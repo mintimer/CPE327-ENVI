@@ -1,7 +1,7 @@
 body {
     position: relative;
     width: 1920px;
-    height: 1080px;
+    height: 2000px;
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
@@ -14,14 +14,15 @@ body {
     color: white;
     padding: 8px;
     text-align: center;
-    width: 120px;
     text-decoration: none;
     display: inline-block;
-    margin-bottom:10;
     cursor: pointer;
     font-family: Muli;
     font-size: 20px;
-    border-radius: 18px;
+    border-radius: 20px;
   }
+  .button1 {width: 110px;}
+  .button2 {width: 80px;}
+  .button3 {width: 180px;}
 
 

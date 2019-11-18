@@ -27,11 +27,11 @@ body {
   .button2 {width: 80px;}
   .button3 {width: 180px;}
 
-.CampaignText {
+.campaignText {
     position: absolute;
     width: 800px;
     height: 61.3px;
-    font-family: Muli;
+    font-family: Prompt;
     font-style: normal;
     font-weight: 300;
     font-size: 65px;
@@ -39,5 +39,14 @@ body {
 }
     .latest{top: calc(50% - 61.3px/2 + 64.65px); left: calc(50% - 529.85px/2 + 13.85px);}
     .popular{top: calc(50% - 62.34px/2 + 620.97px);left: calc(50% - 574.22px/2 + 13.8px);}
+
+.campaignDetail {
+position: absolute;
+font-family: Prompt;
+font-style: normal;
+font-weight: normal;
+}
+.cheader{font-size: 30px;line-height: 45px;}
+.cdetail{font-size: 20px;line-height: 25px;}
 
 

@@ -1,7 +1,7 @@
 body {
     position: relative;
     width: 1920px;
-    height: 2690px;
+    height: 1080px;
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
@@ -23,4 +23,5 @@ body {
     font-size: 20px;
     border-radius: 18px;
   }
+
 

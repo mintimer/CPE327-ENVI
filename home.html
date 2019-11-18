@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
         <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +8,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <!-- ******************* NAV BAR ****************************** -->
     <div class="container-fluid">
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top row border-bottom" style="background-color:white; border:black;">
         <div class='col'>
           <!-- ********** Envi ********** -->
-                <a class="navbar-brand" href="#" style="margin-bottom:0; margin-left:40; font-family: Muli; font-size: 40px; color:#01BF92; ">Envi</a>
+                <a class="nav-link" href="#" style="margin-bottom:0; margin-left:40; font-family: Muli; font-size: 40px; color:#01BF92; ">Envi</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -57,31 +55,34 @@
       
     <!-- ******************* Body 2 - hover ****************************** -->
         <div class="row" >
-          <div style="position: absolute;width: 300px;height: 200px;left: 269.7px; top: 700px;"><img src="pic/home-create.png"></div>
-          <div style="position: absolute;width: 300px;height: 200px;left: 623.7px; top: 700px;"><img src="pic/home-view.png"></div>
-          <div style="position: absolute;width: 300px;height: 200px;left: 989.7px; top: 700px;"><img src="pic/home-join.png"></div>
-          <div style="position: absolute;width: 300px;height: 200px;left: 1349.7px;top: 700px;"><img src="pic/home-rate.png"></div>
+          <div style="position: absolute;width: 300px;height: 200px;left: 269.7px; top: 700px;"><a data-toggle="tip" title="Create new campaign that make world better"><img src="pic/home-create.png"></a></div>
+          <div style="position: absolute;width: 300px;height: 200px;left: 623.7px; top: 700px;"><a data-toggle="tip" title="Find interesting campaign"><img src="pic/home-view.png"></div></a>
+          <div style="position: absolute;width: 300px;height: 200px;left: 989.7px; top: 700px;"><a data-toggle="tip" title="Join campaign that you interested"><img src="pic/home-join.png"></div></a>
+          <div style="position: absolute;width: 300px;height: 200px;left: 1349.7px;top: 700px;"><a data-toggle="tip" title="Rate the attended campaign to make better in future"><img src="pic/home-rate.png"></div></a>
         </div>
       </div>
 
       <div style="position: absolute;width: 439.81px;height: 324.55px;left: 0px;top: 1410.25px;"><img src="pic/hand.png"></div>
       
-      
       <!-- ******************* Body 3 - latest campaign ****************************** -->
       <a class="campaignText latest">Latest Campaign</a>
       <div class="container-fluid" style="margin-top:10%;">
           <div class="row" >
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 - 447.5px);top: calc(50% - 209px/2 + 239.5px);"><img src="pic/late1.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 322px/2 - 455.3px);top: calc(50% - 45px/2 + 392.3px);">ปลูกป่ากับพ่อ</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 - 463.3px);top: calc(50% - 55px/2 + 442.3px);">บางขวาง<br>นครนายก</a>
-             
+              </a>
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 - 0.2px);top: calc(50% - 209px/2 + 239.5px);"><img src="pic/late2.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 191px/2 - 72.8px);top: calc(50% - 45px/2 + 392.3px);">Plant for Dad</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 - 15.3px);top: calc(50% - 55px/2 + 442.3px);">บางกะเจ้า<br>กรุงเทพมหานคร</a>
-              
+              </a>
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 + 448.2px);top: calc(50% - 209px/2 + 239.5px);"><img src="pic/late3.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 251px/2 + 413.2px);top: calc(50% - 45px/2 + 389.3px);">เก็บขยะ ณ บางแสน</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 + 440.7px);top: calc(50% - 55px/2 + 442.3px);">หาดบางแสน<br>ชลบุรี</a>
+              </a>
             </div>
           </div>
 
@@ -89,26 +90,26 @@
       <a class="campaignText popular">Popular Campaign</a>
       <div class="container-fluid">
           <div class="row" >
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 - 447.5px);top: calc(73% - 209px/2 + 239.5px);"><img src="pic/pop1.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 322px/2 - 455.3px);top: calc(73% - 45px/2 + 392.3px);">Be Blind Dream</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 - 463.3px);top: calc(73% - 55px/2 + 442.3px);">KMUTT<br>กรุงเทพมหานคร</a>
-              
+              </a>
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 - 0.2px);top: calc(73% - 209px/2 + 239.5px);"><img src="pic/pop2.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 191px/2 - 72.8px);top: calc(73% - 45px/2 + 392.3px);">One-Two-Tree</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 - 15.3px);top: calc(73% - 55px/2 + 442.3px);">บางกะเจ้า<br>กรุงเทพมหานคร</a>
-
+              </a>
+              <a href="#">
               <div style="position: absolute;width: 337px;height: 209px;left: calc(50% - 337px/2 + 448.2px);top: calc(73% - 209px/2 + 239.5px);"><img src="pic/pop3.png"></div>
               <a class="campaignDetail cheader" style="width: 322px;height: 45px;left: calc(50% - 251px/2 + 413.2px);top: calc(73% - 45px/2 + 389.3px);">วัดสะอาดใจสงบ</a>
               <a class="campaignDetail cdetail" style="width: 322px;height: 45px;left: calc(50% - 306px/2 + 440.7px);top: calc(73% - 55px/2 + 442.3px);">วัดเขาอีโต้ขว้างเบ็ด<br>เชียงราย</a>
-
+              </a>
             </div>
           </div>
 
-
-
-
-       <!-- ******************* Nav bat bottom ****************************** -->
-      <div style="position: absolute;width: 483.12px;height: 750.88px;left: 1619.59px;top:78.2%;"><img src="pic/girl.png"></div>
+       <!-- ******************* Nav bar bottom ****************************** -->
+      <div style="position: absolute;width: 483.12px;height: 750.88px;left: 1619.59px;top:77%;"><img src="pic/girl.png"></div>
       <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#01BF92; top:100%;">
           <div class="container-fluid">
               <div class="col"></div>
@@ -122,9 +123,12 @@
           </div>
       </nav>
 
-
-
+<!-- ******************* Hover Script ****************************** -->
+      <script>
+          $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+          });
+          </script>
 </body>
-
 </html>
 

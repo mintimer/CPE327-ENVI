@@ -1,7 +1,7 @@
 body {
     position: relative;
     width: 1920px;
-    height: 2400px;
+    height: 2300px;
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
@@ -38,7 +38,7 @@ body {
     line-height: 82px;
 }
     .latest{top: calc(50% - 61.3px/2 + 64.65px); left: calc(50% - 529.85px/2 + 13.85px);}
-    .popular{top: calc(50% - 62.34px/2 + 620.97px);left: calc(50% - 574.22px/2 + 13.8px);}
+    .popular{top: calc(49% - 62.34px/2 + 620.97px);left: calc(50% - 574.22px/2 + 13.8px);}
 
 .campaignDetail {
 position: absolute;

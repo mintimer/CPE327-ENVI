@@ -5,5 +5,22 @@ body {
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
-    background-color:#01BF92;
+    background-image: url('pic/home01.jpg');
 }
+
+.button {
+    background-color: #01BF92;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    width: 120px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom:10;
+    cursor: pointer;
+    font-family: Muli;
+    font-size: 20px;
+    border-radius: 18px;
+  }
+

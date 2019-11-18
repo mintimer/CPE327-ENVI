@@ -1,11 +1,13 @@
 body {
     position: relative;
     width: 1920px;
-    height: 2000px;
+    height: 2400px;
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
     background-image: url('pic/home01.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .button {
@@ -24,5 +26,18 @@ body {
   .button1 {width: 110px;}
   .button2 {width: 80px;}
   .button3 {width: 180px;}
+
+.CampaignText {
+    position: absolute;
+    width: 800px;
+    height: 61.3px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 65px;
+    line-height: 82px;
+}
+    .latest{top: calc(50% - 61.3px/2 + 64.65px); left: calc(50% - 529.85px/2 + 13.85px);}
+    .popular{top: calc(50% - 62.34px/2 + 620.97px);left: calc(50% - 574.22px/2 + 13.8px);}
 
 

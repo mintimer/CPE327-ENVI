@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 600px;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+      // The location of Uluru
+      var uluru = {lat: 15, lng: 101};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 7, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map, draggable: true});
+
+      google.maps.event.addListener(marker,'dragend',function(evt){
+         var lat = evt.latLng.lat();
+         var lng = evt.latLng.lng();
+         document.getElementById('latlng').innerHTML = '<p>Latitude = ' + lat + '<br>Longtitude = '+ lng + '</p>';
+      });
+      }
+    </script>
+    
+    <div id='latlng'></div>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iaHIfhLObFmtyTMO1vW0LeYWphhV5U&callback=initMap">
+    </script>
+  </body>
+</html>

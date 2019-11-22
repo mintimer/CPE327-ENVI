@@ -1,11 +1,13 @@
 body {
     position: relative;
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px;
     height: 2300px;
     font-family: Muli;
     font-style: normal;
     font-weight: normal;
     background-image: url('pic/home01.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
 }

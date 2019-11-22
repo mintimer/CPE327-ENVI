@@ -10,7 +10,6 @@
 </head>
 <body>
   <!-- ******************* NAV BAR ****************************** -->
-    <div class="container-fluid">
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top row border-bottom" style="background-color:white; border:black;">
         <div class='col'>
           <!-- ********** Envi ********** -->
@@ -32,7 +31,7 @@
             </li>
             <!-- ********** Login ********** -->
             <li class="nav-item">
-              <a class="nav-link" href="#" style="margin-bottom:0; font-family: Muli; font-size: 20px; color:black;">Login</a>
+              <a class="nav-link" href="login.html" id="login" style="margin-bottom:0; font-family: Muli; font-size: 20px; color:black;">Login</a>
             </li>
             <!-- ********** Sign up ********** -->
             <li class="nav-item">
@@ -41,16 +40,14 @@
           </ul>
         </div>  
       </nav>
-    </div>
+   
 
     <!-- ******************* Body 1 - text with picture ****************************** -->
-      <div class="container-fluid" style="margin-top:10%;">
         <div class="row">
-            <div style="position: absolute;left: 14.48%;right: 41.2%;top: 120px"><img src="pic/home03.png"></div>
-            <div style="position: absolute;left: 59.38%;right: 8.67%;; "><img src="pic/boy under tree.png"></div>
+            <div style="position: absolute;left: 14.48%;right: 41.2%;top: 260px;"><img src="pic/home03.png"></div>
+            <div style="position: absolute;left: 59.38%;right: 8.67%;top: 130px; "><img src="pic/boy under tree.png"></div>
             <!-- ********** Get Start now ********** -->
-            <div style="position: absolute; left: 27.5%;right: 61.3%;top: 365px;"><button class="button button3" href="#" >Get Start Now</a></div> 
-        </div>
+            <div style="position: absolute; left: 27.5%;right: 61.3%;top: 520px;"><button class="button button3" href="#" >Get Start Now</a></div> 
         <br>
       
     <!-- ******************* Body 2 - hover ****************************** -->
@@ -109,7 +106,7 @@
           </div>
 
        <!-- ******************* Nav bar bottom ****************************** -->
-      <div style="position: absolute;width: 483.12px;height: 750.88px;left: 1619.59px;top:77%;"><img src="pic/girl.png"></div>
+      <!-- <div style="position: absolute;width: 483.12px;height: 750.88px;scroll-margin-top: 100% auto;"><img src="pic/girl.png"></div> -->
       <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#01BF92; top:100%;">
           <div class="container-fluid">
               <div class="col"></div>
@@ -122,31 +119,6 @@
               <div class="col"></div>
           </div>
       </nav>
-
-      <!-- ******************* Login form ****************************** -->
-      <div class="container-fluid">
-        <div class="bg-image"></div>
-        <div class="form-box">
-          <div class="head">Welcome Back</div>
-          <form action="#" id="label=control">
-            <div class="form-group">
-              <label class="label control">
-                <span class="label-text">Email</span>
-              </label>
-              <input type="text" name="email" class="form-control" autocomplete="off">
-            </div>
-            <div class="form-group">
-                <label class="label control">
-                    <span class="label-text">Password</span>
-                  </label>
-                  <input type="text" name="password" class="form-control">
-            </div>
-            <input type="submit" value="Sign In" class="button button1">
-            <p class="text-p">Don't have an account?</p> <a href="#">Sign Up</a></p>
-          </form>
-        </div>
-      </div>
-
       <!-- ******************* Hover Script ****************************** -->
       <script>
           $(document).ready(function(){

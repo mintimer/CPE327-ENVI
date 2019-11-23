@@ -26,9 +26,6 @@
     </div>
     <div class="contain">
         <div class="form-box">
-            <div class="head">
-                <p class="texthead">Create your campaign</p>
-            </div>
             <form action="#" id="create-form">
                 <div class="form-group">
                     <span class="text">Campaign name</span>
@@ -44,7 +41,9 @@
                 </div>
                 <div class="form-group">
                     <span class="text">Location</span>
-                    <input type="text" name="location" class="form-control" placeholder="chooose location" required>
+                    <div class="form-control" id="map"></div>
+                    <input type="text" id="lat" name="latitude" class="form-control" placeholder="latitude" value="" required>
+                    <input type="text" id="long" name="latitude" class="form-control" placeholder="longtitude" value="" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Activity describe</span>
@@ -56,11 +55,11 @@
                 </div>
                 <div class="form-group">
                     <span class="text">Authen document</span>
-                    <input type="file" name="authendocument" class="form-control" required>
+                    <input type="file" name="authendocument" class="form-control-file" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Promote picture</span>
-                    <input type="file" name="promotepicture" class="form-control" required>
+                    <input type="file" name="promotepicture" class="form-control-file" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Amount of people</span>
@@ -88,6 +87,70 @@
         function goBack() {
             window.history.back();
         }
+    </script>
+    <script>
+        var map, marker, lat, lng, pos;
+
+        function initMap() {
+            lat = 15;
+            lng = 101;
+            pos = {
+                lat: lat,
+                lng: lng
+            };
+            map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 7,
+                    center: pos,
+                    streetViewControl: false,
+                    fullscreenControl: false,
+                    data: false
+                });
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                draggable: true
+            });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    marker.setPosition(pos);
+                    map.setCenter(pos);
+                });
+            }
+
+            google.maps.event.addListener(marker, 'dragend', function(evt) {
+                lat = evt.latLng.lat();
+                lng = evt.latLng.lng();
+                pos = {
+                    lat: lat,
+                    lng: lng
+                };
+                marker.setPosition(pos);
+                document.getElementById('lat').value = lat;
+                document.getElementById('long').value = lng;
+            });
+
+            google.maps.event.addListener(map, 'click', function(evt) {
+                lat = evt.latLng.lat();
+                lng = evt.latLng.lng();
+                marker.setPosition({
+                    lat: lat,
+                    lng: lng
+                });
+                document.getElementById('lat').value = lat;
+                document.getElementById('long').value = lng;
+            });
+        }
+    </script>
+
+    <div id='latlng'></div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iaHIfhLObFmtyTMO1vW0LeYWphhV5U&callback=initMap">
     </script>
 </body>
 

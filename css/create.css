@@ -1,6 +1,10 @@
+body {
+    height: min-content;
+}
+
 .contain {
     margin: auto;
-    padding-top: 45px;
+    padding-top: 2%;
     max-width: 65%;
     align-items: center;
     vertical-align: center;
@@ -16,7 +20,16 @@ form#create-form {
     border-radius: 10px;
     float: right;
     margin-right: 5%;
-    width: 50%;
+    width: 60%;
+    /* color: #333333; */
+}
+
+.form-control-file {
+    font-family: Muli;
+    border: none;
+    float: right;
+    margin-right: 5%;
+    width: 60%;
     /* color: #333333; */
 }
 
@@ -74,7 +87,7 @@ input.btn[type="submit"]:hover {
     background: white;
     margin: auto;
     max-width: 700px;
-    height: 460px;
+    height: 700px;
     border-radius: 10px;
     box-shadow: 0 3px 6px 0px rgb(255, 255, 255), rgb(255, 255, 255);
     z-index: 2;
@@ -84,6 +97,7 @@ input.btn[type="submit"]:hover {
 }
 
 .btn2 {
+    position: relative;
     background: white;
     border: 0.5mm solid #01BF92;
     float: left;
@@ -98,9 +112,36 @@ input.btn[type="submit"]:hover {
     width: 45%;
     transition: all 0.15s ease-in-out;
     align-items: center;
+    margin-bottom: 10%;
 }
 
 .btn2:hover {
     text-decoration: none;
     background: #bcf0d4;
+}
+
+.btn3 {
+    border: none;
+    background: #01BF92;
+    float: right;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    outline: none;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 10px;
+    width: 45%;
+    transition: all 0.15s ease-in-out;
+    align-items: center;
+}
+
+.btn3:hover {
+    text-decoration: none;
+    background: #00daa2;
+}
+
+#map {
+    height: 200px;
 }

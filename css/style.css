@@ -20,7 +20,7 @@ body {
 }
 
 .boxdown {
-    position: absolute;
+    position: fixed;
     color: white;
     bottom: 0;
     width: 100%;
@@ -28,6 +28,7 @@ body {
     font-size: 13px;
     border-top: 0.5mm solid white;
     background: #01BF92;
+    z-index: 2;
 }
 
 .nav-left {

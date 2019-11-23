@@ -13,7 +13,6 @@ form#create-form {
 }
 
 .form-control {
-    display: inline;
     border-radius: 10px;
     float: right;
     margin-right: 5%;
@@ -55,6 +54,11 @@ input.btn[type="submit"]:hover {
 .texthead {
     font-size: 25px;
     font-weight: bolder;
+    text-align: center;
+}
+
+.textsub {
+    font-size: 23px;
     padding-bottom: 20px;
     text-align: center;
 }

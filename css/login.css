@@ -1,29 +1,36 @@
 body,
 html {
     font-family: Muli;
+    background-image: url('/CPE327-ENVI/pic/home01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .box {
+    position: relative;
     width: 100%;
-    border-bottom:0.1mm solid #cccccc;
-    padding: 20px;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
+    height: 100px;
+    border-bottom: 0.1mm solid #cccccc;
+    background: white;
 }
 
-img{
-    width: 90px;
-
+img {
+    width: 75px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.container{
+.container {
     width: 100%;
     height: 100%;
     /* min-height: 100vh; */
-
     align-items: center;
     padding: 15px;
+    padding-top: 2%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -48,7 +55,7 @@ img{
     max-width: 700px;
     height: 460px;
     border-radius: 10px;
-    box-shadow: 0 3px 6px 0px rgb(255, 255, 255),rgb(255, 255, 255);
+    box-shadow: 0 3px 6px 0px rgb(255, 255, 255), rgb(255, 255, 255);
     z-index: 2;
     /* background: #F8F8F8; */
     border: #333333;
@@ -70,8 +77,8 @@ form#login-form {
     /* background: #F8F8F8; */
 }
 
-.text-head{
-    color:#01BF92;
+.text-head {
+    color: #01BF92;
 }
 
 .form-group {
@@ -88,7 +95,7 @@ form#login-form {
     padding: 20px;
     width: 100%;
     color: #333333;
-    align-items: center;    
+    align-items: center;
 }
 
 .form-control:focus {
@@ -96,7 +103,7 @@ form#login-form {
     box-shadow: none;
 }
 
-input.btn[type="submit"] { 
+input.btn[type="submit"] {
     background: #01BF92;
     border-radius: 30px;
     color: white;
@@ -107,10 +114,10 @@ input.btn[type="submit"] {
     padding: 10px;
     width: 100%;
     transition: all 0.15s ease-in-out;
-    align-items: center;  
+    align-items: center;
 }
 
-input.btn[type="submit"]:hover{
+input.btn[type="submit"]:hover {
     background: #01BF85;
 }
 
@@ -121,12 +128,12 @@ input.btn[type="submit"]:hover{
     margin: 10px 0;
 }
 
-.text-p a{
+.text-p a {
     color: #01BF92;
 }
 
 @media(maxwidth:480px) {
-    form#login-form{
+    form#login-form {
         width: 90%;
         margin: 30px auto;
     }

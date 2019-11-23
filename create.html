@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/create.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav-left">
+            <a href="home.html"><img style="width: 135px" src="/pic/icon.png"></a>
+        </div>
+        <div class="nav-right">
+            <span id="text"><a href="view.html">Search campaign</a></span>
+            <span id="text"><a href="create.html">Create campaign</a></span>
+            <span id="text"><a href="profile.html">My profile</a></span>
+            <a href="home.html"><button class="btn1">Sign out</button></a>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="form-box">
+            <div class="head">
+                <p class="texthead">Create your campaign</p>
+            </div>
+            <form action="#" id="create-form">
+                <div class="form-group">
+                    <span class="text">Campaign name</span>
+                    <input type="text" name="campaignname" class="form-control" autocomplete="off" placeholder="your campaign name" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Start date</span>
+                    <input type="date" name="startdate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">End date</span>
+                    <input type="date" name="enddate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Location</span>
+                    <input type="text" name="location" class="form-control" placeholder="chooose location" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Activity describe</span>
+                    <input type="text" name="detail" class="form-control" placeholder="campaign detail" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Manager name</span>
+                    <input type="text" name="manager" class="form-control" placeholder="manager name" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Authen document</span>
+                    <input type="file" name="authendocument" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Promote picture</span>
+                    <input type="file" name="promotepicture" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Amount of people</span>
+                    <input type="number" name="amount" class="form-control" placeholder="how many people" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Company name</span>
+                    <input type="text" name="company" class="form-control" placeholder="company name" required>
+                </div>
+                <button onclick="goBack()" class="btn2">Back</button>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <div class="boxdown">
+        <div class="nav-left">
+            <span class="text-head">ENVI</span>
+        </div>
+        <div class="nav-right ">
+            <span>2018 All Right Reserve</span>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

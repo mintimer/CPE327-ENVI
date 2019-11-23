@@ -1,6 +1,6 @@
 .contain {
     margin: auto;
-    padding-top: 2%;
+    padding-top: 45px;
     max-width: 65%;
     align-items: center;
     text-align: center;
@@ -39,7 +39,7 @@
     background: white;
     border: 1mm solid #01BF92;
     border-radius: 30px;
-    color: #01BF92;
+    color: #01906e;
     cursor: pointer;
     outline: none;
     overflow: hidden;

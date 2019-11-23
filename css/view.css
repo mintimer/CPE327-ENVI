@@ -1,0 +1,32 @@
+.btn2 {
+    margin: 10px;
+    border: none;
+    width: 10%;
+    height: 5%;
+    background: white;
+    border: 1mm solid #01BF92;
+    border-radius: 30px;
+    color: #01906e;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+}
+
+.pic {
+    width: 300px;
+    height: 500px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+}
+
+.extradetail {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.text1 {
+    font-size: 25px;
+
+}

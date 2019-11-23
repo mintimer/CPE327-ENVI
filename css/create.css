@@ -117,7 +117,7 @@ input.btn[type="submit"]:hover {
 
 .btn2:hover {
     text-decoration: none;
-    background: #bcf0d4;
+    background: rgb(243, 251, 250);
 }
 
 .btn3 {

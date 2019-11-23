@@ -9,6 +9,7 @@
 }
 
 #profilepic {
+    src: url(/pic/profilepic.jpg);
     border-radius: 50%;
     width: 250px;
     float: center;
@@ -32,7 +33,7 @@
 }
 
 .btn2 {
-    margin: 10px;
+    margin: 5px;
     border: none;
     width: 50%;
     height: 5%;
@@ -50,4 +51,5 @@
 .btn2:hover {
     text-decoration: none;
     font-size: 25px;
+    background: rgb(243, 251, 250);
 }

@@ -15,13 +15,13 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="view.php">Search campaign</a></span>
-            <span id="text"><a href="create.php">Create campaign</a></span>
-            <span id="text"><a href="profile.php">My profile</a></span>
-            <a href="home.php"><button class="btn1">Sign out</button></a>
+            <span id="text"><a href="./view.php">Search campaign</a></span>
+            <span id="text"><a href="./create.php">Create campaign</a></span>
+            <span id="text"><a href="./profile.php">My profile</a></span>
+            <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
     <div class="contain">
@@ -50,7 +50,7 @@
                 <!-- <input type="submit" value="Submit" class="btn"> -->
             </form>
             <button onclick="goBack()" class="btn2">Back</button>
-            <a href="create2.php"><button class="btn3">Next</button></a>
+            <a href="./create2.php"><button class="btn3">Next</button></a>
         </div>
     </div>
 

@@ -7,32 +7,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/view.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/view.css">
 
 </head>
 
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="home.html"><img style="width: 135px" src="/pic/icon.png"></a>
+            <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="view.html">Search campaign</a></span>
-            <span id="text"><a href="create.html">Create campaign</a></span>
-            <span id="text"><a href="profile.html">My profile</a></span>
-            <a href="home.html"><button class="btn1">Sign out</button></a>
+            <span id="text"><a href="./view.php">Search campaign</a></span>
+            <span id="text"><a href="./create.php">Create campaign</a></span>
+            <span id="text"><a href="./profile.php">My profile</a></span>
+            <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
 
    <div class="extradetail">
-        <img class="pic" src="pic/home-create.png">
-        <img class="pic" src="pic/home-create.png">
-        <img class="pic" src="pic/home-create.png">
+        <img class="pic" src="./pic/home-create.png">
+        <img class="pic" src="./pic/home-create.png">
+        <img class="pic" src="./pic/home-create.png">
 
    </div>
 
-   <a href="ViewDetail.html"><button class="btn2">Get Start Now</button></a>
+   <a href="./ViewDetail.html"><button class="btn2">Get Start Now</button></a>
 
 
 

@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 body,
 html {
-    font-family: Muli;
-    background-image: url('/pic/home01.jpg');
+    font-family: 'Muli', sans-serif;
+    background-image: url('./pic/home01.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }

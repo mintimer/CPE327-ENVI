@@ -69,7 +69,7 @@
                 </div>
                 <br>
                 <input type="submit" value=" SIGN UP " id="submit" class="btn">
-                <p class="text-p">Already have an account? <a href="login.html">Login</a></p>
+                <p class="text-p">Already have an account? <a href="./login.php">Login</a></p>
                 <br>
                 <p class="text-p-2">By clicking on Sign up, you agree to ENVI's Terms and Conditions of Use.<br> To learn more about how ENVI collects, uses, shares and protects your personal data please read ENVI's Privacy Policy. </p>
             </form>

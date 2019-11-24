@@ -41,11 +41,11 @@
         </div>
 
         <div class="extradetail">
-            <a href="./create.html"><button class="btn2">Create Campaign</button></a>
-            <a href="./view.html"><button class="btn2">Search Campaign</button></a>
+            <a href="./create.php"><button class="btn2">Create Campaign</button></a>
+            <a href="./view.php"><button class="btn2">Search Campaign</button></a>
             <a href="#"><button class="btn2">My History</button></a>
             <a href="#"><button class="btn2">Rate Campaign</button></a>
-            <a href="./report.html"><button class="btn2">Report trouble</button></a>
+            <a href="./report.php"><button class="btn2">Report trouble</button></a>
         </div>
     </div>
 

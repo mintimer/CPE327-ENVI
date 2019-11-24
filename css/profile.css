@@ -1,6 +1,6 @@
 .contain {
     margin: auto;
-    padding-top: 45px;
+    padding-top: 0px;
     max-width: 65%;
     align-items: center;
     text-align: center;
@@ -9,9 +9,8 @@
 }
 
 #profilepic {
-    src: url(./pic/profilepic.jpg);
     border-radius: 50%;
-    width: 250px;
+    width: 50px;
     float: center;
     margin: auto;
 }

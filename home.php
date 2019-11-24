@@ -15,12 +15,12 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="home.html"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./home.html">Become a member</a></span>
-            <span id="text"><a href="./signup.html">Sign up</a></span>
-            <a href="login.html"><button class="btn1">Login</button></a>
+            <span id="text"><a href="./home.php">Become a member</a></span>
+            <span id="text"><a href="./signup.php">Sign up</a></span>
+            <a href="login.php"><button class="btn1">Login</button></a>
         </div>
     </div>
     <div class="contain">
@@ -32,7 +32,7 @@
             <br>
             <span class="text2">that make</span>
             <span class="text3">our world better</span><br><br>
-            <a href="profile.html"><button class="btn2">Get Start Now</button></a>
+            <a href="profile.php"><button class="btn2">Get Start Now</button></a>
             <div class="extradetail">
                 <img class="picdetail" src="./pic/home-create.png">
                 <img class="picdetail" src="./pic/home-join.png">

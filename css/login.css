@@ -128,8 +128,28 @@ input.btn[type="submit"]:hover {
     margin: 10px 0;
 }
 
+.text-p-2 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #333333;
+    text-align: center;
+    margin: 10px 0;
+}
+
 .text-p a {
     color: #01BF92;
+}
+
+.boxdown {
+    position: fixed;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    border-top: 0.5mm solid white;
+    background: #01BF92;
+    z-index: 2;
 }
 
 @media(maxwidth:480px) {

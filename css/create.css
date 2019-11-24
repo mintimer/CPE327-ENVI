@@ -65,13 +65,13 @@ input.btn[type="submit"]:hover {
 }
 
 .texthead {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     text-align: center;
 }
 
 .textsub {
-    font-size: 23px;
+    font-size: 18px;
     padding-bottom: 20px;
     text-align: center;
 }

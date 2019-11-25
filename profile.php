@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/profile1.css">
     <title>Profile</title>
 </head>
 
@@ -26,7 +26,7 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" style="width: 200px" src="./pic/profilepic.jpg">
+            <img id="profilepic" src="./pic/profilepic.jpg">
             <br>
             <span class="textdetailhead">
                 <?php

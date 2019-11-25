@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/view.css">
+    <link rel="stylesheet" href="./css/view1.css">
 
 </head>
 

@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/login.css" type="text/css">
+    <link rel="stylesheet" href="./css/login1.css" type="text/css">
     <title>Login</title>
     <?php include('connect.php'); ?>
 </head>

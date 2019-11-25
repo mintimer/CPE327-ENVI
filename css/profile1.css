@@ -1,0 +1,59 @@
+.btn2 {
+    margin: 5px;
+    border: none;
+    width: 50%;
+    height: 5%;
+    background: white;
+    border: 0.5mm solid #01BF92;
+    border-radius: 30px;
+    color: #01906e;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+}
+
+.btn2:hover {
+    text-decoration: none;
+    font-size: 25px;
+    background: rgb(243, 251, 250);
+}
+
+#profilepic {
+    border-radius: 50%;
+    width: 200px;
+    float: center;
+    margin: auto;
+}
+
+.contain {
+    margin: auto;
+    padding-top: 1%;
+    max-width: 65%;
+    align-items: center;
+    vertical-align: center;
+    /* background: gray; */
+}
+
+.textdetailhead {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.textdetailsub {
+    font-size: 20px;
+}
+
+.extradetail {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
+    text-align: center;
+}
+
+.profiledetail {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}

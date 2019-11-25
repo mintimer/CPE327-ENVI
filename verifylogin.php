@@ -19,7 +19,11 @@
         $_SESSION['role'] = 'user';
         header("Location: profile.php");
     }else{
-        echo "<span style="."color:red".">Failed to login.</span>";
+        echo "
+        <script>
+            document.getElementById('ermsg').innerHTML = 'Invalid username, email or password.';
+        </script>
+        ";
     }
     mysqli_close($con);
 ?>

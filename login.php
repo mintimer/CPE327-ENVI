@@ -25,6 +25,8 @@
                 Welcome
                 <span class="text-head">Back</span>
                 <p class="text-p">Log in to create and join campaign.</p>
+                <p id="ermsg" class="text-p" style="color:red"></p>
+                <p class="text-p" style="color:red">for test user = admin or email = admin@envi.org  pass = 1234</p>
             </div>
             <form action="#" id="login-form" method="post">
                 <div class="form-group">

@@ -32,7 +32,7 @@
             <br>
             <span class="text2">that make</span>
             <span class="text3">our world better</span><br><br>
-            <a href="profile.php"><button class="btn2">Get Start Now</button></a>
+            <a href="login.php"><button class="btn2">Get Start Now</button></a>
             <div class="extradetail">
                 <img class="picdetail" src="./pic/home-create.png">
                 <img class="picdetail" src="./pic/home-join.png">

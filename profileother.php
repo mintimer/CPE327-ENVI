@@ -37,10 +37,10 @@
             </span>
             <br><br>
             <span class="textdetailsub">Created campaign :</span>
-            <span class="textdetaildata">0</span>
+            <span class="textdetaildata">1</span>
             <br>
             <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">0</span>
+            <span class="textdetaildata">80</span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
             <span class="textdetaildate">-99999</span>

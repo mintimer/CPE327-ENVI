@@ -1,0 +1,36 @@
+.box1 {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    /* min-height: 100vh; */
+    padding: 1.5% 0;
+    position: relative;
+    z-index: 1;
+    border: 0.3mm solid #333333;
+    border-radius: 30px;
+}
+
+.textdetailsub {
+    font-size: 20px;
+    padding-left: 2%;
+}
+
+.btn3 {
+    border: none;
+    width: fit-content;
+    height: 5%;
+    color: white;
+    border-radius: 30px;
+    background: #01BF92;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+    float: right;
+}
+
+.btn3:hover {
+    text-decoration: none;
+    background: #00daa2;
+}

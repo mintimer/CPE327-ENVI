@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/login1.css" type="text/css">
     <title>Login</title>
+    <?php include('connect.php'); ?>
 </head>
 
 <body>
@@ -24,8 +25,10 @@
                 Welcome
                 <span class="text-head">Back</span>
                 <p class="text-p">Log in to create and join campaign.</p>
+                <p id="ermsg" class="text-p" style="color:red"></p>
+                <p class="text-p" style="color:red">for test user = admin or email = admin@envi.org  pass = 1234</p>
             </div>
-            <form action="#" id="login-form">
+            <form action="#" id="login-form" method="post">
                 <div class="form-group">
                     <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Email addredd or username" required>
                 </div>
@@ -46,6 +49,10 @@
             <span>2018 All Right Reserve</span>
         </div>
     </div>
+    <?php
+        if(isset($_POST['email']) && isset($_POST['password']))
+            require 'verifylogin.php';
+    ?>
 </body>
 
 </html>

@@ -28,7 +28,12 @@
         <div class="profiledetail">
             <img id="profilepic" src="./pic/profilepic.jpg">
             <br>
-            <span class="textdetailhead">Prayad Janjao</span>
+            <span class="textdetailhead">
+                <?php
+                    session_start();
+                    echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
+                ?>
+            </span>
             <br><br>
             <span class="textdetailsub">Created campaign :</span>
             <span class="textdetaildata">0</span>

@@ -16,6 +16,11 @@
         $_SESSION['uid'] = $userdata['user_id'];
         $_SESSION['user_firstname'] = $userdata['firstname'];
         $_SESSION['user_lastname'] = $userdata['lastname'];
+        $_SESSION['user_gp'] = $userdata['goodness_point'];
+        $_SESSION['phone_no'] = $userdata['phone_no'];
+        if($userdata['picture_path'] != NULL)
+            $_SESSION['picpath'] = $userdata['picture_path'];
+        else $_SESSION['picpath'] = "./pic/profile/profilepic.png";
         $_SESSION['role'] = 'user';
         if($_SESSION['uid']==1)
             header("Location: profileadmin.php");

@@ -62,6 +62,18 @@
     /* background: #000; */
 }
 
+.textjoin {
+    display: none;
+}
+
+.picjoin:hover {
+    width: 500px;
+}
+
+.picjoin {
+    width: 5px;
+}
+
 
 /* 
 .button {

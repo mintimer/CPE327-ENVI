@@ -27,28 +27,28 @@
         <div class="homedetail">
             <img src="./pic/boy under tree.png" style="width: 500px;float: right;margin: auto;">
             <br><br><br><br><br>
-            <div class="textmain"style="display: block;" >
+            <div id="textmain" style="display: block;" >
                 <span class="text1">Let's create the</span>
                 <span class="text2">campaign</span>
                 <br>
                 <span class="text2">that make</span>
                 <span class="text3">our world better</span><br><br>
             </div>
-            <div class="textjoin" style="display: none;" >
-                <span class="text1">Join</span>
+            <div id="textjoin" style="display : none">
+                <span class="text1">State join the</span>
                 <span class="text2">campaign</span>
                 <br>
                 <span class="text2">that you</span>
                 <span class="text3">interested</span><br><br>
             </div>
-            <div class="textrate" style="display: none;">
+            <div id="textrate" style="display: none;">
                 <span class="text1">Rate the</span>
                 <span class="text2">campaign</span>
                 <br>
                 <span class="text2">to make </span>
                 <span class="text3">better one</span><br><br>
             </div>
-            <div class="textview" style="display: none;">
+            <div id="textview" style="display: none;">
                 <span class="text1">Find interesting</span>
                 <span class="text2">campaign</span>
                 <br>
@@ -57,10 +57,10 @@
             </div>
             <a href="profile.php"><button class="btn2">Get Start Now</button></a>
             <div class="extradetail">
-                <img class="picdetail" id="piccreate" src="./pic/home-create.png">
-                <img class="picdetail" id="picjoin" src="./pic/home-join.png">
-                <img class="picdetail" id="picrate" src="./pic/home-rate.png">
-                <img class="picdetail" id="picview" src="./pic/home-view.png">
+                <img class="picdetail" id="piccreate" src="./pic/home-create.png" onmouseover="showcreate()">
+                <img class="picdetail" id="picjoin" src="./pic/home-join.png" onmouseover="showjoin()">
+                <img class="picdetail" id="picrate" src="./pic/home-rate.png" onmouseover="showrate()">
+                <img class="picdetail" id="picview" src="./pic/home-view.png" onmouseover="showview()">
 
             </div>
         </div>
@@ -74,6 +74,32 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        function showcreate(){
+            document.getElementById("textjoin").style.display = "none";
+            document.getElementById("textmain").style.display = "block";
+            document.getElementById("textrate").style.display = "none";
+            document.getElementById("textview").style.display = "none";
+        }
+        function showjoin(){
+            document.getElementById("textjoin").style.display = "block";
+            document.getElementById("textmain").style.display = "none";
+            document.getElementById("textrate").style.display = "none";
+            document.getElementById("textview").style.display = "none";
+        }
+        function showrate(){
+            document.getElementById("textrate").style.display = "block";
+            document.getElementById("textmain").style.display = "none";
+            document.getElementById("textjoin").style.display = "none";
+            document.getElementById("textview").style.display = "none";
+        }
+        function showview(){
+            document.getElementById("textview").style.display = "block";
+            document.getElementById("textmain").style.display = "none";
+            document.getElementById("textrate").style.display = "none";
+            document.getElementById("textjoin").style.display = "none";
+        }
+        </script>
 </body>
 
 </html>

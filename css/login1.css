@@ -2,9 +2,6 @@
 body,
 html {
     font-family: 'Muli', sans-serif;
-    background-image: url('./pic/home01.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .box {

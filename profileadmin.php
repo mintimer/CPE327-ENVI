@@ -27,12 +27,7 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="
-            <?php
-                session_start();
-                echo $_SESSION['picpath'];
-            ?>
-            ">            
+            <img id="profilepic" src="./pic/profile/adminpic.jpg">
             <br>
             <span class="textdetailhead">
             <?php

@@ -26,34 +26,28 @@
     </div>
 
     <div class="contain">
-        <div class="boxview">
+
+            <div class="boxview">
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <br>
-            <span class="text1" id="camname">Sopon</span>
+            <span class="text1" id="camname">Name</span>
             <br>
-            <img class="pic2" id="picRate" src="/pic/star.png"></img>
-            <span class="text2" id="camrate">Sopon</span>
+            <img class="pic2" id="picRate" src="./pic/star.png"></img>
+            <span class="text2" id="camrate">Rate</span>
             <br>
-            <img class="pic2" id="picDate" src="/pic/calander.png"></img>
-            <span class="text2" id="camdate">Sopon</span>
+            <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
+            <span class="text2" id="camdate">Date</span>
             <br>
-            <img class="pic2" id="picLocation" src="/pic/lacation.png"></img>
-            <span class="text2" id="camlocation">Sopon</span>
+            <img class="pic2" id="picLocation" src="./pic/location.png"></img>
+            <span class="text2" id="camlocation">Location</span>
             <br>
-            <img class="pic2" id="picSize" src="/pic/people.png"></img>
-            <span class="text2" id="camsize">Sopon</span>
+            <img class="pic2" id="picSize" src="./pic/people.png"></img>
+            <span class="text2" id="camsize">Size</span>
             <br>
             <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
             <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
-        </div>
-        <br>
-        <div class="boxview">
-            <span class="text1">Sopon</span>
-        </div>
-        <br>
-        <div class="boxview">
-            <span class="text1">Sopon</span>
-        </div>
+            </div>
+            <br>
     </div>
 
     <br>

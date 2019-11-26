@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/view1.css">
+    <link rel="stylesheet" href="./css/join.css">
 
 </head>
 
@@ -26,12 +27,96 @@
     </div>
 
 
+    <div class="contain2">
+        <div class="boxview2">
+            <span class="text3" id="Name">Plant with your Dady GOGOGOGOGO</span>
+            <br>
+
+                <div class="nav-left2">
+                    <span class="text2" id="camstatus">Status : </span>
+                    <span class="text5" id="camstatus2">Enable</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picRate" src="./pic/star.png"></img>
+                    <span class="text2" id="camrate">Rate</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
+                    <span class="text2" id="camdate">Date</span>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picClock" src="./pic/clock.png"></img>
+                    <span class="text2" id="camdate">Time</span>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picSize" src="./pic/people.png"></img>
+                    <span class="text2" id="camsize">Size</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picPhone" src="./pic/phone.png"></img>
+                    <span class="text2" id="camPhone">080-655-xxxx</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picCompany" src="./pic/company.png"></img>
+                    <span class="text2" id="camCompany">Thai Ku Pha</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picLocation" src="./pic/location.png"></img>
+                    <span class="text2" id="camlocation">Location :</span>
+                    <span class="text2" id="camlocation">Thailand</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="picMap" id="picMap" src="./pic/map.png"></img>
+                </div>
+                
+                
+        </div>
+
+        <div class="boxview2">
+            <span class="text3" id="Detail">Detail</span>
+            
+            <div nav-bot>
+            <a href="./Join.php"><button class="btn2">Join us</button></a>
+        </div>
+        </div>
+    </div>
 
 
 
+    <div class="contain2">
+        <div class="boxpic">
+            <div class="nav-left2">
+                <span class="text4" id="PictureHead">Picture</span>
+            </div>
+            <br>
+        </div>
+        <div class="picdetail">
+            <img class="pic3" src="./pic/cam1.jpg">
+            <img class="pic3" src="./pic/cam2.jpg">
+            <img class="pic3" src="./pic/cam3.jpg">
+        </div>
+    </div>
+    <br>
+    <br>
 
-
-   <button onclick="goBack()" class="btn2">Back</button>
 
     <div class="boxdown ">
         <div class="nav-left ">

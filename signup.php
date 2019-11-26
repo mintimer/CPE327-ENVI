@@ -54,16 +54,26 @@
                 <span class="text-head">ENVI </span>now
                 <p class="text-p">Create an account to make the great campaign.</p>
             </div>
-            <form action="#" id="login-form" onSubmit="return checkPassword(this)">
+            <form action="#" id="login-form" onSubmit="return checkPassword(this)" method="post">
                 <div class="form-group">
                     <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Email address" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+                    <input onChange="password_check()" type="password" name="password" id="password" class="form-control" placeholder="Password" value='<?php if (isset($_POST['password'])) echo $_POST['password']; ?>' required>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Confirm password" required>
+                    <input onChange="password_check()" type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Confirm password" value='<?php if (isset($_POST['rpassword'])) echo $_POST['rpassword']; ?>' required>
                 </div>
+                <p style="color:red" id="ermsg_password"></p>
+                <script>
+                    function password_check(){
+                        var x = document.getElementById('password').value;
+                        var y = document.getElementById('rpassword').value;
+                        if(x!=y)
+                            document.getElementById('ermsg_password').innerHTML = 'Password does not match.';
+                        else document.getElementById('ermsg_password').innerHTML = '';
+                    }
+                </script>
                 <div class="form-group">
                     <input type="text" name="firstname" class="form-control" autocomplete="off" placeholder="First name" required>
                 </div>

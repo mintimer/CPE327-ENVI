@@ -1,10 +1,10 @@
 .btn2 {
     margin: 10px;
     border: none;
-    width: 10%;
-    height: 5%;
+    width: 140;
+    height: 50;
     background: white;
-    border: 1mm solid #01BF92;
+    border: 0.15mm solid rgb(0, 0, 0);
     border-radius: 30px;
     color: #01906e;
     cursor: pointer;
@@ -12,12 +12,41 @@
     overflow: hidden;
     align-items: center;
     font-size: 20px;
+
 }
 
 .pic {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
+    padding: 5%;
+}
+
+.pic2 {
+    width: 40px;
+    height: 40px;
     padding: 5px;
+}
+
+.pic3 {
+    width: 600px;
+    height: 450px;
+    padding: 5%;
+    border-radius: 10px;
+    position: relative ;
+}
+.picicon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+.picMap {
+    width: 750px;
+    height: 300px;
+    padding: 5px;
+}
+.picdetail {
+    display: flex;
 }
 
 .extradetail {
@@ -26,13 +55,35 @@
 }
 
 .text1 {
-    font-size: 25px;
+    font-size: 30px;
+}
+
+.text2 {
+    font-size: 30px;
+}
+
+.text3 {
+    font-size: 70px;
+}
+
+.text4 {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.text5 {
+    font-size: 35px;
+    color:rgb(151, 225, 228);
+}
+
+.text6 {
+    font-size: 20px;
 }
 
 .contain {
     margin: auto;
     padding-top: 2%;
-    max-width: 65%;
+    max-width: 80%;
     align-items: center;
     text-align: center;
     vertical-align: center;
@@ -43,9 +94,55 @@
 .boxview {
     position: relative;
     width: 500px;
-    height: 300px;
+    height: 430px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
-    background: rgb(250, 130, 130);
+    background:#F9F9F9;
     margin-right: 5px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgb(185, 185, 185);
 }
+
+.nav-left2 {
+    position: absolute;
+    left: auto;
+    padding-left: 5% ;
+}
+
+.nav-bot {
+    position: absolute;
+    bottom: auto;
+    padding-left: 5% ;
+}
+
+.contain2 {
+    margin: auto;
+    padding-top: 2%;
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    /* background: #000; */
+    display: flex;
+}
+
+.boxview2 {
+    position: relative;
+    width: 1920px;
+    height: 950px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background:#F9F9F9;
+    margin: 5px;
+}
+
+.boxpic {
+    position: absolute;
+    width: 1920;
+    height: 430px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background: #01BF92;
+    margin: 5px;
+}
+

@@ -40,10 +40,10 @@
                     <input type="date" name="enddate" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <span class="text">Location</span>
+                    <span class="text">Choose your location</span>
                     <div class="form-control" id="map"></div>
-                    <input type="text" id="lat" name="latitude" class="form-control" placeholder="latitude" value="" required>
-                    <input type="text" id="long" name="latitude" class="form-control" placeholder="longtitude" value="" required>
+                    <input type="text" id="lat" name="latitude" class="form-control" placeholder="latitude" value="" required hidden>
+                    <input type="text" id="long" name="latitude" class="form-control" placeholder="longtitude" value="" required hidden>
                 </div>
                 <div class="form-group">
                     <span class="text">Activity describe</span>

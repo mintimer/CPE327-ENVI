@@ -77,6 +77,10 @@
                 <span style="position : absolute; margin: auto; padding: 10px; padding-left:120px;" >Date of birth</span>
                     <input type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
                 </div>
+                <div class="form-group">
+                    <span class="text">Upload Profile picture</span>
+                    <input type="file" name="profilepic" class="form-control-file" required>
+                </div>
                 <br>
                 <input type="submit" value=" SIGN UP " id="submit" class="btn">
                 <p class="text-p">Already have an account? <a href="./login.php">Login</a></p>

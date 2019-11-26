@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <title>Profile</title>
+    <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <title>Rate Campaign</title>
 </head>
 
 <body>
@@ -26,31 +28,22 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="./pic/profilepic.jpg">
-            <br>
             <span class="textdetailhead">
-                <?php
-                    session_start();
-                    echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
-                ?>
+                Rate campaign
+            </span><br>
+            <span class="textdetailsub">
+                Choose your attended campaign
+            </span><br><br>
+        </div>
+        
+        <div class="box1">
+        <span class="textdetailsub">
+               "Campaign Name"
             </span>
-            <br><br>
-            <span class="textdetailsub">Created campaign :</span>
-            <span class="textdetaildata">0</span>
-            <br>
-            <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">0</span>
-            <br>
-            <span class="textdetailsub">Goodness points :</span>
-            <span class="textdetaildate">99999</span>
+            <a href="#"><button class="btn3">Rate now</button></a>
         </div>
+        
 
-        <div class="extradetail">
-            <a href="./create.php"><button class="btn2">Create Campaign</button></a>
-            <a href="./view.php"><button class="btn2">Search Campaign</button></a>
-            <a href="#"><button class="btn2">My History</button></a>
-            <a href="./rate.php"><button class="btn2">Rate Campaign</button></a>
-        </div>
     </div>
 
 
@@ -61,7 +54,6 @@
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>
-        </div>
     </div>
 </body>
 

@@ -27,7 +27,7 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="./pic/profilepic.jpg">
+            <img id="profilepic" src="./pic//profile/adminpic.jpg">
             <br>
             <span class="textdetailhead">
                 <?php

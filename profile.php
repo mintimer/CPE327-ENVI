@@ -35,7 +35,7 @@
             <br>
             <span class="textdetailhead">
                 <?php
-                    echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
+                    echo $_SESSION['firstname'].' '.$_SESSION['lastname'];
                 ?>
             </span>
             <br><br>
@@ -46,7 +46,10 @@
             <span class="textdetaildata">0</span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
-            <span class="textdetaildate">99999</span>
+            <span class="textdetaildate">
+            <?php
+                echo $_SESSION['goodness_point'];
+            ?></span>
         </div>
 
         <div class="extradetail">

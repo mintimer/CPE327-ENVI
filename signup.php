@@ -11,31 +11,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./css/login1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Sign Up</title>
-
     <script>
         // Function to check Whether both passwords 
         // is same or not. 
+        window.onload = "";
+        var success = [0,0,0,0,0];
         function checkPassword(form) {
             password1 = form.password.value;
             password2 = form.rpassword.value;
-
+            success[4] = success[0]+success[1]+success[2]+success[3];
             // If password not entered 
             if (password1 == '')
                 alert("Please enter Password");
-
             // If confirm password not entered 
             else if (password2 == '')
                 alert("Please enter confirm password");
-
             // If Not same return False.     
-            else if (password1 != password2) {
-                alert("\nPassword did not match. Please try again.")
+            else if (success[4] != 4) {
+                alert("\nInvalid input. Please try again.")
                 return false;
             }
-
+            //else if (success == 0)
+                //alert("\nInvalid input. Please try again.")
+                //return false;
             // If same return True. 
             else {
-                alert("Password Match: Welcome to ENVI")
+                alert("Welcome to ENVI ")
                 return true;
             }
         }
@@ -54,24 +55,61 @@
                 <span class="text-head">ENVI </span>now
                 <p class="text-p">Create an account to make the great campaign.</p>
             </div>
-            <form action="#" id="login-form" onSubmit="return checkPassword(this)" method="post">
+            <p class="text-p" style="color:red"><?php
+                session_start();
+                if(isset($_SESSION['ext'])){
+                    if($_SESSION['ext'] == 1)
+                        echo "username already used";
+                    else if($_SESSION['ext'] == 2)
+                        echo "email already used";
+                    else if($_SESSION['ext'] == 3)
+                        echo "username email already used";   
+                    else if($_SESSION['ext'] == 20)
+                        echo "Image file is not support";  
+                    session_destroy();
+                } 
+            ?></p>
+            <form action="./checkexist.php" enctype="multipart/form-data" id="login-form" onSubmit="return checkPassword(this)" method="post">
                 <div class="form-group">
-                    <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Email address" required>
+                    <input type="text" name="username" class="form-control" autocomplete="off" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <input onChange="password_check()" type="password" name="password" id="password" class="form-control" placeholder="Password" value='<?php if (isset($_POST['password'])) echo $_POST['password']; ?>' required>
+                    <input onChange="email_check()" type="text" name="email" id="email" class="form-control" autocomplete="off" placeholder="Email address" required>
+                </div>
+                <p style="color:red" id='ermsg_email'></p>
+                <script>
+                    function email_check(){
+                        var em = document.getElementById('email').value;
+                        var n = em.includes("@") && em.includes(".");
+                        if(!n){
+                            document.getElementById('ermsg_email').innerHTML = 'Invalid email.';
+                            success[0] = 0;
+                        }
+                        else {
+                            document.getElementById('ermsg_email').innerHTML = '';
+                            success[0] = 1;    
+                        }
+                    }
+                </script>
+                <div class="form-group">
+                    <input onChange="password_check()" type="password" name="password" id="password" class="form-control" placeholder="Password" required>
                 </div>
                 <div class="form-group">
-                    <input onChange="password_check()" type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Confirm password" value='<?php if (isset($_POST['rpassword'])) echo $_POST['rpassword']; ?>' required>
+                    <input onChange="password_check()" type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Confirm password" required>
                 </div>
                 <p style="color:red" id="ermsg_password"></p>
                 <script>
                     function password_check(){
-                        var x = document.getElementById('password').value;
-                        var y = document.getElementById('rpassword').value;
-                        if(x!=y)
+                        var pw = document.getElementById('password').value;
+                        var rpw = document.getElementById('rpassword').value;
+                        if(pw!=rpw){
                             document.getElementById('ermsg_password').innerHTML = 'Password does not match.';
-                        else document.getElementById('ermsg_password').innerHTML = '';
+                            success[1] = 0;
+                        }
+                        else {
+                            document.getElementById('ermsg_password').innerHTML = '';
+                            success[1] = 1;
+                        }
                     }
                 </script>
                 <div class="form-group">
@@ -81,18 +119,47 @@
                     <input type="text" name="lastname" class="form-control" autocomplete="off" placeholder="Last name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone_no" class="form-control" autocomplete="off" placeholder="Phone number" required>
+                    <input onChange="phone_check()" id="phone" type="text" name="phone_no" class="form-control" autocomplete="off" placeholder="Phone number"  required>
                 </div>
+                <p style="color:red" id="ermsg_phone"></p>
+                <script>
+                    function phone_check(){
+                        var phno = document.getElementById('phone').value;
+                        if(isNaN(phno)){
+                            document.getElementById('ermsg_phone').innerHTML = 'Invalid Phone NO.';
+                            success[2] = 0;
+                        }
+                        else {
+                            document.getElementById('ermsg_phone').innerHTML = '';
+                            success[2] = 1;
+                        }
+                    }
+                </script>
                 <div class="form-group">
                 <span style="position : absolute; margin: auto; padding: 10px; padding-left:120px;" >Date of birth</span>
-                    <input type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
+                    <input onChange="dob_check()" id="dob" type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
                 </div>
+                <p style="color:red" id="ermsg_dob"></p>
+                <script>
+                    function dob_check(){
+                        var dobir = new Date(document.getElementById('dob').value);
+                        var today = new Date();
+                        if(dobir>today){
+                            document.getElementById('ermsg_dob').innerHTML = 'Please select valid date';
+                            success[3] = 0;
+                        }
+                        else {
+                            document.getElementById('ermsg_dob').innerHTML = '';
+                            success[3] = 1;
+                        }
+                    }
+                </script>
                 <div class="form-group">
                     <span class="text">Upload Profile picture (optional)</span>
-                    <input type="file" name="profilepic" class="form-control-file">
+                    <input type="file" name="profilepic" id="profilepic" class="form-control-file">
                 </div>
                 <br>
-                <input type="submit" value=" SIGN UP " id="submit" class="btn">
+                <input type="submit" name="submit" value=" SIGN UP " id="submit" class="btn">
                 <p class="text-p">Already have an account? <a href="./login.php">Login</a></p>
                 <br>
                 <p class="text-p-2">By clicking on Sign up, you agree to ENVI's Terms and Conditions of Use.<br> To learn more about how ENVI collects, uses, shares and protects your personal data please read ENVI's Privacy Policy. </p>
@@ -108,5 +175,4 @@
         </div>
     </div>
 </body>
-
 </html>

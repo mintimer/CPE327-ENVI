@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 06:00 PM
+-- Generation Time: Nov 26, 2019 at 09:09 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -111,15 +111,17 @@ CREATE TABLE `userinfo` (
   `dob` date NOT NULL,
   `disease` text COLLATE utf8_unicode_ci,
   `allergic_food` text COLLATE utf8_unicode_ci,
-  `banned` int(11) NOT NULL DEFAULT '0'
+  `banned` int(11) NOT NULL DEFAULT '0',
+  `picture_path` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `userinfo`
 --
 
-INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastname`, `goodness_point`, `phone_no`, `email`, `dob`, `disease`, `allergic_food`, `banned`) VALUES
-(1, 'admin', '1234', 'adminja', 'eiei', 0, '0851957830', 'admin@envi.org', '1998-08-21', NULL, NULL, 0);
+INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastname`, `goodness_point`, `phone_no`, `email`, `dob`, `disease`, `allergic_food`, `banned`, `picture_path`) VALUES
+(1, 'admin', '1234', 'Prayad', 'Janjao', 9999, '0851957830', 'admin@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/adminpic.jpg'),
+(3, 'mint', '1234', 'Settapong', 'Subkong', 100, '0851957830', 'mint@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/mint.jpg');
 
 -- --------------------------------------------------------
 
@@ -215,7 +217,7 @@ ALTER TABLE `reportinfo`
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

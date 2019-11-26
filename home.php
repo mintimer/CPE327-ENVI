@@ -7,8 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home1.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/home1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Envi</title>
 </head>
 
@@ -18,7 +18,7 @@
             <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./home.php">Become a member</a></span>
+            <span id="text"><a href="./profileadmin.php">Become a member</a></span>
             <span id="text"><a href="./signup.php">Sign up</a></span>
             <a href="login.php"><button class="btn1">Login</button></a>
         </div>

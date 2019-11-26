@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,28 +30,20 @@
             <img id="profilepic" src="./pic/profilepic.jpg">
             <br>
             <span class="textdetailhead">
-                <?php
-                    session_start();
-                    echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
-                ?>
+                MANNAJAE JAEJAEJAE
+                <!-- <?php
+                session_start();
+                echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
+                ?> -->
             </span>
             <br><br>
-            <span class="textdetailsub">Created campaign :</span>
-            <span class="textdetaildata">0</span>
-            <br>
-            <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">0</span>
-            <br>
-            <span class="textdetailsub">Goodness points :</span>
-            <span class="textdetaildate">99999</span>
+            <span class="textdetailsub">Administrator Mode</span>
         </div>
 
         <div class="extradetail">
-            <a href="./create.php"><button class="btn2">Create Campaign</button></a>
-            <a href="./view.php"><button class="btn2">Search Campaign</button></a>
-            <a href="#"><button class="btn2">My History</button></a>
-            <a href="#"><button class="btn2">Rate Campaign</button></a>
-            <a href="./report.php"><button class="btn2">Report trouble</button></a>
+            <a href="#"><button class="btn3">Approve Campaign</button></a>
+            <a href="#"><button class="btn3">User Control</button></a>
+            <a href="#"><button class="btn3">Campaign Control</button></a>
         </div>
     </div>
 

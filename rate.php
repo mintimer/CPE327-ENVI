@@ -36,15 +36,16 @@
             </span><br><br>
         </div>
         
+        <!-- loop for -->
         <div class="box1">
         <span class="textdetailsub">
-               "Campaign Name"
+               //Campaign Name
             </span>
-            <a href="#"><button class="btn3">Rate now</button></a>
+            <button class="btn3">Rate now</button>
         </div>
-        
-
     </div>
+
+    
 
 
 

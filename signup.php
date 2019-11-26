@@ -78,8 +78,8 @@
                     <input type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
                 </div>
                 <div class="form-group">
-                    <span class="text">Upload Profile picture</span>
-                    <input type="file" name="profilepic" class="form-control-file" required>
+                    <span class="text">Upload Profile picture (optional)</span>
+                    <input type="file" name="profilepic" class="form-control-file">
                 </div>
                 <br>
                 <input type="submit" value=" SIGN UP " id="submit" class="btn">

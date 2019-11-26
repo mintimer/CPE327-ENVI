@@ -21,7 +21,7 @@
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
             <span id="text"><a href="./profile.php">My profile</a></span>
-            <a href="./home.php"><button class="btn1">Sign out</button></a>
+            <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
 

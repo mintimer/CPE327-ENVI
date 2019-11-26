@@ -1,40 +1,38 @@
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 600px;
-    background-color: #555;
-    color: #fff;
+.textjoin {
+    font-size: 80px;
+}
+
+.textcom {
+    font-size: 80px;
+    color:#01BF92 ;
+}
+
+.textenj {
+    font-size: 60px;
+}
+
+.contain3 {
+    margin: auto;
+    padding-top: 2%;
+    max-width: 80%;
+    align-items: center;
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+    vertical-align: center;
+    /* background: #000; */
+    display: flex;
+}
+
+.boxjoin {
+    position: relative;
+    width: 1920px;
+    height: 950px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.piccor {
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+}

@@ -27,19 +27,30 @@
     </div>
 
 
-    <div class="contain2">
-        <div class="popup" onclick="myFunction()">Click me!
-            <span class="popuptext" id="myPopup">Kuyyyyyyyyy</span>
+    <div class="contain3">
+        <div class="boxjoin">
+        <span class="textjoin" id="join">Joining</span> &nbsp;
+        <span class="textcom" id="complete">Completed ! </span>
+        <br>
+        <br>
+        <br>
+        <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
+        <br>
+        <br>
+        <br>
+        <span class="textenj" id="enjoy">Enjoy your trip</span>
+        <br>
+        <span class="textenj" id="good">Goodluck </span>
+
+        <br> <br>
+        <br><br> <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="./View.php"><spam id="back">Back to View page</span></a>
         </div>
     </div>
-
-    <script>
-    // When the user clicks on <div>, open the popup
-    function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-    }
-    </script>
 
 
     <div class="boxdown ">

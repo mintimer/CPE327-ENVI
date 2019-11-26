@@ -33,8 +33,8 @@
             <br>
 
                 <div class="nav-left2">
-                    <span class="text2" id="camrate">Status : </span>
-                    <span class="text5" id="camrate">Enable</span>
+                    <span class="text2" id="camstatus">Status : </span>
+                    <span class="text5" id="camstatus2">Enable</span>
                 </div>
                 <br>
                 <br>

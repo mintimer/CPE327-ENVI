@@ -82,7 +82,7 @@
                 <br>
                 <br>
                 <div class="nav-left2">
-                    <img class="pic4" id="picMap" src="./pic/map.png"></img>
+                    <img class="picMap" id="picMap" src="./pic/map.png"></img>
                 </div>
                 
                 
@@ -90,7 +90,10 @@
 
         <div class="boxview2">
             <span class="text3" id="Detail">Detail</span>
-            <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
+            
+            <div nav-bot>
+            <a href="./Join.php"><button class="btn2">Join us</button></a>
+        </div>
         </div>
     </div>
 

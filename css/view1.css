@@ -35,9 +35,9 @@
     position: relative ;
 }
 
-.pic4 {
-    width: 600px;
-    height: 180px;
+.picMap {
+    width: 750px;
+    height: 300px;
     padding: 5px;
 }
 .picdetail {
@@ -54,7 +54,7 @@
 }
 
 .text2 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .text3 {
@@ -102,7 +102,7 @@
 
 .nav-bot {
     position: absolute;
-    left: auto;
+    bottom: auto;
     padding-left: 5% ;
 }
 
@@ -120,7 +120,7 @@
 .boxview2 {
     position: relative;
     width: 1920px;
-    height: 800px;
+    height: 950px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
     background:#F9F9F9;
@@ -135,3 +135,5 @@
     font-size: 17px;
     background: #01BF92;
     margin: 5px;
+}
+

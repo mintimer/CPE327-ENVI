@@ -58,7 +58,7 @@
             
             <br>
             <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./Join.php"><button class="btn2">Join us</button></a>
+            <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
             </div>
             <br>
     </div>

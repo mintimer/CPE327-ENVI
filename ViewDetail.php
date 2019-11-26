@@ -25,13 +25,16 @@
         </div>
     </div>
 
+    <div class="contain2">
+        <div class="boxview2">
+            <span class="text3" id="camname">Plant with your Dady</span>
+        </div>
+        <div class="boxview2">
+            <span class="text3" id="camname">Detail</span>
+        </div>
+    </div>
 
 
-
-
-
-
-   <button onclick="goBack()" class="btn2">Back</button>
 
     <div class="boxdown ">
         <div class="nav-left ">

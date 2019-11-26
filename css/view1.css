@@ -42,6 +42,10 @@
     position: left;
 }
 
+.text3 {
+    font-size: 70px;
+}
+
 .contain {
     margin: auto;
     padding-top: 2%;
@@ -68,4 +72,25 @@
 .nav-left2 {
     position: absolute;
     left: auto;
+}
+
+.contain2 {
+    margin: auto;
+    padding-top: 2%;
+    max-width: 80%;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    /* background: #000; */
+    display: flex;
+}
+
+.boxview2 {
+    position: relative;
+    width: 800px;
+    height: 430px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background:#F9F9F9;
+    margin-right: 50px;
 }

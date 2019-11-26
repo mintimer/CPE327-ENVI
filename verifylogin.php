@@ -17,7 +17,9 @@
         $_SESSION['user_firstname'] = $userdata['firstname'];
         $_SESSION['user_lastname'] = $userdata['lastname'];
         $_SESSION['role'] = 'user';
-        header("Location: profile.php");
+        if($_SESSION['uid']==1)
+            header("Location: profileadmin.php");
+        else header("Location: profile.php");
     }else{
         echo "
         <script>

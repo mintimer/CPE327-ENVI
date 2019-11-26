@@ -30,6 +30,8 @@
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <br>
             <span class="text1">Sopon</span>
+            <br>
+            <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
         </div>
         <br>
         <div class="boxview">

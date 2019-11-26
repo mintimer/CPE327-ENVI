@@ -28,7 +28,6 @@
 
 
     <div class="contain3">
-        <div class="boxjoin">
         <span class="textjoin" id="join">Joining</span> &nbsp;
         <span class="textcom" id="complete">Completed ! </span>
         <br>
@@ -42,14 +41,15 @@
         <br>
         <span class="textenj" id="good">Goodluck </span>
 
-        <br> <br>
-        <br><br> <br>
         <br>
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        
         <a href="./View.php"><spam id="back">Back to View page</span></a>
-        </div>
     </div>
 
 

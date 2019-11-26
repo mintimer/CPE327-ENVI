@@ -27,21 +27,28 @@
     </div>
 
     <div class="contain3">
-        <div class="boxjoin">
         <span class="textjoin" id="join">Joining</span> &nbsp;
         <span class="textcom" id="complete">Compaign </span>
         <span class="textjoin" id="complete">Now !</span>
-
         <br>
         <br>
         <span class="textenj" id="select">Select your account</span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    
+    <div class="contain3">
+        <div class="boxaccount">
+            <a href="./join.php">
+                <div class="nav-left">
+                    <img style="width:35px" src="./pic/account.png">
+                    <span style="font-size:20px" id="account">Your Account</span>
+                </div>
+            </a>
         </div>
     </div>
-
-    <div class="boxaccount">
-        <img style="width : 40px,height : 40px" src="./pic/account.png">
-    </div>
-
 
     <div class="boxdown ">
         <div class="nav-left ">

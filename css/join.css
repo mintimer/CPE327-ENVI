@@ -12,26 +12,15 @@
     color: rgb(104, 104, 104);
 }
 
-.contain3 { 
+.contain3 {
     margin: auto;
     padding-top: 2%;
-    max-width: 80%;
+    max-width: 65%;
     align-items: center;
     text-align: center;
     vertical-align: center;
     /* background: #000; */
-    display: flex;
 }
-
-.boxjoin {
-    position: relative;
-    width: 1920px;
-    height: 950px;
-    border-bottom: 0.1mm solid #cccccc;
-    font-size: 17px;
-    margin: 5px;
-}
-
 .piccor {
     width: 200px;
     height: 200px;
@@ -39,17 +28,11 @@
 }
 
 .boxaccount {
-    position: absolute;
-    width: 270px;
-    height: 53px;
-    border-bottom: 0.1mm solid #cccccc;
-    font-size: 17px;
-    background: rgb(255, 255, 255);
-    margin: 5px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    margin: auto;
     border-radius: 10px;
     border: 0.15mm solid rgb(0, 0, 0);
-}
-
-.text11 {
-    font-size: 20px;
 }

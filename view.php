@@ -36,24 +36,24 @@
             <br>
             <br>
             <div class="nav-left2 ">
-                <img class="pic2" id="picRate" src="./pic/star.png"></img>
-                <span class="text2" id="camrate">Rate</span>
+                <img class="picicon" id="picRate" src="./pic/star.png"></img>
+                <span class="text6" id="camrate">Rate</span>
             </div>
             <br>
             <div class="nav-left2 ">
-                <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text2" id="camdate">Date</span>
+                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
+                <span class="text6" id="camdate">Date</span>
             </div>
             <br>
             <div class="nav-left2">
-                <img class="pic2" id="picLocation" src="./pic/location.png"></img>
-                <span class="text2" id="camlocation">Location</span>
+                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
+                <span class="text6" id="camlocation">Location</span>
             </div>
             
             <br>
             <div class="nav-left2">
-                <img class="pic2" id="picSize" src="./pic/people.png"></img>
-                <span class="text2" id="camsize">Size</span>
+                <img class="picicon" id="picSize" src="./pic/people.png"></img>
+                <span class="text6" id="camsize">Size</span>
             </div>
             
             <br>

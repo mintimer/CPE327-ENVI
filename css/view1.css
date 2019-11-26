@@ -34,6 +34,11 @@
     border-radius: 10px;
     position: relative ;
 }
+.picicon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
 
 .picMap {
     width: 750px;
@@ -69,6 +74,10 @@
 .text5 {
     font-size: 35px;
     color:rgb(151, 225, 228);
+}
+
+.text6 {
+    font-size: 20px;
 }
 
 .contain {

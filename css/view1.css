@@ -15,8 +15,8 @@
 }
 
 .pic {
-    width: 500px;
-    height: 800px;
+    width: 250px;
+    height: 150px;
     padding: 5px;
 }
 
@@ -46,6 +46,6 @@
     height: 300px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
-    background: white;
+    background: rgb(250, 130, 130);
     margin-right: 5px;
 }

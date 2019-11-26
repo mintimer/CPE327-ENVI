@@ -28,6 +28,7 @@
     <div class="contain">
         <div class="boxview">
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
+            <br>
             <span class="text1">Sopon</span>
         </div>
         <br>

@@ -30,19 +30,32 @@
             <div class="boxview">
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <br>
-            <span class="text1" id="camname">Name</span>
+            <div class="nav-left2 ">
+                <span class="text1" id="camname">Name</span>
+            </div>
             <br>
-            <img class="pic2" id="picRate" src="./pic/star.png"></img>
-            <span class="text2" id="camrate">Rate</span>
             <br>
-            <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
-            <span class="text2" id="camdate">Date</span>
+            <div class="nav-left2 ">
+                <img class="pic2" id="picRate" src="./pic/star.png"></img>
+                <span class="text2" id="camrate">Rate</span>
+            </div>
             <br>
-            <img class="pic2" id="picLocation" src="./pic/location.png"></img>
-            <span class="text2" id="camlocation">Location</span>
+            <div class="nav-left2 ">
+                <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
+                <span class="text2" id="camdate">Date</span>
+            </div>
             <br>
-            <img class="pic2" id="picSize" src="./pic/people.png"></img>
-            <span class="text2" id="camsize">Size</span>
+            <div class="nav-left2">
+                <img class="pic2" id="picLocation" src="./pic/location.png"></img>
+                <span class="text2" id="camlocation">Location</span>
+            </div>
+            
+            <br>
+            <div class="nav-left2">
+                <img class="pic2" id="picSize" src="./pic/people.png"></img>
+                <span class="text2" id="camsize">Size</span>
+            </div>
+            
             <br>
             <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
             <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
@@ -52,8 +65,6 @@
 
     <br>
     <br>
-
-
 
 
     <div class="boxdown ">

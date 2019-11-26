@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="box">
+<div class="box">
         <div class="nav-left">
             <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
@@ -26,7 +26,6 @@
         </div>
     </div>
 
-
     <div class="contain3">
         <div class="boxjoin">
         <span class="textjoin" id="join">Joining</span> &nbsp;
@@ -36,14 +35,11 @@
         <br>
         <br>
         <span class="textenj" id="select">Select your account</span>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        
         </div>
+    </div>
+
+    <div class="boxaccount">
+        <img style="width : 40px,height : 40px" src="./pic/account.png">
     </div>
 
 

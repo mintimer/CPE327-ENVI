@@ -31,7 +31,7 @@
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <br>
             <div class="nav-left2 ">
-                <span class="text1" id="camname">Name</span>
+                <span class="text1" id="camname">Name..............</span>
             </div>
             <br>
             <br>

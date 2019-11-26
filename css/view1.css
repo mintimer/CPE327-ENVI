@@ -15,10 +15,9 @@
 }
 
 .pic {
-    width: 300px;
-    height: 500px;
-    padding-bottom: 25px;
-    padding-right: 25px;
+    width: 500px;
+    height: 800px;
+    padding: 5px;
 }
 
 .extradetail {

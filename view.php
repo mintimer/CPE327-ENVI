@@ -27,6 +27,7 @@
 
     <div class="contain">
         <div class="boxview">
+            <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <span class="text1">Sopon</span>
         </div>
         <br>
@@ -38,6 +39,23 @@
             <span class="text1">Sopon</span>
         </div>
     </div>
+
+    <div class="contain">
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+        <br>
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+        <br>
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+    </div>
+    <br>
+    <br>
+
 
 
 

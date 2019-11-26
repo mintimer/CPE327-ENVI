@@ -92,10 +92,10 @@
 
         <div class="boxview2">
             <span class="text3" id="Detail">Detail</span>
-            
-            <div nav-bot>
-            <a href="./Join.php"><button class="btn2">Join us</button></a>
-        </div>
+            <br>
+            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
+            <br>
+            <button class="btn2" onclick="goBack()">Go Back</button>
         </div>
     </div>
 
@@ -126,6 +126,14 @@
             <span>2018 All Right Reserve</span>
         </div>
     </div>
+
+    
+<script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
 </body>
+
 
 </html>

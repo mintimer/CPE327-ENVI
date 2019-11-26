@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="box">
+<div class="box">
         <div class="nav-left">
             <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
@@ -26,31 +26,41 @@
         </div>
     </div>
 
-
     <div class="contain3">
         <span class="textjoin" id="join">Joining</span> &nbsp;
-        <span class="textcom" id="complete">Completed ! </span>
+        <span class="textcom" id="complete">Compaign </span>
+        <span class="textjoin" id="complete">Now !</span>
         <br>
         <br>
-        <br>
-        <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
-        <br>
-        <br>
-        <br>
-        <span class="textenj" id="enjoy">Enjoy your trip</span>
-        <br>
-        <span class="textenj" id="good">Goodluck </span>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <a href="./View.php"><spam id="back">Back to View page</span></a>
+        <span class="textenj" id="select">Select your account</span>
     </div>
+
+    <br>
+    
+    <div class="contain3">
+        <div class="boxaccount">
+            <a href="./join.php">
+                <div class="nav-left">
+                    <img style="width:35px" src="./pic/account.png">
+                    <span style="font-size:20px" id="account">Your Account</span>
+                </div>
+            </a>
+        </div>
+        <br>
+        <br>
+
+        <div class="line"></div>
+        or
+        <br>
+        <br>
+        <button onclick="goBack()">Cancle</button>
+    </div>
+
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
 
 
     <div class="boxdown ">

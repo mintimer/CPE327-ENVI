@@ -9,30 +9,40 @@
 
 .textenj {
     font-size: 60px;
+    color: rgb(104, 104, 104);
 }
 
 .contain3 {
     margin: auto;
-    padding-top: 2%;
-    max-width: 80%;
+    padding-top: 5%;
+    max-width: 65%;
     align-items: center;
     text-align: center;
     vertical-align: center;
     /* background: #000; */
-    display: flex;
 }
-
-.boxjoin {
-    position: relative;
-    width: 1920px;
-    height: 950px;
-    border-bottom: 0.1mm solid #cccccc;
-    font-size: 17px;
-    margin: 5px;
-}
-
 .piccor {
     width: 200px;
     height: 200px;
     padding: 5px;
+}
+
+.boxaccount {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    border-radius: 10px;
+    border: 0.15mm solid rgb(0, 0, 0);
+    display: flex;
+}
+
+.line {
+    position: absolute;
+    width: 500px;
+    height: 0px;
+    left: 300px;
+    top: 280px;
+    color: black;
 }

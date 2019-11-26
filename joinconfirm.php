@@ -36,8 +36,6 @@
     </div>
 
     <br>
-    <br>
-    <br>
     
     <div class="contain3">
         <div class="boxaccount">
@@ -48,7 +46,22 @@
                 </div>
             </a>
         </div>
+        <br>
+        <br>
+
+        <div class="line"></div>
+        or
+        <br>
+        <br>
+        <button onclick="goBack()">Cancle</button>
     </div>
+
+    <script>
+    function goBack() {
+    window.history.back();
+    }
+    </script>
+
 
     <div class="boxdown ">
         <div class="nav-left ">

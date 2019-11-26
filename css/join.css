@@ -9,9 +9,10 @@
 
 .textenj {
     font-size: 60px;
+    color: rgb(104, 104, 104);
 }
 
-.contain3 {
+.contain3 { 
     margin: auto;
     padding-top: 2%;
     max-width: 80%;
@@ -35,4 +36,27 @@
     width: 200px;
     height: 200px;
     padding: 5px;
+}
+
+.boxaccount {
+    position: absolute;
+    width: 270px;
+    height: 53px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    border: 0.15mm solid rgb(0, 0, 0);
+}
+
+.picaccount {
+    width: 40px;
+    height: 40px;
+    padding: 5%;
+    margin: 10%;
+}
+
+.text11 {
+    font-size: 20px;
 }

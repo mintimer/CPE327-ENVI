@@ -94,7 +94,7 @@
             <span class="text3" id="Detail">Detail</span>
             
             <div nav-bot>
-            <a href="./Join.php"><button class="btn2">Join us</button></a>
+            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
         </div>
         </div>
     </div>

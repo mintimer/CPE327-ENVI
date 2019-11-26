@@ -41,7 +41,7 @@
                 $target_file = $target_dir . basename($_POST['username'].".jpeg");
             if(strpos($_FILES["profilepic"]["name"],".gif") !== false)
                 $target_file = $target_dir . basename($_POST['username'].".gif");
-            $_SESSION['picpath'] =  $target_file;
+            $_SESSION['picpath'] =  "./".$target_file;
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             // Check if image file is a actual image or fake image

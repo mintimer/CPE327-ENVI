@@ -22,28 +22,32 @@
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
             <span id="text"><a href="./profile.php">My profile</a></span>
-            <a href="./home.php"><button class="btn1">Sign out</button></a>
+            <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="./pic/profilepic.jpg">
+            <img id="profilepic" src="
+            <?php
+                session_start();
+                echo $_SESSION['picpath'];
+            ?>
+            ">            
             <br>
             <span class="textdetailhead">
-                <?php
-                session_start();
+            <?php
                 echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
-                ?>
+            ?>
             </span>
             <br><br>
             <span class="textdetailsub">Administrator Mode</span>
         </div>
 
         <div class="extradetail">
-            <a href="#"><button class="btn3">Approve Campaign</button></a>
-            <a href="#"><button class="btn3">User Control</button></a>
-            <a href="#"><button class="btn3">Campaign Control</button></a>
-            <a href="#"><button class="btn3">View Report</button></a>
+            <a href="#"><button class="btn2">Approve Campaign</button></a>
+            <a href="#"><button class="btn2">User Control</button></a>
+            <a href="#"><button class="btn2">Campaign Control</button></a>
+            <a href="#"><button class="btn2">View Report</button></a>
         </div>
     </div>
 

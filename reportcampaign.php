@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/create1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <title>Create campaign</title>
+    <title>Report Campaign</title>
 </head>
 
 <body>
@@ -27,20 +27,12 @@
     <div class="contain">
         <div class="form-box">
             <div class="head">
-                <p class="texthead">Report trouble</p><br>
+                <p class="texthead">Report this campaign?</p><br>
             </div>
             <form action="#" id="create-form">
                 <div class="form-group">
-                    <span class="text">User</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <span class="text">Campaign</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <span class="text">Name</span>
-                    <input type="textarea" row="10" name="campaignname" class="form-control" autocomplete="off" placeholder="give us the name" required>
+                    <span class="text">Enter you name</span>
+                    <input type="textarea" row="10" name="campaignname" class="form-control" autocomplete="off" placeholder="" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Detail</span>

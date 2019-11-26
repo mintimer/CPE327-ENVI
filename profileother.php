@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,14 +43,11 @@
             <span class="textdetaildata">0</span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
-            <span class="textdetaildate">99999</span>
+            <span class="textdetaildate">-99999</span>
         </div>
 
         <div class="extradetail">
-            <a href="#"><button class="btn2">My Campaign</button></a>
-            <a href="./view.php"><button class="btn2">Search Campaign</button></a>
-            <a href="#"><button class="btn2">My History</button></a>
-            <a href="#"><button class="btn2">Rate Campaign</button></a>
+            <a href="./report.php"><button class="btn2">Report this user</button></a>
         </div>
     </div>
 

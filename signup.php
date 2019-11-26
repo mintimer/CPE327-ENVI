@@ -65,7 +65,17 @@
                     <input type="password" name="rpassword" id="rpassword" class="form-control" placeholder="Confirm password" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="email" class="form-control" autocomplete="off" placeholder="What should we call you?" required>
+                    <input type="text" name="firstname" class="form-control" autocomplete="off" placeholder="First name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lastname" class="form-control" autocomplete="off" placeholder="Last name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone_no" class="form-control" autocomplete="off" placeholder="Phone number" required>
+                </div>
+                <div class="form-group">
+                <span style="position : absolute; margin: auto; padding: 10px; padding-left:120px;" >Date of birth</span>
+                    <input type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
                 </div>
                 <br>
                 <input type="submit" value=" SIGN UP " id="submit" class="btn">

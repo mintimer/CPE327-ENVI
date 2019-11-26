@@ -30,11 +30,10 @@
             <img id="profilepic" src="./pic/profilepic.jpg">
             <br>
             <span class="textdetailhead">
-                MANNAJAE JAEJAEJAE
-                <!-- <?php
+                <?php
                 session_start();
                 echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
-                ?> -->
+                ?>
             </span>
             <br><br>
             <span class="textdetailsub">Administrator Mode</span>
@@ -44,6 +43,7 @@
             <a href="#"><button class="btn3">Approve Campaign</button></a>
             <a href="#"><button class="btn3">User Control</button></a>
             <a href="#"><button class="btn3">Campaign Control</button></a>
+            <a href="#"><button class="btn3">View Report</button></a>
         </div>
     </div>
 

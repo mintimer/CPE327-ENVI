@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/view1.css">
 
 </head>
@@ -25,9 +26,20 @@
         </div>
     </div>
 
-    <div class="popup" onclick="myFunction()">Click me!
-  <span class="popuptext" id="myPopup">Popup text...</span>
-</div>
+
+    <div class="contain2">
+        <div class="popup" onclick="myFunction()">Click me!
+            <span class="popuptext" id="myPopup">Kuyyyyyyyyy</span>
+        </div>
+    </div>
+
+    <script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    }
+    </script>
 
 
     <div class="boxdown ">

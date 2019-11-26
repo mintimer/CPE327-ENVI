@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/view1.css">
+    <link rel="stylesheet" href="./css/join.css">
 
 </head>
 
@@ -24,6 +25,7 @@
             <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
+
 
     <div class="contain2">
         <div class="boxview2">
@@ -114,7 +116,6 @@
     </div>
     <br>
     <br>
-
 
 
     <div class="boxdown ">

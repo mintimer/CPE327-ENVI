@@ -34,7 +34,7 @@
             <br>
             <span class="textdetailhead">
             <?php
-                echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
+                echo $_SESSION['firstname'].' '.$_SESSION['lastname'];
             ?>
             </span>
             <br><br>

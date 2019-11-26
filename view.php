@@ -25,25 +25,21 @@
         </div>
     </div>
 
-   <div class="extradetail">
-        <img class="pic" src="./pic/home-create.png">
-        <img class="pic" src="./pic/home-create.png">
-        <img class="pic" src="./pic/home-create.png">
-
-   </div>
-
-   <a href="./ViewDetail.html"><button class="btn2">Get Start Now</button></a>
-
-
-
-
-
-
-
+    <div class="contain">
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+        <br>
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+        <br>
+        <div class="boxview">
+            <span class="text1">Sopon</span>
+        </div>
+    </div>
 
 
-
-   <button onclick="goBack()" class="btn2">Back</button>
 
     <div class="boxdown ">
         <div class="nav-left ">

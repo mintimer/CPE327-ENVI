@@ -40,10 +40,10 @@
         </div>
 
         <div class="extradetail">
-            <a href="#"><button class="btn3">Approve Campaign</button></a>
-            <a href="#"><button class="btn3">User Control</button></a>
-            <a href="#"><button class="btn3">Campaign Control</button></a>
-            <a href="#"><button class="btn3">View Report</button></a>
+            <a href="#"><button class="btn2">Approve Campaign</button></a>
+            <a href="#"><button class="btn2">User Control</button></a>
+            <a href="#"><button class="btn2">Campaign Control</button></a>
+            <a href="#"><button class="btn2">View Report</button></a>
         </div>
     </div>
 

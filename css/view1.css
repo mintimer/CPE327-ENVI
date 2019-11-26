@@ -22,10 +22,26 @@
 }
 
 .pic2 {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
-    position: relative;
+}
+
+.pic3 {
+    width: 600px;
+    height: 450px;
+    padding: 5%;
+    border-radius: 10px;
+    position: relative ;
+}
+
+.pic4 {
+    width: 600px;
+    height: 180px;
+    padding: 5px;
+}
+.picdetail {
+    display: flex;
 }
 
 .extradetail {
@@ -38,12 +54,21 @@
 }
 
 .text2 {
-    font-size: 15px;
-    position: left;
+    font-size: 35px;
 }
 
 .text3 {
     font-size: 70px;
+}
+
+.text4 {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.text5 {
+    font-size: 35px;
+    color:rgb(151, 225, 228);
 }
 
 .contain {
@@ -72,12 +97,13 @@
 .nav-left2 {
     position: absolute;
     left: auto;
+    padding-left: 5% ;
 }
 
 .contain2 {
     margin: auto;
     padding-top: 2%;
-    max-width: 80%;
+    max-width: 90%;
     align-items: center;
     text-align: center;
     vertical-align: center;
@@ -87,10 +113,19 @@
 
 .boxview2 {
     position: relative;
-    width: 800px;
-    height: 430px;
+    width: 1920px;
+    height: 800px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
     background:#F9F9F9;
-    margin-right: 50px;
+    margin: 5px;
 }
+
+.boxpic {
+    position: absolute;
+    width: 1920;
+    height: 430px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background: #01BF92;
+    margin: 5px;

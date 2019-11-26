@@ -27,12 +27,88 @@
 
     <div class="contain2">
         <div class="boxview2">
-            <span class="text3" id="camname">Plant with your Dady</span>
+            <span class="text3" id="Name">Plant with your Dady GOGOGOGOGO</span>
+            <br>
+
+                <div class="nav-left2">
+                    <span class="text2" id="camrate">Status : </span>
+                    <span class="text5" id="camrate">Enable</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picRate" src="./pic/star.png"></img>
+                    <span class="text2" id="camrate">Rate</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
+                    <span class="text2" id="camdate">Date</span>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picClock" src="./pic/clock.png"></img>
+                    <span class="text2" id="camdate">Time</span>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picSize" src="./pic/people.png"></img>
+                    <span class="text2" id="camsize">Size</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picPhone" src="./pic/phone.png"></img>
+                    <span class="text2" id="camPhone">080-655-xxxx</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picCompany" src="./pic/company.png"></img>
+                    <span class="text2" id="camCompany">Thai Ku Pha</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic2" id="picLocation" src="./pic/location.png"></img>
+                    <span class="text2" id="camlocation">Location :</span>
+                    <span class="text2" id="camlocation">Thailand</span>
+                </div>
+                <br>
+                <br>
+                <div class="nav-left2">
+                    <img class="pic4" id="picMap" src="./pic/map.png"></img>
+                </div>
+                
+                
         </div>
+
         <div class="boxview2">
-            <span class="text3" id="camname">Detail</span>
+            <span class="text3" id="Detail">Detail</span>
+            <a href="./ViewDetail.php"><button class="btn2">Join us</button></a>
         </div>
     </div>
+
+    <div class="contain2">
+        <div class="boxpic">
+            <div class="nav-left2">
+                <span class="text4" id="PictureHead">Picture</span>
+            </div>
+            <br>
+        </div>
+        <div class="picdetail">
+            <img class="pic3" src="./pic/cam1.jpg">
+            <img class="pic3" src="./pic/cam2.jpg">
+            <img class="pic3" src="./pic/cam3.jpg">
+        </div>
+    </div>
+    <br>
+    <br>
 
 
 

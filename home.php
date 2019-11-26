@@ -18,7 +18,7 @@
             <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./profileadmin.php">Become a member</a></span>
+            <span id="text">Become a member</span>
             <span id="text"><a href="./signup.php">Sign up</a></span>
             <a href="login.php"><button class="btn1">Login</button></a>
         </div>
@@ -55,7 +55,7 @@
                 <span class="text2">in many</span>
                 <span class="text3">category</span><br><br>
             </div>
-            <a href="profile.php"><button class="btn2">Get Start Now</button></a>
+            <a href="signup.php"><button class="btn2">Get Start Now</button></a>
             <div class="extradetail">
                 <img class="picdetail" id="piccreate" src="./pic/home-create.png" onmouseover="showcreate()">
                 <img class="picdetail" id="picjoin" src="./pic/home-join.png" onmouseover="showjoin()">

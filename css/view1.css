@@ -100,6 +100,12 @@
     padding-left: 5% ;
 }
 
+.nav-bot {
+    position: absolute;
+    left: auto;
+    padding-left: 5% ;
+}
+
 .contain2 {
     margin: auto;
     padding-top: 2%;

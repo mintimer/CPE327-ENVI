@@ -29,7 +29,9 @@
             <img id="profilepic" src="
             <?php
                 session_start();
-                echo $_SESSION['picpath'];
+                if($_SESSION['picpath']==NULL)
+                    echo "./pic/profile/profilepic.png";
+                else echo $_SESSION['picpath'];
             ?>
             ">
             <br>

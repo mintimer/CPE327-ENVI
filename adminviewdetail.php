@@ -10,26 +10,16 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <?php
-        require 'connect.php';
-        $sql = "SELECT * FROM campaigninfo WHERE campaign_id = ".$_POST['uid'];
-        $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result);
-        $sqlname = "SELECT * FROM userinfo WHERE user_id = ".$row['user_id'];
-        $result2 = mysqli_query($con, $sqlname);
-        $user = mysqli_fetch_array($result2);
-        ?>
+
 </head>
 
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./view.php">Search campaign</a></span>
-            <span id="text"><a href="./create.php">Create campaign</a></span>
-            <span id="text"><a href="./profile.php">My profile</a></span>
+            <span id="text"><a href="./profileadmin.php">Main menu</a></span>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
@@ -37,31 +27,30 @@
 
     <div class="contain2">
         <div class="boxview2">
-            <span class="text-campaigndetailhead" id="Name"><?php echo $row['campaign_name']; ?></span>
+            <span class="text-campaigndetailhead" id="Name">Plant with your Dady GOGOGOGOGO</span>
             <br>
             <div class="campaigndetailtextbox">
                 <div class="nav-left2">
-                    <form action="./profileother.php" id="visit" method="post"></form>
                     <span class="text2" id="camstatus">Status : </span>
-                    <span class="text2" id="camstatus2"><?php 
-                    if($row['status'] == 1)
-                        echo 'Enable'; 
-                    ?></span>
+                    <span class="text2" id="camstatus2">Enable</span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
-                    <span class="text2"><button type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'].' '.$user['lastname']; ?></button></span>
+                    <span class="text2"><a href="./profileother.php">Name with link</a></span>
+                    <br>
+                    <span class="text2" id="camPhone">Category : </span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br><br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">Start date : </span>
-                    <span class="text2" id="camstatus2"><?php echo $row['start_time']; ?></span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">End date : </span>
-                    <span class="text2" id="camstatus2"><?php echo $row['end_time']; ?></span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br>
                     <img class="pic2" id="picSize" src="./pic/people.png"></img>
                     <span class="text2" id="camsize">Size : </span>
-                    <span class="text2" id="camstatus2"><?php echo $row['amount_people']; ?></span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br>
                     <img class="pic2" id="picCompany" src="./pic/company.png"></img>
                     <span class="text2" id="camCompany">Location</span>
@@ -87,7 +76,9 @@
                         <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
                 </div>
             </div>
-            <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>
+            <a href="#"><button class="btn4">Approve</button></a>
+            <br>
+            <a href="#"><button class="btn5">Suspend</button></a>
             <br>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

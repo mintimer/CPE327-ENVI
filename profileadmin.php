@@ -16,12 +16,12 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./view.php">Search campaign</a></span>
+            <!-- <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
-            <span id="text"><a href="./profile.php">My profile</a></span>
+            <span id="text"><a href="./profile.php">My profile</a></span> -->
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>

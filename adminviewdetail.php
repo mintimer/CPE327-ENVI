@@ -16,9 +16,10 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
+            <span id="text"><a href="./profileadmin.php">Main menu</a></span>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
@@ -75,9 +76,9 @@
                         <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
                 </div>
             </div>
-            <a href="#"><button class="btn3">Approve</button></a>
+            <a href="#"><button class="btn4">Approve</button></a>
             <br>
-            <a href="#"><button class="btn3">Suspend</button></a>
+            <a href="#"><button class="btn5">Suspend</button></a>
             <br>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

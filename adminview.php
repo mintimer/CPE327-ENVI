@@ -18,6 +18,7 @@
             <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
+        <span id="text"><a href="./profileadmin.php">Main menu</a></span>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>

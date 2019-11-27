@@ -11,14 +11,14 @@
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
-        require 'connect.php';
-        $sql = "SELECT * FROM campaigninfo WHERE campaign_id = ".$_POST['uid'];
-        $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result);
-        $sqlname = "SELECT * FROM userinfo WHERE user_id = ".$row['user_id'];
-        $result2 = mysqli_query($con, $sqlname);
-        $user = mysqli_fetch_array($result2);
-        ?>
+    require 'connect.php';
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['uid'];
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($result);
+    $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
+    $result2 = mysqli_query($con, $sqlname);
+    $user = mysqli_fetch_array($result2);
+    ?>
 </head>
 
 <body>
@@ -43,13 +43,13 @@
                 <div class="nav-left2">
                     <form action="./profileother.php" id="visit" method="post"></form>
                     <span class="text2" id="camstatus">Status : </span>
-                    <span class="text2" id="camstatus2"><?php 
-                    if($row['status'] == 1)
-                        echo 'Enable'; 
-                    ?></span>
+                    <span class="text2" id="camstatus2"><?php
+                                                        if ($row['status'] == 1)
+                                                            echo 'Enable';
+                                                        ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
-                    <span class="text2"><button type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'].' '.$user['lastname']; ?></button></span>
+                    <span class="text2"><button type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></button></span>
                     <br><br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">Start date : </span>
@@ -84,7 +84,7 @@
             <br>
             <div class="campaigndetailtextbox">
                 <div class="picpreviewcontrol">
-                        <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
+                    <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
                 </div>
             </div>
             <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>

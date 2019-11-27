@@ -57,8 +57,7 @@
         <div class="extradetail">
             <a href="./create.php"><button class="btn2">Create Campaign</button></a>
             <a href="./view.php"><button class="btn2">Search Campaign</button></a>
-            <a href="#"><button class="btn2">My History</button></a>
-            <a href="./rate.php"><button class="btn2">Rate Campaign</button></a>
+            <a href="./history.php"><button class="btn2">My History</button></a>
         </div>
     </div>
 

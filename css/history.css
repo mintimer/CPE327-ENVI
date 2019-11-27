@@ -1,0 +1,51 @@
+.headbox {
+    width: 90%;
+    /* background: #000; */
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.btn6 {
+    margin: 5px;
+    border: none;
+    width: 30%;
+    height: 5%;
+    background: #01BF92;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+    transition: transform .2s;
+}
+
+.btn6:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    background: #00daa2;
+}
+
+.btn7 {
+    margin: 5px;
+    border: none;
+    width: 30%;
+    height: 5%;
+    background: white;
+    border: 0.5mm solid #01BF92;
+    border-radius: 30px;
+    color: #01906e;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+    transition: transform .2s;
+}
+
+.btn7:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    background: rgb(243, 251, 250);
+}

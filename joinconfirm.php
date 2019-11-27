@@ -53,7 +53,7 @@
         or
         <br>
         <br>
-        <button onclick="goBack()">Cancle</button>
+        <button onclick="goBack()">Cancel</button>
     </div>
 
     <script>

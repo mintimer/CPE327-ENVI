@@ -249,6 +249,19 @@
     transform: scale(1.1);
 }
 
+.btnnobtn {
+    border: none;
+    background: none;
+    border: none;
+    color: #01906e;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: left;
+    font-size: 20px;
+    transition: transform .2s;
+}
+
 .picMap {
     position: relative;
     width: 100%;

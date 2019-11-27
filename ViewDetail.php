@@ -49,7 +49,7 @@
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
-                    <span class="text2"><button type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></button></span>
+                    <span class="text2"><button class="btnnobtn" type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></button></span>
                     <br>
                     <span class="text2" id="camstatus">Category : </span>
                     <span class="text2" id="camstatus2"><?php

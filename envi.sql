@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2019 at 12:16 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Nov 27, 2019 at 05:33 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,18 +34,26 @@ CREATE TABLE `campaigninfo` (
   `campaign_type` tinyint(4) NOT NULL,
   `start_time` date NOT NULL,
   `end_time` date NOT NULL,
-  `lo_id` int(11) NOT NULL,
   `campaign_describe` text COLLATE utf8_unicode_ci NOT NULL,
   `manage_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `manage_authen` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `campaign_document` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `campaign_pic` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `manage_authen` text COLLATE utf8_unicode_ci,
+  `campaign_document` text COLLATE utf8_unicode_ci,
+  `campaign_pic` text COLLATE utf8_unicode_ci NOT NULL,
   `amount_people` int(11) NOT NULL,
-  `company_name` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `location` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   `user_id` int(11) NOT NULL,
-  `rating_avg` float NOT NULL
+  `lati` double NOT NULL,
+  `longti` double NOT NULL,
+  `rating_avg` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `campaigninfo`
+--
+
+INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `start_time`, `end_time`, `campaign_describe`, `manage_name`, `manage_authen`, `campaign_document`, `campaign_pic`, `amount_people`, `location`, `status`, `user_id`, `lati`, `longti`, `rating_avg`) VALUES
+(1, 'Push da payload', 1, '2019-12-27', '2019-12-27', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 0, 9, 35.14876876243253, 129.0537048847939, 0);
 
 -- --------------------------------------------------------
 
@@ -61,20 +69,8 @@ CREATE TABLE `guest_join` (
   `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `locationinfo`
---
-
-CREATE TABLE `locationinfo` (
-  `lo_id` int(11) NOT NULL,
-  `lat` double NOT NULL,
-  `lng` double NOT NULL
+  `disease` text COLLATE utf8_unicode_ci,
+  `allergic_food` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -90,7 +86,7 @@ CREATE TABLE `reportinfo` (
   `user_target_id` int(11) DEFAULT NULL,
   `isUserReport` int(11) NOT NULL,
   `report_detail` text COLLATE utf8_unicode_ci NOT NULL,
-  `report_doc` text COLLATE utf8_unicode_ci DEFAULT NULL
+  `report_doc` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -109,10 +105,10 @@ CREATE TABLE `userinfo` (
   `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `banned` int(11) NOT NULL DEFAULT 0,
-  `picture_path` text COLLATE utf8_unicode_ci DEFAULT NULL
+  `disease` text COLLATE utf8_unicode_ci,
+  `allergic_food` text COLLATE utf8_unicode_ci,
+  `banned` int(11) NOT NULL DEFAULT '0',
+  `picture_path` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -135,7 +131,7 @@ CREATE TABLE `user_join` (
   `user_id` int(11) NOT NULL,
   `campaign_id` int(11) NOT NULL,
   `rating_score` int(11) DEFAULT NULL,
-  `comment` text COLLATE utf8_unicode_ci DEFAULT NULL
+  `comment` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -147,7 +143,6 @@ CREATE TABLE `user_join` (
 --
 ALTER TABLE `campaigninfo`
   ADD PRIMARY KEY (`campaign_id`),
-  ADD KEY `lo_id` (`lo_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
@@ -157,12 +152,6 @@ ALTER TABLE `guest_join`
   ADD PRIMARY KEY (`guest_id`),
   ADD KEY `user_id` (`user_id`),
   ADD KEY `campaign_id` (`campaign_id`);
-
---
--- Indexes for table `locationinfo`
---
-ALTER TABLE `locationinfo`
-  ADD PRIMARY KEY (`lo_id`);
 
 --
 -- Indexes for table `reportinfo`
@@ -195,19 +184,13 @@ ALTER TABLE `user_join`
 -- AUTO_INCREMENT for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `guest_join`
 --
 ALTER TABLE `guest_join`
   MODIFY `guest_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `locationinfo`
---
-ALTER TABLE `locationinfo`
-  MODIFY `lo_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `reportinfo`
@@ -229,7 +212,6 @@ ALTER TABLE `userinfo`
 -- Constraints for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  ADD CONSTRAINT `campaigninfo_ibfk_1` FOREIGN KEY (`lo_id`) REFERENCES `locationinfo` (`lo_id`),
   ADD CONSTRAINT `campaigninfo_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`);
 
 --

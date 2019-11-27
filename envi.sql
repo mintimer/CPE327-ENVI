@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2019 at 05:33 PM
+-- Generation Time: Nov 27, 2019 at 07:47 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -53,7 +53,8 @@ CREATE TABLE `campaigninfo` (
 --
 
 INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `start_time`, `end_time`, `campaign_describe`, `manage_name`, `manage_authen`, `campaign_document`, `campaign_pic`, `amount_people`, `location`, `status`, `user_id`, `lati`, `longti`, `rating_avg`) VALUES
-(1, 'Push da payload', 1, '2019-12-27', '2019-12-27', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 0, 9, 35.14876876243253, 129.0537048847939, 0);
+(1, 'Push da payload', 3, '2019-12-27', '2019-12-31', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 1, 9, 35.14876876243253, 129.0537048847939, 0),
+(2, 'Plook Prayad', 1, '2019-12-28', '2019-12-31', 'Plook kun ter rao sao pai tum mai ya mua arai wa eiei zaza!!', 'Harn Bangmod', NULL, NULL, './pic/campaign/Plook Prayad.jpg', 44, 'Bang mod', 1, 3, 13.651032936218165, 100.49537658691406, 0);
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,7 @@ ALTER TABLE `user_join`
 -- AUTO_INCREMENT for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `guest_join`

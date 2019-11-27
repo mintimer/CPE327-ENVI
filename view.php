@@ -12,12 +12,11 @@
     <?php
         require 'connect.php';
         $sql = "SELECT * FROM campaigninfo WHERE status = 1";
-        $sqlcount = "SELECT COUNT(*) num FROM campaigninfo";
+        $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
         $result = mysqli_query($con, $sqlcount);
         $row = mysqli_fetch_array($result);
         $num = $row['num'];
         $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_array($result);
     ?>
 </head>
 
@@ -37,6 +36,7 @@
     <div class="contain">
         <?php
         for($x=0;$x<$num;$x++){
+            $row = mysqli_fetch_array($result);
             echo '<div class="boxview">
                 <img class="pic" id="pic" src="'.$row['campaign_pic'].'"><br>
                 <span class="text-campaignname" id="camname">'.$row['campaign_name'].'</span>

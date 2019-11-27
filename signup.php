@@ -59,13 +59,19 @@
                 session_start();
                 if(isset($_SESSION['ext'])){
                     if($_SESSION['ext'] == 1)
-                        echo "username already used";
+                        echo "Username already used";
                     else if($_SESSION['ext'] == 2)
-                        echo "email already used";
+                        echo "Email already used";
                     else if($_SESSION['ext'] == 3)
-                        echo "username email already used";   
+                        echo "Username and email already used";   
                     else if($_SESSION['ext'] == 20)
                         echo "Image file is not support";  
+                    else if($_SESSION['ext'] == 21)
+                        echo "Username already used and Image file is not support";  
+                    else if($_SESSION['ext'] == 22)
+                        echo "Email already used and Image file is not support";  
+                    else if($_SESSION['ext'] == 23)
+                        echo "Username and email already used and Image file is not support";  
                     session_destroy();
                 } 
             ?></p>

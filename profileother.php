@@ -11,6 +11,16 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Profile</title>
+    <?php
+        require 'connect.php';
+        $sql = "SELECT * FROM userinfo WHERE user_id = ".$_POST['visit'];
+        $result = mysqli_query($con, $sql);
+        $user = mysqli_fetch_array($result);
+
+        $sql = "SELECT COUNT(*) num FROM campaigninfo WHERE user_id = ".$user['user_id'];
+        $result = mysqli_query($con, $sql);
+        $countcreate = mysqli_fetch_array($result);
+    ?>
 </head>
 
 <body>
@@ -27,23 +37,22 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="./pic/profile/profilepic.png">
+            <img id="profilepic" src="<?php echo $user['picture_path']; ?>">
             <br>
             <span class="textdetailhead">
                 <?php
-                session_start();
-                echo $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname'];
+                echo $user['firstname'] . ' ' . $user['lastname'];
                 ?>
             </span>
             <br><br>
             <span class="textdetailsub">Created campaign :</span>
-            <span class="textdetaildata">1</span>
+            <span class="textdetaildata"><?php echo $countcreate['num'] ?></span>
             <br>
             <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">80</span>
+            <span class="textdetaildata">รอทำจอยก่อน</span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
-            <span class="textdetaildate">-99999</span>
+            <span class="textdetaildate"><?php echo $user['goodness_point'] ?></span>
         </div>
 
         <div class="extradetail">

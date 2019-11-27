@@ -19,9 +19,6 @@
             <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./view.php">Search campaign</a></span>
-            <span id="text"><a href="./create.php">Create campaign</a></span>
-            <span id="text"><a href="./profile.php">My profile</a></span>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
@@ -78,7 +75,9 @@
                         <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
                 </div>
             </div>
-            <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>
+            <a href="#"><button class="btn3">Approve</button></a>
+            <br>
+            <a href="#"><button class="btn3">Suspend</button></a>
             <br>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

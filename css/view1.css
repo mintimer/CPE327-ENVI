@@ -121,7 +121,7 @@
     /* background: #000; */
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
 }
 
 .boxview2 {
@@ -129,8 +129,8 @@
     position: relative;
     padding-top: 20px;
     border-radius: 15px;
+    height: 800px;
     width: 48%;
-    height: 700px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
     background: #F9F9F9;
@@ -160,8 +160,11 @@
 .picpreviewcontrol {
     margin: auto;
     /* background: black; */
+    align-items: center;
+    text-align: center;
     height: 290px;
     width: 100%;
+    /* padding: 10%; */
 }
 
 .pic2 {
@@ -172,9 +175,12 @@
 
 #pic3 {
     height: 250px;
+    width: 100%;
     border-radius: 10px;
-    margin: auto;
-    float: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: scale-down;
 }
 
 .btn3 {

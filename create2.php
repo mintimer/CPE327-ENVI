@@ -10,6 +10,25 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/create1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Create campaign</title>
+    <script>
+        // Function to check Whether both passwords 
+        // is same or not. 
+        window.onload = "";
+        var success = [0,0];
+        function checkvalid(form) {
+            if (success[0] != 1) {
+                alert("\nInvalid date. Please try again.")
+                return false;
+            }
+            else if(success[1] != 1){
+                alert("\nPlease select loacation on gmaps.")
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -24,20 +43,51 @@
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
+    
     <div class="contain">
         <div class="form-box">
-            <form action="#" id="create2-form" enctype="multipart/form-data" method="post">
+            <p class="text-p" id="ermsg_file" style="color:red"></p>
+            <script>
+                function filemsg(){
+                    document.getElementById('ermsg_file').innerHTML = ''
+                }
+            </script>
+            <?php
+                session_start(); 
+                if(isset($_POST['category']))
+                    $_SESSION['campaign_type'] = $_POST['category']; 
+                if(isset($_SESSION['ext2'])){
+                    if(strpos($_SESSION['ext2'],'1')!==false)
+                        echo "<script>
+                                document.getElementById('ermsg_file').innerHTML = 'Already Use Campaign Name.'
+                            </script>";
+                    else if(strpos($_SESSION['ext2'],'3')!==false)
+                        echo "<script>
+                            document.getElementById('ermsg_file').innerHTML = 'picture file too large.'
+                        </script>";
+                    else if(strpos($_SESSION['ext2'],'2')!==false)
+                        echo "<script>
+                            document.getElementById('ermsg_file').innerHTML = 'picture file does not support.'
+                        </script>";
+                    unset($_SESSION["ext2"]);
+                } 
+            ?>
+            <form action="./checkcreate.php" id="create2-form" onSubmit="return checkvalid(this)" enctype="multipart/form-data" method="post">
                 <div class="form-group">
                     <span class="text">Campaign name</span>
-                    <input type="text" name="campaignname" class="form-control" autocomplete="off" placeholder="your campaign name" required>
+                    <input type="text" name="campaignname" class="form-control" placeholder="your campaign name" required>
+                </div>
+                <div class="form-group">
+                    <span class="text">Activity describe</span>
+                    <input type="text" name="detail" class="form-control" placeholder="campaign detail" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Start date</span>
-                    <input onChange="datecheck()" id="startdate" type="date" name="startdate" class="form-control" required>
+                    <input onChange="datecheck()" autocomplete="off" id="startdate" type="date" name="startdate" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <span class="text">End date</span>
-                    <input onChange="datecheck()" id="enddate" type="date" name="enddate" class="form-control" required>
+                    <input onChange="datecheck()" autocomplete="off" id="enddate" type="date" name="enddate" class="form-control" required>
                 </div>
                 <p style="color:red" id="ermsg_date"></p>
                 <script>
@@ -49,60 +99,49 @@
                         update.setDate(today.getDate() + 30);
                         if (((std - update) / (24 * 60 * 60 * 1000)) < -1) {
                             document.getElementById('ermsg_date').innerHTML = 'Start-Date should be at least 30 days from today (' + update.toDateString() + ')';
+                            success[0] = 0;
                         } else if (std > end) {
                             document.getElementById('ermsg_date').innerHTML = 'Start-Date > End-Date!! ( Should be after on ' + std.toDateString() + ' )';
+                            success[0] = 0;
                         } else {
                             document.getElementById('ermsg_date').innerHTML = '';
+                            success[0] = 1;
                         }
                     }
                 </script>
                 <div class="form-group">
                     <span class="text">Choose your location</span>
                     <div class="form-control" id="map"></div>
-                    <input type="text" id="lat" name="latitude" class="form-control" placeholder="latitude" value="" required hidden>
-                    <input type="text" id="long" name="latitude" class="form-control" placeholder="longtitude" value="" required hidden>
+                    <input type="text" id="lat" autocomplete="off" name="latitude" class="form-control" placeholder="latitude" value="" required hidden>
+                    <input type="text" id="long" autocomplete="off" name="longtitude" class="form-control" placeholder="longtitude" value="" required hidden>
+                    <p style="color:red" id="ermsg_map"></p>
                 </div>
-                <p style="color:red" id="ermsg_map"></p>
                 <script>
                     function checkmark(){
-                        if(document.getElementById('lat').value=="")
+                        if(document.getElementById('lat').value==""){
                             document.getElementById('ermsg_map').innerHTML = "Please choose location.";
+                            success[1]=0;
+                        } else {
+                            success[1]=1;
+                        }
                     }
                 </script>
                 <div class="form-group">
-                    <span class="text">Activity describe</span>
-                    <input type="text" name="detail" class="form-control" placeholder="campaign detail" required>
+                    <span class="text">Location name</span>
+                    <input type="text" name="location" class="form-control" placeholder="location name" required>
                 </div>
                 <div class="form-group">
                     <span class="text">Manager name</span>
                     <input type="text" name="manager" class="form-control" placeholder="manager name" required>
                 </div>
                 <div class="form-group">
-                    <span class="text">Authen document</span>
-                    <input type="file" name="authendocument" id="authendocument" class="form-control-file" required>
-                </div>
-                <div class="form-group">
                     <span class="text">Promote picture</span>
-                    <input type="file" name="promotepicture" id="promotepicture" class="form-control-file" required>
+                    <input type="file" onChange="filemsg()" name="promotepicture" id="promotepicture" class="form-control-file" required>
                 </div>
-                <p style="color:red"><?php
-                    if(isset($_SESSION['ext'])){
-                        if($_SESSION['ext']==1)
-                            echo "Authen file does not support.";
-                        else if($_SESSION['ext']==2)
-                            echo "Picture file does not support.";
-                        else if($_SESSION['ext']==3)
-                            echo "Authen and picture file does not support.";
-                        $_SESSION['ext']=0;
-                    }
-                ?></p>
                 <div class="form-group">
                     <span class="text">Amount of people</span>
                     <input type="number" min="10" max="1000" name="amount" class="form-control" placeholder="how many people" required>
-                </div>
-                <div class="form-group">
-                    <span class="text">Company name</span>
-                    <input type="text" name="company" class="form-control" placeholder="company name" required>
+                    <!-- <p style="color:orange">less than 8 MB.</p> -->
                 </div>
                 <input type="submit" onClick="checkmark()" name="submit" id="submit" value="Submit" class="btn">
             </form>

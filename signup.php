@@ -31,9 +31,6 @@
                 alert("\nInvalid input. Please try again.")
                 return false;
             }
-            //else if (success == 0)
-                //alert("\nInvalid input. Please try again.")
-                //return false;
             // If same return True. 
             else {
                 alert("Welcome to ENVI ")

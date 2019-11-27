@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2019 at 09:46 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Nov 27, 2019 at 12:16 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -37,12 +37,12 @@ CREATE TABLE `campaigninfo` (
   `lo_id` int(11) NOT NULL,
   `campaign_describe` text COLLATE utf8_unicode_ci NOT NULL,
   `manage_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `manage_authen` text COLLATE utf8_unicode_ci,
-  `campaign_document` text COLLATE utf8_unicode_ci,
-  `campaign_pic` text COLLATE utf8_unicode_ci,
+  `manage_authen` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `campaign_document` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `campaign_pic` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `amount_people` int(11) NOT NULL,
   `company_name` varchar(80) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT 0,
   `user_id` int(11) NOT NULL,
   `rating_avg` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -61,8 +61,8 @@ CREATE TABLE `guest_join` (
   `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci,
-  `allergic_food` text COLLATE utf8_unicode_ci
+  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -90,7 +90,7 @@ CREATE TABLE `reportinfo` (
   `user_target_id` int(11) DEFAULT NULL,
   `isUserReport` int(11) NOT NULL,
   `report_detail` text COLLATE utf8_unicode_ci NOT NULL,
-  `report_doc` text COLLATE utf8_unicode_ci
+  `report_doc` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -109,10 +109,10 @@ CREATE TABLE `userinfo` (
   `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci,
-  `allergic_food` text COLLATE utf8_unicode_ci,
-  `banned` int(11) NOT NULL DEFAULT '0',
-  `picture_path` text COLLATE utf8_unicode_ci
+  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `banned` int(11) NOT NULL DEFAULT 0,
+  `picture_path` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -122,7 +122,8 @@ CREATE TABLE `userinfo` (
 INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastname`, `goodness_point`, `phone_no`, `email`, `dob`, `disease`, `allergic_food`, `banned`, `picture_path`) VALUES
 (1, 'admin', '1234', 'Prayad', 'Janjao', 9999, '0851957830', 'admin@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/adminpic.jpg'),
 (3, 'mint', '1234', 'Settapong', 'Subkong', 100, '0851957830', 'mint@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/mint.jpg'),
-(5, 'test', '1150', 'Test', 'Unknown', 100, '191', 'test@test.test', '1982-06-11', NULL, NULL, 0, '');
+(5, 'test', '1150', 'Test', 'Unknown', 100, '191', 'test@test.test', '1982-06-11', NULL, NULL, 0, ''),
+(9, 'man', '1234', 'Prakasit', 'Nuchkamnerd', 100, '191', 'man@hotmail.com', '1998-09-20', NULL, NULL, 0, './pic/profile/man.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +135,7 @@ CREATE TABLE `user_join` (
   `user_id` int(11) NOT NULL,
   `campaign_id` int(11) NOT NULL,
   `rating_score` int(11) DEFAULT NULL,
-  `comment` text COLLATE utf8_unicode_ci
+  `comment` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -218,7 +219,7 @@ ALTER TABLE `reportinfo`
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

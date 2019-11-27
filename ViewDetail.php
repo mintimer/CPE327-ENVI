@@ -50,7 +50,6 @@
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
                     <span class="text2"><button type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></button></span>
-<<<<<<< HEAD
                     <br>
                     <span class="text2" id="camstatus">Category : </span>
                     <span class="text2" id="camstatus2"><?php
@@ -63,8 +62,6 @@
                                                         else if ($row['campaign_type'] == 4)
                                                             echo 'Other';
                                                         ?></span>
-=======
->>>>>>> 6421a22a779914d8a82d4548388dd77cf41ab950
                     <br><br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">Start date : </span>
@@ -98,11 +95,7 @@
             <br>
             <div class="campaigndetailtextbox">
                 <div class="picpreviewcontrol">
-<<<<<<< HEAD
                     <span><img class="pic3" id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
-=======
-                    <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
->>>>>>> 6421a22a779914d8a82d4548388dd77cf41ab950
                 </div>
             </div>
             <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>

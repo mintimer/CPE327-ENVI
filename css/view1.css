@@ -1,3 +1,17 @@
+.contain {
+    margin: auto;
+    padding-top: 2%;
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    /* background: #000; */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+
 .btn2 {
     margin: 10px;
     border: none;
@@ -12,13 +26,37 @@
     overflow: hidden;
     align-items: center;
     font-size: 20px;
-
 }
 
-.pic {
+.boxview {
+    position: relative;
     width: 350px;
-    height: 200px;
-    padding: 5%;
+    margin: auto;
+    /* margin-left: 2%; */
+    margin-bottom: 2%;
+    height: 420px;
+    border-bottom: 0.1mm solid #cccccc;
+    font-size: 17px;
+    background: #F9F9F9;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgb(185, 185, 185);
+}
+
+#pic {
+    border-radius: 30px;
+    width: 250px;
+    height: 150px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.text-campaignname {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-campaignsub {
+    font-size: 20px;
 }
 
 .pic2 {
@@ -32,8 +70,9 @@
     height: 450px;
     padding: 5%;
     border-radius: 10px;
-    position: relative ;
+    position: relative;
 }
+
 .picicon {
     width: 30px;
     height: 30px;
@@ -45,6 +84,7 @@
     height: 300px;
     padding: 5px;
 }
+
 .picdetail {
     display: flex;
 }
@@ -52,10 +92,6 @@
 .extradetail {
     padding-top: 5%;
     padding-bottom: 5%;
-}
-
-.text1 {
-    font-size: 30px;
 }
 
 .text2 {
@@ -73,46 +109,19 @@
 
 .text5 {
     font-size: 35px;
-    color:rgb(151, 225, 228);
-}
-
-.text6 {
-    font-size: 20px;
-}
-
-.contain {
-    margin: auto;
-    padding-top: 2%;
-    max-width: 80%;
-    align-items: center;
-    text-align: center;
-    vertical-align: center;
-    /* background: #000; */
-    display: flex;
-}
-
-.boxview {
-    position: relative;
-    width: 500px;
-    height: 430px;
-    border-bottom: 0.1mm solid #cccccc;
-    font-size: 17px;
-    background:#F9F9F9;
-    margin-right: 5px;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgb(185, 185, 185);
+    color: rgb(151, 225, 228);
 }
 
 .nav-left2 {
     position: absolute;
     left: auto;
-    padding-left: 5% ;
+    padding-left: 5%;
 }
 
 .nav-bot {
     position: absolute;
     bottom: auto;
-    padding-left: 5% ;
+    padding-left: 5%;
 }
 
 .contain2 {
@@ -132,7 +141,7 @@
     height: 950px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
-    background:#F9F9F9;
+    background: #F9F9F9;
     margin: 5px;
 }
 
@@ -145,4 +154,3 @@
     background: #01BF92;
     margin: 5px;
 }
-

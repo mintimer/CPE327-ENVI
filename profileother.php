@@ -31,8 +31,8 @@
             <br>
             <span class="textdetailhead">
                 <?php
-                    session_start();
-                    echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'];
+                session_start();
+                echo $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname'];
                 ?>
             </span>
             <br><br>
@@ -47,10 +47,11 @@
         </div>
 
         <div class="extradetail">
-            <a href="./report.php"><button class="btn2">Report this user</button></a>
+            <a href="#"><button class="btn2">Report this user</button></a>
+            <button onclick="goBack()" class="btn2">Back</button>
+
         </div>
     </div>
-
 
 
     <div class="boxdown ">
@@ -61,6 +62,12 @@
             <span>2018 All Right Reserve</span>
         </div>
     </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

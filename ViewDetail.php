@@ -7,16 +7,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/view1.css">
-    <link rel="stylesheet" href="./css/join.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="./home.html"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>
@@ -29,94 +29,62 @@
 
     <div class="contain2">
         <div class="boxview2">
-            <span class="text3" id="Name">Plant with your Dady GOGOGOGOGO</span>
+            <span class="text-campaigndetailhead" id="Name">Plant with your Dady GOGOGOGOGO</span>
             <br>
-
+            <div class="campaigndetailtextbox">
                 <div class="nav-left2">
                     <span class="text2" id="camstatus">Status : </span>
-                    <span class="text5" id="camstatus2">Enable</span>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
-                    <img class="pic2" id="picRate" src="./pic/star.png"></img>
-                    <span class="text2" id="camrate">Rate</span>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
+                    <span class="text2" id="camstatus2">Enable</span>
+                    <br>
+                    <span class="text2" id="camstatus">Create by : </span>
+                    <span class="text2"><a href="./profileother.php">Name with link</a></span>
+                    <br><br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
-                    <span class="text2" id="camdate">Date</span>
+                    <span class="text2" id="camdate">Start date : </span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
-                    <img class="pic2" id="picClock" src="./pic/clock.png"></img>
-                    <span class="text2" id="camdate">Time</span>
+                    <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
+                    <span class="text2" id="camdate">End date : </span>
+                    <span class="text2" id="camstatus2">Detail</span>
                     <br>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
                     <img class="pic2" id="picSize" src="./pic/people.png"></img>
-                    <span class="text2" id="camsize">Size</span>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
+                    <span class="text2" id="camsize">Size : </span>
+                    <span class="text2" id="camstatus2">Detail</span>
+                    <br>
                     <img class="pic2" id="picPhone" src="./pic/phone.png"></img>
-                    <span class="text2" id="camPhone">080-655-xxxx</span>
-                </div>
-                <br>
-                <br>
-                <div class="nav-left2">
+                    <span class="text2" id="camPhone">Phone : </span>
+                    <span class="text2" id="camstatus2">Detail</span>
+                    <br>
                     <img class="pic2" id="picCompany" src="./pic/company.png"></img>
-                    <span class="text2" id="camCompany">Thai Ku Pha</span>
+                    <span class="text2" id="camCompany">Location</span>
+                    <span class="text2" id="camstatus2">Detail</span>
                 </div>
-                <br>
-                <br>
-                <div class="nav-left2">
-                    <img class="pic2" id="picLocation" src="./pic/location.png"></img>
-                    <span class="text2" id="camlocation">Location :</span>
-                    <span class="text2" id="camlocation">Thailand</span>
+                <div class="locationcontrol">
+                    <span><img class="picMap" id="picMap" src="./pic/map.png"></img></span>
                 </div>
-                <br>
-                <br>
-                <div class="nav-left2">
-                    <img class="picMap" id="picMap" src="./pic/map.png"></img>
-                </div>
-                
-                
-        </div>
-
-        <div class="boxview2">
-            <span class="text3" id="Detail">Detail</span>
-            <br>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-            <br>
-            <button class="btn2" onclick="goBack()">Go Back</button>
-        </div>
-    </div>
-
-
-
-    <div class="contain2">
-        <div class="boxpic">
-            <div class="nav-left2">
-                <span class="text4" id="PictureHead">Picture</span>
             </div>
+        </div>
+        <div class="boxview2">
+            <span class="text-campaigndetailhead" id="Detail">Detail</span>
             <br>
+            <div class="campaigndetailtextbox">
+                <div class="nav-left3">
+                    <span class="text2" id="camstatus">detaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaail</span>
+                </div>
+            </div>
+            <span class="text-campaigndetailhead" id="Detail">Picture</span>
+            <br>
+            <div class="picpreviewcontrol">
+                <div class="nav-left2">
+                    <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
+                </div>
+            </div>
+            <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>
+            <br>
+            <button class="btn3" onclick="goBack()">Go Back</button>
         </div>
-        <div class="picdetail">
-            <img class="pic3" src="./pic/cam1.jpg">
-            <img class="pic3" src="./pic/cam2.jpg">
-            <img class="pic3" src="./pic/cam3.jpg">
-        </div>
-    </div>
-    <br>
-    <br>
 
+    </div>
 
     <div class="boxdown ">
         <div class="nav-left ">
@@ -127,11 +95,11 @@
         </div>
     </div>
 
-    
-<script>
-    function goBack() {
-    window.history.back();
-    }
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 

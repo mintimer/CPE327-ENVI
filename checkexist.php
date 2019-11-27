@@ -28,7 +28,7 @@ if ($_FILES["profilepic"]["name"] != NULL && (strpos($_FILES["profilepic"]["name
         $target_file = $target_dir . basename($_POST['username'] . ".jpeg");
     if (strpos($_FILES["profilepic"]["name"], ".gif") !== false)
         $target_file = $target_dir . basename($_POST['username'] . ".gif");
-    $_SESSION['picpath'] =  "./" . $target_file;
+    $_SESSION['picpath'] =  "./".$target_file;
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image
@@ -80,7 +80,6 @@ if ($_FILES["profilepic"]["name"] != NULL && (strpos($_FILES["profilepic"]["name
     $_SESSION['lastname'] = $_POST['lastname'];
     $_SESSION['phone_no'] = $_POST['phone_no'];
     $_SESSION['dob'] = $_POST['dob'];
-    $_SESSION['picpath'] = $_FILES["profilepic"]["name"];
 } else if ($_FILES["profilepic"]["name"] == NULL);
 else $_SESSION['ext'] = $_SESSION['ext'] + 20;
 

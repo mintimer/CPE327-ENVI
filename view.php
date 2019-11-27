@@ -27,7 +27,7 @@
 
     <div class="contain">
 
-            <div class="boxview">
+        <div class="boxview">
             <img class="pic" id="cam1" src="./pic/cam1.jpg">
             <br>
             <div class="nav-left2 ">
@@ -49,18 +49,18 @@
                 <img class="picicon" id="picLocation" src="./pic/location.png"></img>
                 <span class="text6" id="camlocation">Location</span>
             </div>
-            
+
             <br>
             <div class="nav-left2">
                 <img class="picicon" id="picSize" src="./pic/people.png"></img>
                 <span class="text6" id="camsize">Size</span>
             </div>
-            
+
             <br>
             <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
             <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-            </div>
-            <br>
+        </div>
+        <br>
     </div>
 
     <br>

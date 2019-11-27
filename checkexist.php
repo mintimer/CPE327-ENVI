@@ -92,4 +92,3 @@
             echo "<script> window.location.replace('signup.php'); </script>";
         else echo "<script> window.location.replace('uploadsignup.php'); </script>";
     }
-?>

@@ -30,27 +30,27 @@
                 <p class="texthead">Let's get start</p>
                 <p class="textsub">Choose your category</p>
             </div>
-            <form action="#" id="create-form">
+            <form action="./create2.php" id="create-form" method="post">
                 <div class="form-group">
                     <span class="text">Planting</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
+                    <input type="radio" name="category" id="category" class="form-control" value=1 required>
                 </div>
                 <div class="form-group">
                     <span class="text">Public cleaning</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
+                    <input type="radio" name="category" id="category" class="form-control" value=2 required>
                 </div>
                 <div class="form-group">
                     <span class="text">Volunteer</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
+                    <input type="radio" name="category" id="category" class="form-control" value=3 required>
                 </div>
                 <div class="form-group">
                     <span class="text">Others</span>
-                    <input type="radio" name="campaign category" class="form-control" required>
+                    <input type="radio" name="category" id="category"class="form-control" value=4 required>
                 </div>
                 <!-- <input type="submit" value="Submit" class="btn"> -->
             </form>
             <button onclick="goBack()" class="btn2">Back</button>
-            <a href="./create2.php"><button class="btn3">Next</button></a>
+            <button class="btn3" type="submit" form="create-form" >Next</button>
         </div>
     </div>
 

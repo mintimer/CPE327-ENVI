@@ -28,184 +28,25 @@
     <div class="contain">
         <div class="boxview">
             <img class="pic" id="pic" src="./pic/cam1.jpg"><br>
-            <span class="text-campaignname" id="camname">sodkfmsdfmdsfm</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text-campaignsub" id="camrate">Rate</span>
+            <span class="text-campaignname" id="camname">Campaign Name</span>
+            <div class="campaigndetailtextbox">
+                <div class="nav-left2 ">
+                    <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
+                    <span class="text-campaignsub" id="camdate">Date</span>
+                    <br>
+                    <img class="picicon" id="picLocation" src="./pic/location.png"></img>
+                    <span class="text-campaignsub" id="camlocation">Location</span>
+                    <br>
+                    <img class="picicon" id="picSize" src="./pic/people.png"></img>
+                    <span class="text-campaignsub" id="camsize">Size</span><br>
+                </div>
             </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text-campaignsub" id="camdate">Date</span>
+            <div class="campaigndetailbutton">
+                <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
+                <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
             </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text-campaignsub" id="camlocation">Location</span>
-            </div>
-
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text-campaignsub" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
         </div>
-        <!-- ssssssssssssssssssssssssss -->
-        <div class="boxview">
-            <img class="pic" id="pic" src="./pic/cam1.jpg">
-            <span class="text-campaignname" id="camname">Campaign name</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text6" id="camrate">Rate</span>
-            </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text6" id="camdate">Date</span>
-            </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text6" id="camlocation">Location</span>
-            </div>
 
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text6" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-        </div>
-        <div class="boxview">
-            <img class="pic" id="pic" src="./pic/cam1.jpg">
-            <span class="text-campaignname" id="camname">Campaign name</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text6" id="camrate">Rate</span>
-            </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text6" id="camdate">Date</span>
-            </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text6" id="camlocation">Location</span>
-            </div>
-
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text6" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-        </div>
-        <div class="boxview">
-            <img class="pic" id="pic" src="./pic/cam1.jpg">
-            <span class="text-campaignname" id="camname">Campaign name</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text6" id="camrate">Rate</span>
-            </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text6" id="camdate">Date</span>
-            </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text6" id="camlocation">Location</span>
-            </div>
-
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text6" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-        </div>
-        <div class="boxview">
-            <img class="pic" id="pic" src="./pic/cam1.jpg">
-            <span class="text-campaignname" id="camname">Campaign name</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text6" id="camrate">Rate</span>
-            </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text6" id="camdate">Date</span>
-            </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text6" id="camlocation">Location</span>
-            </div>
-
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text6" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-        </div>
-        <div class="boxview">
-            <img class="pic" id="pic" src="./pic/cam1.jpg">
-            <span class="text-campaignname" id="camname">Campaign name</span>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picRate" src="./pic/star.png"></img>
-                <span class="text6" id="camrate">Rate</span>
-            </div>
-            <br>
-            <div class="nav-left2 ">
-                <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                <span class="text6" id="camdate">Date</span>
-            </div>
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                <span class="text6" id="camlocation">Location</span>
-            </div>
-
-            <br>
-            <div class="nav-left2">
-                <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                <span class="text6" id="camsize">Size</span>
-            </div>
-
-            <br>
-            <a href="./ViewDetail.php"><button class="btn2">Read More</button></a>
-            <a href="./joinconfirm.php"><button class="btn2">Join us</button></a>
-        </div>
-        
-        
-        
-    </div>
-    <!-- sssssssssssssssssssssssss -->
 
     </div>
 

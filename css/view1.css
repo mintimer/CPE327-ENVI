@@ -2,48 +2,81 @@
     margin: auto;
     padding-top: 2%;
     max-width: 90%;
-    align-items: center;
-    text-align: center;
     vertical-align: center;
     /* background: #000; */
     align-items: center;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+}
+
+.campaigndetailtextbox {
+    margin-top: 10px;
+    margin: auto;
+    max-width: 85%;
+    text-align: left;
+    vertical-align: center;
+    /* background: #000; */
+}
+
+.campaigndetailbutton {
+    display: flex;
+    margin-top: 10px;
+    margin: auto;
+    max-width: 85%;
+    text-align: left;
+    vertical-align: center;
+    /* background: #cccccc; */
+}
+
+.nav-left2 {
+    left: 0px;
+    padding-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn2 {
     margin: 10px;
+    margin-bottom: 10px;
     border: none;
-    width: 140;
-    height: 50;
+    width: 130;
+    color: #01906e;
+    height: 40;
     background: white;
-    border: 0.15mm solid rgb(0, 0, 0);
+    border: 0.15mm solid #01BF92;
     border-radius: 30px;
     color: #01906e;
     cursor: pointer;
     outline: none;
     overflow: hidden;
     align-items: center;
-    font-size: 20px;
+    font-size: 17px;
+    transition: transform .2s;
+}
+
+.btn2:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    background: rgb(243, 251, 250);
 }
 
 .boxview {
     position: relative;
     width: 350px;
-    margin: auto;
-    /* margin-left: 2%; */
-    margin-bottom: 2%;
-    height: 420px;
+    /* margin: auto; */
+    margin: 1%;
+    max-height: 450px;
     border-bottom: 0.1mm solid #cccccc;
     font-size: 17px;
     background: #F9F9F9;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 4px 4px 10px rgb(185, 185, 185);
 }
 
 #pic {
-    border-radius: 30px;
+    border-radius: 15px;
     width: 250px;
     height: 150px;
     margin-top: 5%;
@@ -53,10 +86,18 @@
 .text-campaignname {
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .text-campaignsub {
     font-size: 20px;
+}
+
+.picicon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
 }
 
 .pic2 {
@@ -71,12 +112,6 @@
     padding: 5%;
     border-radius: 10px;
     position: relative;
-}
-
-.picicon {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
 }
 
 .picMap {
@@ -110,12 +145,6 @@
 .text5 {
     font-size: 35px;
     color: rgb(151, 225, 228);
-}
-
-.nav-left2 {
-    position: absolute;
-    left: auto;
-    padding-left: 5%;
 }
 
 .nav-bot {

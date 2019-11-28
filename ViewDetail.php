@@ -68,6 +68,10 @@
                     <span class="text2" id="camstatus2"><?php
                                                         if ($row['status'] == 1)
                                                             echo 'Enable';
+                                                        else if ($row['status'] == 0)
+                                                            echo 'Pending Admin Checking';
+                                                        else if ($row['status'] == 2)
+                                                            echo 'Suspended';
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
@@ -141,6 +145,9 @@
             </div>
             <?php
             $check = 0;
+            if($pNo['num'] == $row['amount_people']){
+                $check = 2;
+            }
             for($z=0;$z<$numjoin;$z++){
                 if($row2[$z] == $row['campaign_id']){
                     $check = 1;
@@ -151,8 +158,11 @@
                         <button type="submit" name="cid" formaction="./joinconfirm.php" value="'.$row['campaign_id'].'" class="btn3">Join us</button>
                         <br>
                         </form>';
-                    }
-                    else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
+            }
+            else if($check == 2){
+                echo 'ปุ่มคนเต็มที่กดไม่ได้';
+            }
+            else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
             ?>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

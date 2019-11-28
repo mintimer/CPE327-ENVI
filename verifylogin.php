@@ -24,7 +24,6 @@
         if($userdata['picture_path'] != NULL)
             $_SESSION['picpath'] = $userdata['picture_path'];
         else $_SESSION['picpath'] = "./pic/profile/profilepic.png";
-        $_SESSION['role'] = 'user';
         if($_SESSION['uid']==1)
             header("Location: profileadmin.php");
         else header("Location: profile.php");

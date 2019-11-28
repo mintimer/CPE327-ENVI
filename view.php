@@ -83,6 +83,9 @@
                     </form>
                     ';
                 $check = 0;
+                if($pNo['num'] == $row['amount_people']){
+                    $check = 2;
+                }
                 for($z=0;$z<$numjoin;$z++){
                     if($row2[$z] == $row['campaign_id']){
                         $check = 1;
@@ -92,6 +95,8 @@
                     echo '<form method="post" id="่join-form">
                             <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
                         </form>';
+                }else if($check == 2){
+                    echo 'ปุ่มคนเต็มที่กดไม่ได้';
                 }
                 else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
                     echo '

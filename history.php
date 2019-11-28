@@ -57,7 +57,7 @@
         </div>
 
         <?php
-        if ($num != NULL) {
+        if ($num != 0) {
             for ($x = 0; $x < $num; $x++) {
                 $row = mysqli_fetch_array($result);
                 echo '<div class="boxview" style="padding-bottom:1%;">
@@ -87,7 +87,7 @@
             }
         } else echo '<div class="subbox">
             <p class="textnosub" id="camname">You did not create any campaign.</p>
-            <a href="./view.php"><button class="btn3" id="joinedbtn">Start create campaign</button></a>
+            <a href="./create.php"><button class="btn3" id="joinedbtn">Start create campaign</button></a>
         </div>';
 
 
@@ -106,7 +106,7 @@
         </div>
 
         <?php
-        if ($numjoin != NULL) {
+        if ($numjoin != 0) {
             for ($y = 0; $y < $numjoin; $y++) {
                 $row2 = mysqli_fetch_array($join);
                 echo '<div class="boxview" style="padding-bottom:1%;">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <form action="./viewparticipant.php" method="post" id="select-form">
-                            <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn4">Rate campaign</button>
+                            <button type="submit" name="cid" form="select-form" value="' . $row2['campaign_id'] . '" class="btn4">Rate campaign</button>
                         </form>
             </div>';
             }

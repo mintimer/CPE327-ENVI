@@ -12,6 +12,7 @@
     <?php
     require 'connect.php';
     session_start();
+    $_SESSION['ref'] = str_replace("/envi/CPE327-ENVI", ".", $_SERVER['REQUEST_URI']);
     $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
     $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
     $result = mysqli_query($con, $sqlcount);

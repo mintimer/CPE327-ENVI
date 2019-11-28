@@ -66,14 +66,14 @@
                 <div class="nav-left2">
                     <form action="./profileother.php" id="visit" method="post"></form>
                     <span class="text2" id="camstatus">Status : </span>
-                    <span class="text2" id="camstatus2"><?php
-                                                        if ($row['status'] == 1)
-                                                            echo 'Enable';
-                                                        else if ($row['status'] == 0)
-                                                            echo 'Pending Admin Checking';
-                                                        else if ($row['status'] == 2)
-                                                            echo 'Suspended';
-                                                        ?></span>
+                    <?php
+                        if ($row['status'] == 1)
+                            echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                        else if ($row['status'] == 0)
+                            echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                        else if ($row['status'] == 2)
+                            echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
+                        ?>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
 

@@ -62,8 +62,14 @@
                 $row = mysqli_fetch_array($result);
                 echo '<div class="boxview" style="padding-bottom:1%;">
                 <img class="pic" id="pic" src="' . $row['campaign_pic'] . '"><br>
-                <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span>
-                <div class="campaigndetailtextbox">
+                <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span><br>';
+                if ($row['status'] == 1)
+                    echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                else if ($row['status'] == 0)
+                    echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                else if ($row['status'] == 2)
+                    echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
+                echo '<div class="campaigndetailtextbox">
                     <div class="nav-left2 ">
                         <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
                         <span class="text-campaignsub" id="camdate">Date : ' . $row['start_time'] . '</span>

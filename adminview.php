@@ -10,15 +10,6 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
-<<<<<<< HEAD
-        require 'connect.php';
-        $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
-        $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
-        $result = mysqli_query($con, $sqlcount);
-        $row = mysqli_fetch_array($result);
-        $num = $row['num'];
-        $result = mysqli_query($con, $sql);
-=======
     require 'connect.php';
     $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
     $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
@@ -26,7 +17,6 @@
     $row = mysqli_fetch_array($result);
     $num = $row['num'];
     $result = mysqli_query($con, $sql);
->>>>>>> 83038e52246e0aab390779d595566d21e5b3c110
     ?>
 </head>
 

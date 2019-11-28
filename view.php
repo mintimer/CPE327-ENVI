@@ -11,12 +11,32 @@
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
+    session_start();
     $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
     $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
     $result = mysqli_query($con, $sqlcount);
     $row = mysqli_fetch_array($result);
     $num = $row['num'];
     $result = mysqli_query($con, $sql);
+
+    
+    $sqljoined = "SELECT u.* , c.*
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+
+    $sqlnumjoin = "SELECT COUNT(*) num2
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+
+    $join = mysqli_query($con, $sqlnumjoin);
+    $num2 = mysqli_fetch_array($join);
+    $numjoin = $num2['num2'];
+
+    $join = mysqli_query($con, $sqljoined);
+    for($y=0 ; $y < $numjoin; $y++){
+        $arr = mysqli_fetch_array($join);
+        $row2[$y] = $arr['campaign_id'];
+    }
     ?>
 </head>
 
@@ -55,9 +75,19 @@
                     <form action="./ViewDetail.php" method="post" id="select-form">
                         <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn2">Read More</button>
                     </form>
-                    <form method="post" id="่join-form">
-                        <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
-                    </form>
+                    ';
+                $check = 0;
+                for($z=0;$z<$numjoin;$z++){
+                    if($row2[$z] == $row['campaign_id']){
+                        $check = 1;
+                    }
+                }
+                if($check == 0){
+                    echo '<form method="post" id="่join-form">
+                            <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
+                        </form>';
+                }
+                    echo '
                 </div>
             </div>';
         }

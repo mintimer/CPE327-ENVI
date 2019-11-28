@@ -75,7 +75,7 @@
                                 echo "./pic/profile/profilepic.png";
                             else echo $t=$row['picture_path']; 
                     echo '">  '.$row['firstname'] . ' ' . $row['lastname'].'</button>';
-                    $row = $row = mysqli_fetch_array($result);
+                    $row = mysqli_fetch_array($result);
                     echo'</p><br><br>';
                 }
                

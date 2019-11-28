@@ -94,7 +94,8 @@
 .textdetailsub {
     position: absolute;
     font-size: 18px;
-    padding-left: 3%;
+    padding-left: 5%;
+    margin-bottom: 10%;
 }
 
 .texhistorysub {
@@ -127,4 +128,26 @@
 
 .middle {
     margin: auto;
+}
+
+#miniprofilepic {
+    border-radius: 50%;
+    width: 40;
+    height: 40;
+    float: center;
+    object-fit: cover;
+    margin: auto;
+}
+
+.btnnobtn {
+    border: none;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: left;
+    font-size: 20px;
+    transition: transform .2s;
 }

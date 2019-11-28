@@ -8,5 +8,5 @@ VALUES ('".$_SESSION['campaign_name']."',".$_SESSION['campaign_type'].",'".$_SES
         '".$_SESSION['campaign_describe']."','".$_SESSION['manage_name']."','".$_SESSION['campaign_pic']."',".$_SESSION['amount_people'].",
         '".$_SESSION['location']."','".$_SESSION['cmp_user_id']."','".$_SESSION['lati']."','".$_SESSION['longti']."');";
 mysqli_query($con,$sql);
-header("Location:view.php");
+header("Location:history.php");
 ?>

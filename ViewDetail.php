@@ -12,12 +12,31 @@
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
+    session_start();
     $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
     $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
     $result2 = mysqli_query($con, $sqlname);
     $user = mysqli_fetch_array($result2);
+
+    $sqljoined = "SELECT u.* , c.*
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+
+    $sqlnumjoin = "SELECT COUNT(*) num2
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+
+    $join = mysqli_query($con, $sqlnumjoin);
+    $num2 = mysqli_fetch_array($join);
+    $numjoin = $num2['num2'];
+
+    $join = mysqli_query($con, $sqljoined);
+    for($y=0 ; $y < $numjoin; $y++){
+        $arr = mysqli_fetch_array($join);
+        $row2[$y] = $arr['campaign_id'];
+    }
     ?>
 </head>
 
@@ -110,10 +129,20 @@
                     <span><img id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
                 </div>
             </div>
-            <form method="post" id="่joining-form">
-            <button type="submit" name="cid" formaction="./joinconfirm.php" value="<?php echo $row['campaign_id']; ?>" class="btn3">Join us</button>
-            <br>
-            </form>
+            <?php
+            $check = 0;
+            for($z=0;$z<$numjoin;$z++){
+                if($row2[$z] == $row['campaign_id']){
+                    $check = 1;
+                }
+            }
+            if($check == 0){
+                        echo '<form method="post" id="่joining-form">
+                        <button type="submit" name="cid" formaction="./joinconfirm.php" value="'.$row['campaign_id'].'" class="btn3">Join us</button>
+                        <br>
+                        </form>';
+                    }
+            ?>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>
 

@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/view1.css">
     <?php
-    require 'connect.php';
-    echo $_POST['cid'];
+    session_start();
+    $_SESSION['cid'] = $_POST['cid'];
     ?>
 </head>
 
 <body>
 <div class="box">
         <div class="nav-left">
-            <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>

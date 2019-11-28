@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2019 at 07:47 PM
+-- Generation Time: Nov 28, 2019 at 12:05 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -53,42 +53,8 @@ CREATE TABLE `campaigninfo` (
 --
 
 INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `start_time`, `end_time`, `campaign_describe`, `manage_name`, `manage_authen`, `campaign_document`, `campaign_pic`, `amount_people`, `location`, `status`, `user_id`, `lati`, `longti`, `rating_avg`) VALUES
-(1, 'Push da payload', 3, '2019-12-27', '2019-12-31', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 1, 9, 35.14876876243253, 129.0537048847939, 0),
+(1, 'Push da payload', 3, '2019-12-30', '2019-12-31', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 1, 9, 35.14876876243253, 129.0537048847939, 0),
 (2, 'Plook Prayad', 1, '2019-12-28', '2019-12-31', 'Plook kun ter rao sao pai tum mai ya mua arai wa eiei zaza!!', 'Harn Bangmod', NULL, NULL, './pic/campaign/Plook Prayad.jpg', 44, 'Bang mod', 1, 3, 13.651032936218165, 100.49537658691406, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `guest_join`
---
-
-CREATE TABLE `guest_join` (
-  `guest_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `campaign_id` int(11) NOT NULL,
-  `firstname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
-  `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci,
-  `allergic_food` text COLLATE utf8_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `reportinfo`
---
-
-CREATE TABLE `reportinfo` (
-  `report_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `campaign_id` int(11) DEFAULT NULL,
-  `user_target_id` int(11) DEFAULT NULL,
-  `isUserReport` int(11) NOT NULL,
-  `report_detail` text COLLATE utf8_unicode_ci NOT NULL,
-  `report_doc` text COLLATE utf8_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -136,6 +102,14 @@ CREATE TABLE `user_join` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `user_join`
+--
+
+INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VALUES
+(3, 1, NULL, NULL),
+(3, 2, NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -145,23 +119,6 @@ CREATE TABLE `user_join` (
 ALTER TABLE `campaigninfo`
   ADD PRIMARY KEY (`campaign_id`),
   ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `guest_join`
---
-ALTER TABLE `guest_join`
-  ADD PRIMARY KEY (`guest_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `campaign_id` (`campaign_id`);
-
---
--- Indexes for table `reportinfo`
---
-ALTER TABLE `reportinfo`
-  ADD PRIMARY KEY (`report_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `campaign_id` (`campaign_id`),
-  ADD KEY `user_target_id` (`user_target_id`);
 
 --
 -- Indexes for table `userinfo`
@@ -188,18 +145,6 @@ ALTER TABLE `campaigninfo`
   MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `guest_join`
---
-ALTER TABLE `guest_join`
-  MODIFY `guest_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reportinfo`
---
-ALTER TABLE `reportinfo`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
@@ -214,21 +159,6 @@ ALTER TABLE `userinfo`
 --
 ALTER TABLE `campaigninfo`
   ADD CONSTRAINT `campaigninfo_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`);
-
---
--- Constraints for table `guest_join`
---
-ALTER TABLE `guest_join`
-  ADD CONSTRAINT `guest_join_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`),
-  ADD CONSTRAINT `guest_join_ibfk_2` FOREIGN KEY (`campaign_id`) REFERENCES `campaigninfo` (`campaign_id`);
-
---
--- Constraints for table `reportinfo`
---
-ALTER TABLE `reportinfo`
-  ADD CONSTRAINT `reportinfo_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`),
-  ADD CONSTRAINT `reportinfo_ibfk_2` FOREIGN KEY (`campaign_id`) REFERENCES `campaigninfo` (`campaign_id`),
-  ADD CONSTRAINT `reportinfo_ibfk_3` FOREIGN KEY (`user_target_id`) REFERENCES `userinfo` (`user_id`);
 
 --
 -- Constraints for table `user_join`

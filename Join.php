@@ -10,13 +10,18 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/view1.css">
-
+    <?php
+    session_start();
+    require 'connect.php';
+    $sql = "INSERT INTO user_join (user_id, campaign_id) VALUES (".$_SESSION['uid'].", ".$_SESSION['cid']." )";
+    mysqli_query($con,$sql);
+    ?>
 </head>
 
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="./home.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>

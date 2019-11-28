@@ -54,7 +54,7 @@
 
         <div class="extradetail">
             <a href="#"><button class="btn2">Report this user</button></a>
-            <button onclick="goBack()" class="btn2">Back</button>
+            <a href="./ViewDetail.php"><button class="btn2">Back</button></a>
 
         </div>
     </div>

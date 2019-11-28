@@ -13,7 +13,10 @@
     <?php
     require 'connect.php';
     session_start();
-    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
+    if(isset($_POST['cid'])){
+        $_SESSION['cid'] = $_POST['cid'];
+    }
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_SESSION['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
     $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];

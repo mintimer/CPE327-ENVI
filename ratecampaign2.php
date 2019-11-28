@@ -59,16 +59,12 @@
     <div class="boxrate2">
         <form class="ratetextarea">
             <textarea placeholder="Your comment"></textarea><br>
+        </form>
     </div>
 
     <div class="boxrate3">
         <a href="./ratesuccess.php"><button class="subbutt">Submit</button></a>
     </div>
-
-    
-    
-    
-
 
     <div class="boxdown">
         <div class="nav-left ">

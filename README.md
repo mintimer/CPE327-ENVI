@@ -19,3 +19,6 @@ Coding by
 - 60070501088 - Sopon Niyomwan - tsopon
 
 **THIS PROJECT HAS NO FRAMEWORK**
+
+
+**PLEASE F11 FOR FULL EXPERIENCE**

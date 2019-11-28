@@ -42,7 +42,6 @@
             <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
-
    
     <div class="boxrate">
         <div class="nav-left">
@@ -53,17 +52,20 @@
         <div class="nav-right-rate">
             <span class="ratetexttitle">Giving comment for :</span><br><br>
             <span class="ratetexthead">Sweep for Dad</span><br> 
-        </div>                                                                                                     
+        </div> 
     </div>
-    
    
+    <div class="boxrate2">
+        <form class="ratetextarea">
+            <textarea placeholder="Your comment"></textarea><br>
+    </div>
 
-    <form class="ratetextarea">
-        <textarea placeholder="Your comment"></textarea><br>
-        <a href="./ratesuccess.php"><button class="subbutt">Submit</button>
-    </form>
+    <div class="boxrate3">
+        <a href="./ratesuccess.php"><button class="subbutt">Submit</button></a>
+    </div>
 
-
+    
+    
     
 
 

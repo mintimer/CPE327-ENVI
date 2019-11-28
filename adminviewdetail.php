@@ -47,11 +47,11 @@
                     <span class="text2" id="camstatus">Status : </span>
                     <span class="text2" id="camstatus2"><?php
                                                         if ($row['status'] == 1)
-                                                            echo 'Enable';
-                                                        else if ($row['status'] == 0)
-                                                            echo 'Pending Admin Checking';
-                                                        else if ($row['status'] == 2)
-                                                            echo 'Suspended';
+                                                        echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                                                    else if ($row['status'] == 0)
+                                                        echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                                                    else if ($row['status'] == 2)
+                                                        echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
@@ -122,7 +122,7 @@
             <button type="submit" name="status" class="btn5" value=2 >Suspend</button>
             <br>
             </form>
-            <button class="btn3" onclick="goBack()">Go Back</button>
+            <a href="./adminview.php"><button class="btn3" >Go Back</button></a>
         </div>
 
     </div>

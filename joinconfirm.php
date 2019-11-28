@@ -33,7 +33,7 @@
 
     <div class="contain3">
         <span class="textjoin" id="join">Join</span> &nbsp;
-        <span class="textcom" id="complete">Compaign </span>
+        <span class="textcom" id="complete">Campaign </span>
         <span class="textjoin" id="complete">Now !</span>
         <br>
         <span class="textenj" id="select">Select your account</span>

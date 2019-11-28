@@ -28,7 +28,7 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./profileadmin.php">Main menu</a></span>

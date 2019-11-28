@@ -129,7 +129,7 @@
                         <span class="text-campaignsub" id="camsize">Size : ' . $pNo['num'] . '/' . $row2['amount_people'] . '</span><br>
                     </div>
                 </div>
-                <form action="./rate.php" method="post" id="select-create">
+                <form action="./ratecampaign.php" method="post" id="select-create">
                             <button type="submit" name="cid" form="select-create" value="' . $row2['campaign_id'] . '" class="btn4">Rate campaign</button>
                         </form>
             </div>';

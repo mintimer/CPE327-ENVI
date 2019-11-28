@@ -51,7 +51,7 @@
                                                     if ($row['status'] == 1)
                                                         echo 'Enable';
                                                     else if ($row['status'] == 0)
-                                                        echo 'Pending Admin Checking';
+                                                        echo 'Pending admin checking';
                                                     else if ($row['status'] == 2)
                                                         echo 'Suspended';
                                                     ?></p>

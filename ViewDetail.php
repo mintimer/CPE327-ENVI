@@ -49,7 +49,19 @@
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
-                    <span class="text2"><button class="btnnobtn" type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>"><?php echo $user['firstname'] . ' ' . $user['lastname']; ?></button></span>
+
+                    <span class="text2">
+                        <button class="btnnobtn" type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>">
+                        <img id="miniprofilepic" src="
+                                    <?php 
+                                    if($user['picture_path']==NULL) 
+                                        echo "./pic/profile/profilepic.png";
+                                    else echo $user['picture_path']; 
+                                    ?>
+                                    "> 
+                                    <?php echo $user['firstname'] . ' ' . $user['lastname']; ?>
+                        </button>
+                    </span>
                     <br>
                     <span class="text2" id="camstatus">Category : </span>
                     <span class="text2" id="camstatus2"><?php
@@ -79,7 +91,7 @@
                     <span class="text2" id="camCompany">Location : </span>
                     <span class="text2" id="camstatus2"><?php echo $row['location']; ?></span>
                 </div>
-                <div id="map"class="locationcontrol">
+                <div id="map" class="locationcontrol">
                 </div>
             </div>
         </div>
@@ -95,7 +107,7 @@
             <br>
             <div class="campaigndetailtextbox">
                 <div class="picpreviewcontrol">
-                    <span><img class="pic3" id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
+                    <span><img id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
                 </div>
             </div>
             <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>
@@ -121,31 +133,31 @@
         }
     </script>
     <script>
-            var map, marker, lat, lng, pos;
+        var map, marker, lat, lng, pos;
 
-            function initMap() {
-                lat = <?php echo $row['lati']; ?>;
-                lng = <?php echo $row['longti']; ?>;
-                pos = {
-                    lat: lat,
-                    lng: lng
-                };
-                map = new google.maps.Map(
-                    document.getElementById('map'), {
-                        zoom: 7,
-                        center: pos,
-                        streetViewControl: false,
-                        fullscreenControl: false,
-                        data: false
-                    });
-                marker = new google.maps.Marker({
-                    position: pos,
-                    map: map,
+        function initMap() {
+            lat = <?php echo $row['lati']; ?>;
+            lng = <?php echo $row['longti']; ?>;
+            pos = {
+                lat: lat,
+                lng: lng
+            };
+            map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 7,
+                    center: pos,
+                    streetViewControl: false,
+                    fullscreenControl: false,
+                    data: false
                 });
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iaHIfhLObFmtyTMO1vW0LeYWphhV5U&callback=initMap">
-        </script>
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iaHIfhLObFmtyTMO1vW0LeYWphhV5U&callback=initMap">
+    </script>
 </body>
 
 

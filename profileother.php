@@ -13,6 +13,13 @@
     <title>Profile</title>
     <?php
         require 'connect.php';
+        session_start();
+        if($_SESSION['uid']==1) 
+            $ref =  './adminviewdetail.php';
+        else $ref = $_SESSION['ref'];
+        if(isset($_POST['cid']))
+            $value=$_POST['cid'];
+        else $value = NULL;
         $sql = "SELECT * FROM userinfo WHERE user_id = ".$_POST['visit'];
         $result = mysqli_query($con, $sql);
         $user = mysqli_fetch_array($result);
@@ -54,12 +61,9 @@
 
         <div class="extradetail">
             <a href="#"><button class="btn2">Report this user</button></a>
-            <a href="<?php 
-                session_start();
-                if($_SESSION['uid']!=1) 
-                    echo './ViewDetail.php';
-                else echo './adminviewdetail.php';
-            ?>"><button class="btn2">Back</button></a>
+            <form action="<?php echo $ref; ?>" method="post">
+                <button type="submit" class="btn2" value=<?php echo $value; ?> >Back</button>
+            </form>
 
         </div>
     </div>

@@ -10,7 +10,15 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-
+    <?php
+    require 'connect.php';
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['uid'];
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($result);
+    $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
+    $result2 = mysqli_query($con, $sqlname);
+    $user = mysqli_fetch_array($result2);
+    ?>
 </head>
 
 <body>
@@ -26,38 +34,62 @@
 
 
     <div class="contain2">
-        <div class="boxview2">
-            <span class="text-campaigndetailhead" id="Name">Plant with your Dady GOGOGOGOGO</span>
+    <div class="boxview2">
+            <span class="text-campaigndetailhead" id="Name"><?php echo $row['campaign_name']; ?></span>
             <br>
             <div class="campaigndetailtextbox">
                 <div class="nav-left2">
+                    <form action="./profileother.php" id="visit" method="post"></form>
                     <span class="text2" id="camstatus">Status : </span>
-                    <span class="text2" id="camstatus2">Enable</span>
+                    <span class="text2" id="camstatus2"><?php
+                                                        if ($row['status'] == 1)
+                                                            echo 'Enable';
+                                                        ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
-                    <span class="text2"><a href="./profileother.php">Name with link</a></span>
+
+                    <span class="text2">
+                        <button class="btnnobtn" type="submit" form="visit" name="visit" value="<?php echo $row['user_id']; ?>">
+                        <img id="miniprofilepic" src="
+                                    <?php 
+                                    if($user['picture_path']==NULL) 
+                                        echo "./pic/profile/profilepic.png";
+                                    else echo $user['picture_path']; 
+                                    ?>
+                                    "> 
+                                    <?php echo $user['firstname'] . ' ' . $user['lastname']; ?>
+                        </button>
+                    </span>
                     <br>
-                    <span class="text2" id="camPhone">Category : </span>
-                    <span class="text2" id="camstatus2">Detail</span>
+                    <span class="text2" id="camstatus">Category : </span>
+                    <span class="text2" id="camstatus2"><?php
+                                                        if ($row['campaign_type'] == 1)
+                                                            echo 'Planting';
+                                                        else if ($row['campaign_type'] == 2)
+                                                            echo 'Public cleaning';
+                                                        else if ($row['campaign_type'] == 3)
+                                                            echo 'Volunteer';
+                                                        else if ($row['campaign_type'] == 4)
+                                                            echo 'Other';
+                                                        ?></span>
                     <br><br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">Start date : </span>
-                    <span class="text2" id="camstatus2">Detail</span>
+                    <span class="text2" id="camstatus2"><?php echo $row['start_time']; ?></span>
                     <br>
                     <img class="pic2" id="picDate" src="./pic/calendar.png"></img>
                     <span class="text2" id="camdate">End date : </span>
-                    <span class="text2" id="camstatus2">Detail</span>
+                    <span class="text2" id="camstatus2"><?php echo $row['end_time']; ?></span>
                     <br>
                     <img class="pic2" id="picSize" src="./pic/people.png"></img>
                     <span class="text2" id="camsize">Size : </span>
-                    <span class="text2" id="camstatus2">Detail</span>
+                    <span class="text2" id="camstatus2"><?php echo $row['amount_people']; ?></span>
                     <br>
                     <img class="pic2" id="picCompany" src="./pic/company.png"></img>
-                    <span class="text2" id="camCompany">Location</span>
-                    <span class="text2" id="camstatus2">Detail</span>
+                    <span class="text2" id="camCompany">Location : </span>
+                    <span class="text2" id="camstatus2"><?php echo $row['location']; ?></span>
                 </div>
-                <div class="locationcontrol">
-                    <span><img class="picMap" id="picMap" src="./pic/map.png"></img></span>
+                <div id="map" class="locationcontrol">
                 </div>
             </div>
         </div>
@@ -66,14 +98,14 @@
             <br>
             <div class="campaigndetailtextbox">
                 <div class="nav-left3">
-                    <span class="text2" id="camstatus">detaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaail</span>
+                    <span class="text2" id="camstatus"><?php echo $row['campaign_describe']; ?></span>
                 </div>
             </div>
             <span class="text-campaigndetailhead" id="Detail">Picture</span>
             <br>
             <div class="campaigndetailtextbox">
                 <div class="picpreviewcontrol">
-                        <span><img class="pic3" id="pic3" src="./pic/cam1.jpg"></img></span>
+                    <span><img id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
                 </div>
             </div>
             <a href="#"><button class="btn4">Approve</button></a>

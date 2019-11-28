@@ -9,6 +9,12 @@
     font-weight: bold;
 }
 
+.textdelete {
+    font-size: 60px;
+    color: rgb(223, 23, 23);
+    font-weight: bold;
+}
+
 .textenj {
     font-size: 40px;
     color: rgb(104, 104, 104);

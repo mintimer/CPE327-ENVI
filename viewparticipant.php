@@ -47,7 +47,6 @@
     <div class="contain3">
         <div class="form-box">
             <div class="head">
-                <p class="texthead">View Participant</p>
                 <p class="texthead"><?php echo $row['campaign_name'] ?></p>
                 <p class="texhistorysub">Status : <?php
                                                     if ($row['status'] == 1)

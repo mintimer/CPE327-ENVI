@@ -108,6 +108,21 @@
     font-size: 20px;
 }
 
+.btncannotclick {
+    margin: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 130;
+    height: 40;
+    background: #01906e;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 17px;
+}
+
 
 /* ########################  VIEW DETAI L############################### */
 

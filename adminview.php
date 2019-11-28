@@ -11,12 +11,12 @@
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
-    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
-    $result = mysqli_query($con, $sql);
+    $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
+    $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
+    $result = mysqli_query($con, $sqlcount);
     $row = mysqli_fetch_array($result);
-    $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
-    $result2 = mysqli_query($con, $sqlname);
-    $user = mysqli_fetch_array($result2);
+    $num = $row['num'];
+    $result = mysqli_query($con, $sql);
     ?>
 </head>
 

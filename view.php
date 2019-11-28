@@ -88,9 +88,6 @@
                         </form>';
                 }
                 else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
-
-
-
                     echo '
                 </div>
             </div>';

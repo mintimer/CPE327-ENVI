@@ -14,7 +14,7 @@
     <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Campaign</title>
 
-    <style> 
+    <style>
         textarea {
             width: 100%;
             height: 150px;
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-   
+
     <div class="boxrate">
         <div class="nav-left">
             <div class="campaignpicinrate">
@@ -52,19 +52,19 @@
         </div>
         <div class="nav-right-rate">
             <span class="ratetexttitle">Giving comment for :</span><br><br>
-            <span class="ratetexthead">Sweep for Dad</span><br> 
-        </div>                                                                                                     
+            <span class="ratetexthead">Sweep for Dad</span><br>
+        </div>
     </div>
-    
-   
+
+    <div class="boxrate">
 
     <form class="ratetextarea">
         <textarea placeholder="Your comment"></textarea><br>
-        <a href="./ratesuccess.php"><button class="subbutt">Submit</button>
+        <a href="./ratesuccess.php"><button class=subbutt>Submit</button>
     </form>
 
 
-    
+    </div>
 
 
     <div class="boxdown">
@@ -73,6 +73,7 @@
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>
+        </div>
     </div>
 </body>
 

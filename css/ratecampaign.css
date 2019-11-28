@@ -1,4 +1,3 @@
-
 #campaignpic {
     width: 135px;
     border-radius: 30px;
@@ -21,12 +20,12 @@
     font-weight: 800;
 }
 
-.ratetexttitle {  
+.ratetexttitle {
     position: relative;
     margin-left: -375px;
     font-size: 60px;
     font-weight: 800;
-    color:  #01bf92;
+    color: #01bf92;
 }
 
 .ratetexthead {
@@ -36,7 +35,7 @@
     font-weight: 800;
 }
 
-.ratetextred{
+.ratetextred {
     left: 100%;
     font-size: 20px;
     color: #FF0000;
@@ -58,7 +57,6 @@
     background: white;
 }
 
-
 .ratebutt {
     display: inline;
     background: #01BF92;
@@ -75,8 +73,7 @@
     border: none;
 }
 
-.ratebutt:hover{
-   
+.ratebutt:hover {
     transform: scale(1.12);
 }
 
@@ -104,7 +101,7 @@
     height: 50%;
 }
 
-.rate-left{
+.rate-left {
     margin-top: 25px;
     position: absolute;
     border-radius: 50px;
@@ -115,14 +112,12 @@
     border: 1.5mm solid #01BF92;
 }
 
-.rate-right{
+.rate-right {
     margin-top: 40px;
     position: absolute;
     border-radius: 50px;
-    
     left: 35%;
     height: 250px;
-    
 }
 
 .nav-right-rate {
@@ -138,7 +133,7 @@
 .nav1 {
     position: absolute;
     display: inline;
-    left : 20%;
+    left: 20%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
@@ -160,8 +155,8 @@
 .nav2 {
     position: absolute;
     display: inline;
-    left : 33.5%;
-    margin-top: 260px ;
+    left: 33.5%;
+    margin-top: 260px;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
@@ -182,7 +177,7 @@
 .nav3 {
     position: absolute;
     display: inline;
-    left : 47%;
+    left: 47%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
@@ -193,7 +188,7 @@
     padding: 10px;
     padding-right: 25px;
     padding-left: 25px;
-  color: #000000;
+    color: #000000;
     cursor: pointer;
     outline: none;
     overflow: hidden;
@@ -204,7 +199,7 @@
 .nav4 {
     position: absolute;
     display: inline;
-    left : 60.5%;
+    left: 60.5%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
@@ -226,7 +221,7 @@
 .nav5 {
     position: absolute;
     display: inline;
-    left : 74%;
+    left: 74%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
@@ -248,27 +243,23 @@
 .nav1:hover {
     text-decoration: none;
     transform: scale(1.5);
-  
 }
 
 .nav2:hover {
     text-decoration: none;
     transform: scale(1.5);
-  
 }
 
 .nav3:hover {
     text-decoration: none;
     transform: scale(1.5);
-  
 }
 
 .nav4:hover {
     text-decoration: none;
     transform: scale(1.5);
-  
 }
-    
+
 .nav5:hover {
     text-decoration: none;
     transform: scale(1.5);
@@ -278,7 +269,6 @@
     position: absolute;
     left: 18%;
     width: auto;
-    
 }
 
 .ssmid {
@@ -298,7 +288,6 @@
 .headrate {
     position: relative;
     align-items: center;
-    
 }
 
 .successheader {
@@ -335,7 +324,7 @@
     border: 1.0mm solid #01BF92;
     color: #01BF92;
     cursor: pointer;
-    overflow: hidden;  
+    overflow: hidden;
     transition: transform .2s;
 }
 
@@ -344,19 +333,22 @@
     text-decoration: none;
 }
 
-.ratetextarea{
+.ratetextarea {
     height: 250px;
     margin-top: 430px;
     left: 20%;
     width: 60%;
     position: relative;
+    align-items: center;
+    text-align: center;
 }
 
 .subbutt {
-    margin-left: 45%;
-    display: inline;
+    margin: auto;
     background: #01BF92;
     border-radius: 30px;
+    width: 25%;
+    margin-top: 1%;
     padding: 10px;
     padding-right: 25px;
     padding-left: 25px;

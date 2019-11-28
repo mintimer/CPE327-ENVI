@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2019 at 12:05 PM
+-- Generation Time: Nov 28, 2019 at 05:18 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -54,7 +54,8 @@ CREATE TABLE `campaigninfo` (
 
 INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `start_time`, `end_time`, `campaign_describe`, `manage_name`, `manage_authen`, `campaign_document`, `campaign_pic`, `amount_people`, `location`, `status`, `user_id`, `lati`, `longti`, `rating_avg`) VALUES
 (1, 'Push da payload', 3, '2019-12-30', '2019-12-31', 'Lets help DVA to got this win of payload pushing now !!!!!', 'D.Va', NULL, NULL, './pic/campaign/Push da payload.png', 12, 'Busan', 1, 9, 35.14876876243253, 129.0537048847939, 0),
-(2, 'Plook Prayad', 1, '2019-12-28', '2019-12-31', 'Plook kun ter rao sao pai tum mai ya mua arai wa eiei zaza!!', 'Harn Bangmod', NULL, NULL, './pic/campaign/Plook Prayad.jpg', 44, 'Bang mod', 1, 3, 13.651032936218165, 100.49537658691406, 0);
+(2, 'Plook Prayad', 1, '2019-12-28', '2019-12-31', 'Plook kun ter rao sao pai tum mai ya mua arai wa eiei zaza!!', 'Harn Bangmod', NULL, NULL, './pic/campaign/Plook Prayad.jpg', 44, 'Bang mod', 1, 3, 13.651032936218165, 100.49537658691406, 0),
+(6, 'Lang Par Char', 2, '2020-01-15', '2020-01-22', 'A Stop on the Salt Route 1000 B.C. As they rounded a bend in the path that ran beside the river, Lara recognized the silhouette of a fig tree atop a nearby hill. The weather was hot and the days were long. The fig tree was in full leaf, but not yet bearing fruit. Soon Lara spotted other landmarksâ€”an outcropping of limestone beside the path that had a silhouette like a manâ€™s face, a marshy spot beside the river where the waterfowl were easily startled, a tall tree that looked like a man with his arms upraised. They were drawing near to the place where there was an island in the river. The island was a good spot to make camp. They would sleep on the island tonight. Lara had been back and forth along the river path many times in her short life. Her people had not created the pathâ€”it had always been there, like the riverâ€”but their deerskin-shod feet and the wooden wheels of their handcarts kept the path well worn. Laraâ€™s people were salt traders, and their livelihood took them on a continual journey.', 'Polar Bear', NULL, NULL, './pic/campaign/Lang Par Char.jpg', 10, 'Greenland', 0, 3, 60.05032975791311, -43.19330771519503, 0);
 
 -- --------------------------------------------------------
 
@@ -106,8 +107,10 @@ CREATE TABLE `user_join` (
 --
 
 INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VALUES
-(3, 1, NULL, NULL),
-(3, 2, NULL, NULL);
+(3, 2, NULL, NULL),
+(3, 6, NULL, NULL),
+(5, 1, NULL, NULL),
+(9, 1, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -142,7 +145,7 @@ ALTER TABLE `user_join`
 -- AUTO_INCREMENT for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `userinfo`
@@ -164,8 +167,8 @@ ALTER TABLE `campaigninfo`
 -- Constraints for table `user_join`
 --
 ALTER TABLE `user_join`
-  ADD CONSTRAINT `user_join_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`),
-  ADD CONSTRAINT `user_join_ibfk_2` FOREIGN KEY (`campaign_id`) REFERENCES `campaigninfo` (`campaign_id`);
+  ADD CONSTRAINT `user_join_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userinfo` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_join_ibfk_2` FOREIGN KEY (`campaign_id`) REFERENCES `campaigninfo` (`campaign_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -12,7 +12,7 @@
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <title>Rate Campaign</title>
+    <title>Rate Success</title>
 </head>
 
 
@@ -34,30 +34,33 @@
 
         <div class="profiledetail">
             <span class="textdetailhead">
-                Rate campaign
+                Rate Success!
             </span><br>
             <span class="textdetailsub">
-                Choose your attended campaign
+                Thank you for your king suggestion
             </span>
         </div>
+    </div>
 
-        <div class="ratebox">
-            <div class="rate-left">
-                <div class="campaignpic">
-                    <img id="campaignpic" src="./pic/camp1.png">
-                </div>  
-            </div>
-            
-            <div class="rate-right">
-                <span class = textdetailcampaign>Sweep for Dad</span><br>
-                <span class="ratetextred">You have not rate this campaign yet!</span><br><br>
-                <span class = ratetext>Date</span><br><br>
-                <span class = ratetext>Place</span><br>
-                <a href="./ratecampaign.php"><button class=ratebutt>Rate!!!</button></a>
-            </div>
+    <div class = "ratehead">
+
+        <div class="ssleft">
+            <span class="successheader">Rate</span>
+        </div>
+        <div class="ssmid">
+            <span class="successbody">your paticipated</span><br>
+            <span class="successbody2">for better next</span><br><br><br>
+            <a href="./rate.php"><button class="backbutt">Go back</button></a>
+        </div>
+        <div class="ssright">
+            <span class="successheader">Campaign</span>
         </div>
 
+        
+    
     </div>
+
+    
     
     <div class="boxdown ">
         <div class="nav-left ">

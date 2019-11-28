@@ -24,9 +24,13 @@
         $result = mysqli_query($con, $sql);
         $user = mysqli_fetch_array($result);
 
-        $sql = "SELECT COUNT(*) num FROM campaigninfo WHERE user_id = ".$user['user_id'];
+        $sql = "SELECT COUNT(*) num FROM campaigninfo WHERE user_id = ".$user['user_id']." AND status = 1" ;
         $result = mysqli_query($con, $sql);
         $countcreate = mysqli_fetch_array($result);
+
+        $sql = "SELECT COUNT(*) num FROM user_join WHERE user_id = ".$user['user_id'];
+        $result = mysqli_query($con, $sql);
+        $countjoin = mysqli_fetch_array($result);
     ?>
 </head>
 
@@ -41,7 +45,10 @@
     </div>
     <div class="contain">
         <div class="profiledetail">
-            <img id="profilepic" src="<?php echo $user['picture_path']; ?>">
+            <img id="profilepic" src="<?php 
+                if($user['picture_path']==NULL) 
+                    echo "./pic/profile/profilepic.png";
+                else echo $user['picture_path']; ?>">
             <br>
             <span class="textdetailhead">
                 <?php
@@ -53,7 +60,7 @@
             <span class="textdetaildata"><?php echo $countcreate['num'] ?></span>
             <br>
             <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">รอทำจอยก่อน</span>
+            <span class="textdetaildata"><?php echo $countjoin['num'] ?></span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
             <span class="textdetaildate"><?php echo $user['goodness_point'] ?></span>

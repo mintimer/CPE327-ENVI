@@ -26,39 +26,41 @@
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
             <span id="text"><a href="./profile.php">My profile</a></span>
-            <a href="./signout.php"><button class="btn1">Sign out</button></a>
+            <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
 
-    <div class="contain">
-
-        <div class="profiledetail">
-            <span class="textdetailhead">
-                Rate campaign
-            </span><br>
-            <span class="textdetailsub">
-                Choose your attended campaign
-            </span>
-        </div>
-
-        <div class="ratebox">
-            <div class="rate-left">
-                <div class="campaignpic">
-                    <img id="campaignpic" src="./pic/camp1.png">
-                </div>  
-            </div>
-            
-            <div class="rate-right">
-                <span class = textdetailcampaign>Sweep for Dad</span><br>
-                <span class="ratetextred">You have not rate this campaign yet!</span><br><br>
-                <span class = ratetext>Date</span><br><br>
-                <span class = ratetext>Place</span><br>
-                <a href="./ratecampaign.php"><button class=ratebutt>Rate!!!</button></a>
+   
+    <div class="boxrate">
+        <div class="nav-left">
+            <div class="campaignpicinrate">
+                <img id="campaignpicinrate" src="./pic/camp1.png">
             </div>
         </div>
-
+        <div class="nav-right-rate">
+            <span class="ratetexttitle">Giving a rate for :</span><br><br>
+            <span class="ratetexthead">Sweep for Dad</span><br> 
+        </div>                                                                                                     
     </div>
-    
+
+    <div class="boxrate">
+        <a href="./ratecampaign2.php"><button class="nav1">
+            1 Star
+        </button>
+        <a href="./ratecampaign2.php"><button class="nav2">
+            2 Star
+        </button>
+        <a href="./ratecampaign2.php"><button class="nav3">
+            3 Star
+        </button>
+        <a href="./ratecampaign2.php"><button class="nav4">
+            4 Star
+        </button>
+        <a href="./ratecampaign2.php"><button class="nav5">
+            5 Star
+        </button>
+    </div>
+
     <div class="boxdown ">
         <div class="nav-left ">
             <span class="text-head ">ENVI</span>

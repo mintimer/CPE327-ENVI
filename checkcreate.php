@@ -34,17 +34,10 @@ if(isset($_FILES["promotepicture"]["name"])){
         if (isset($_POST["submit"])) {
             $check = getimagesize($_FILES["promotepicture"]["tmp_name"]);
             if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
-                echo "File is not an image.";
                 $uploadOk = 0;
             }
-        }
-        // Check if file already exists
-        if (file_exists($target_file)) {
-            echo "Sorry, file already exists.";
-            $uploadOk = 0;
         }
         // Check file size
         if ($_FILES["promotepicture"]["size"] > 8000000) {
@@ -56,19 +49,15 @@ if(isset($_FILES["promotepicture"]["name"])){
             $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif"
         ) {
-            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
             $_SESSION['ext2'] = $_SESSION['ext2'].'2';
             // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["promotepicture"]["tmp_name"], $target_file)) {
-                echo "The file " . basename($_FILES["promotepicture"]["name"]) . " has been uploaded.";
             } else {
-                echo "Sorry, there was an error uploading your file.";
                 $_SESSION['ext2'] = $_SESSION['ext2'].'2';
             }
         }
@@ -87,6 +76,6 @@ if(isset($_FILES["promotepicture"]["name"])){
 }else 
     $_SESSION['ext2'] = $_SESSION['ext2'].'3';
 if ($_SESSION['ext2'] != '0')
-    echo "<script> window.location.replace('create2.php'); </script>";
-else echo "<script> window.location.replace('uploadcampaign.php'); </script>";
+    echo "<script> window.location.replace('./create2.php'); </script>";
+else echo "<script> window.location.replace('./uploadcampaign.php'); </script>";
 ?>

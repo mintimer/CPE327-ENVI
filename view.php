@@ -87,6 +87,10 @@
                             <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
                         </form>';
                 }
+                else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
+
+
+
                     echo '
                 </div>
             </div>';

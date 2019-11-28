@@ -142,6 +142,7 @@
                         <br>
                         </form>';
                     }
+                    else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
             ?>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

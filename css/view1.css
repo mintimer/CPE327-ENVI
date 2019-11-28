@@ -224,6 +224,21 @@
     transition: transform .2s;
 }
 
+.btn3cannotclick {
+    margin: 5px;
+    border: none;
+    width: 50%;
+    height: 5%;
+    background: #01906e;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 20px;
+    transition: transform .2s;
+}
+
 .btn3:hover {
     text-decoration: none;
     transform: scale(1.1);

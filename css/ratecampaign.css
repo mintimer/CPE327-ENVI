@@ -49,14 +49,6 @@
     color: black;
 }
 
-.ratebox {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    margin-bottom: 25px;
-    background: white;
-}
-
 .ratebutt {
     display: inline;
     background: #01BF92;
@@ -99,6 +91,18 @@
     position: relative;
     width: 100%;
     height: 50%;
+}
+
+.boxrate2 {
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+
+.boxrate3 {
+    position: relative;
+    width: 100%;
+    height: 125px;
 }
 
 .rate-left {
@@ -334,7 +338,7 @@
 }
 
 .ratetextarea {
-    height: 250px;
+    height: 175px;
     margin-top: 430px;
     left: 20%;
     width: 60%;
@@ -344,7 +348,9 @@
 }
 
 .subbutt {
-    margin: auto;
+    margin-bottom: 400px;
+    margin-left: 45%;
+    display: inline;
     background: #01BF92;
     border-radius: 30px;
     width: 25%;

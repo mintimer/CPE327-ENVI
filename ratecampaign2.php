@@ -33,7 +33,7 @@
 <body>
     <div class="box">
         <div class="nav-left">
-            <a href="home.php"><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>
@@ -52,19 +52,22 @@
         </div>
         <div class="nav-right-rate">
             <span class="ratetexttitle">Giving comment for :</span><br><br>
-            <span class="ratetexthead">Sweep for Dad</span><br>
-        </div>
+            <span class="ratetexthead">Sweep for Dad</span><br> 
+        </div> 
+    </div>
+   
+    <div class="boxrate2">
+        <form class="ratetextarea">
+            <textarea placeholder="Your comment"></textarea><br>
     </div>
 
-    <div class="boxrate">
-
-    <form class="ratetextarea">
-        <textarea placeholder="Your comment"></textarea><br>
-        <a href="./ratesuccess.php"><button class=subbutt>Submit</button>
-    </form>
-
-
+    <div class="boxrate3">
+        <a href="./ratesuccess.php"><button class="subbutt">Submit</button></a>
     </div>
+
+    
+    
+    
 
 
     <div class="boxdown">

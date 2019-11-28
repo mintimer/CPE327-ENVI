@@ -50,11 +50,11 @@
                 <p class="texthead"><?php echo $row['campaign_name'] ?></p>
                 <p class="texhistorysub">Status : <?php
                                                     if ($row['status'] == 1)
-                                                        echo 'Enable';
-                                                    else if ($row['status'] == 0)
-                                                        echo 'Pending admin checking';
-                                                    else if ($row['status'] == 2)
-                                                        echo 'Suspended';
+                                                    echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                                                else if ($row['status'] == 0)
+                                                    echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                                                else if ($row['status'] == 2)
+                                                    echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
                                                     ?></p>
                 <p class="texhistorysub">Participant : <?php
                     echo $num.' / ' . $row['amount_people'];

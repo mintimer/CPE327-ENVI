@@ -22,10 +22,10 @@
 
     $sqljoined = "SELECT u.* , c.*
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid'];
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
     $sqlnumjoin = "SELECT COUNT(*) num2
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid'];
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
 
     $join = mysqli_query($con, $sqlnumjoin);
     $num2 = mysqli_fetch_array($join);
@@ -35,10 +35,11 @@
     ?>
 </head>
 
+
 <body>
     <div class="box">
         <div class="nav-left">
-            <a><img style="width: 135px" src="./pic/icon.png"></a>
+            <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>
@@ -62,8 +63,14 @@
                 $row = mysqli_fetch_array($result);
                 echo '<div class="boxview" style="padding-bottom:1%;">
                 <img class="pic" id="pic" src="' . $row['campaign_pic'] . '"><br>
-                <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span>
-                <div class="campaigndetailtextbox">
+                <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span><br>';
+                if ($row['status'] == 1)
+                    echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                else if ($row['status'] == 0)
+                    echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                else if ($row['status'] == 2)
+                    echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
+                echo '<div class="campaigndetailtextbox">
                     <div class="nav-left2 ">
                         <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
                         <span class="text-campaignsub" id="camdate">Date : ' . $row['start_time'] . '</span>
@@ -111,8 +118,14 @@
                 $row2 = mysqli_fetch_array($join);
                 echo '<div class="boxview" style="padding-bottom:1%;">
                 <img class="pic" id="pic" src="' . $row2['campaign_pic'] . '"><br>
-                <span class="text-campaignname" id="camname">' . $row2['campaign_name'] . '</span>
-                <div class="campaigndetailtextbox">
+                <span class="text-campaignname" id="camname">' . $row2['campaign_name'] . '</span><br>';
+                    if ($row2['status'] == 1)
+                        echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                    else if ($row2['status'] == 0)
+                        echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                    else if ($row2['status'] == 2)
+                        echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
+                echo '<div class="campaigndetailtextbox">
                     <div class="nav-left2 ">
                         <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
                         <span class="text-campaignsub" id="camdate">Date : ' . $row2['start_time'] . '</span>
@@ -129,7 +142,7 @@
                         <span class="text-campaignsub" id="camsize">Size : ' . $pNo['num'] . '/' . $row2['amount_people'] . '</span><br>
                     </div>
                 </div>
-                <form action="./rate.php" method="post" id="select-create">
+                <form action="./ratecampaign.php" method="post" id="select-create">
                             <button type="submit" name="cid" form="select-create" value="' . $row2['campaign_id'] . '" class="btn4">Rate campaign</button>
                         </form>
             </div>';

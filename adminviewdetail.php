@@ -12,7 +12,7 @@
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
-    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['uid'];
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
     $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];

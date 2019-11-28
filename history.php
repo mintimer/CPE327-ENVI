@@ -50,8 +50,9 @@
                     <span class="text-campaignsub" id="camsize">Size</span><br>
                 </div>
             </div>
-            <button type="submit" name="uid" form="select-form" value="'.$row['campaign_id'].'" class="btn2">View participant</button></a>
-                    <button type="submit" class="btn2">Delete</button></a>
+                    <form action="./viewparticipant.php" method="post" id="select-form">
+                        <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn3">View participant</button>
+                    </form>
         </div>
         <!-- for loop end -->
 

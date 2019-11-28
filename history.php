@@ -50,7 +50,8 @@
                     <span class="text-campaignsub" id="camsize">Size</span><br>
                 </div>
             </div>
-            <a href="#"><button class="btn5">Delete Campaign</button></a>
+            <button type="submit" name="uid" form="select-form" value="'.$row['campaign_id'].'" class="btn2">View participant</button></a>
+                    <button type="submit" class="btn2">Delete</button></a>
         </div>
         <!-- for loop end -->
 

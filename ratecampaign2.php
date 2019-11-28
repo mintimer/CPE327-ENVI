@@ -13,6 +13,19 @@
     <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Campaign</title>
+
+    <style> 
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 5px solid #01bf92;
+            border-radius: 25px;
+            font-size: 16px;
+            resize: none;
+        }
+    </style>
 </head>
 
 
@@ -26,40 +39,35 @@
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
             <span id="text"><a href="./profile.php">My profile</a></span>
-            <a href="./signout.php"><button class="btn1">Sign out</button></a>
+            <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
 
-    <div class="contain">
-
-        <div class="profiledetail">
-            <span class="textdetailhead">
-                Rate campaign
-            </span><br>
-            <span class="textdetailsub">
-                Choose your attended campaign
-            </span>
-        </div>
-
-        <div class="ratebox">
-            <div class="rate-left">
-                <div class="campaignpic">
-                    <img id="campaignpic" src="./pic/camp1.png">
-                </div>  
-            </div>
-            
-            <div class="rate-right">
-                <span class = textdetailcampaign>Sweep for Dad</span><br>
-                <span class="ratetextred">You have not rate this campaign yet!</span><br><br>
-                <span class = ratetext>Date</span><br><br>
-                <span class = ratetext>Place</span><br>
-                <a href="./ratecampaign.php"><button class=ratebutt>Rate!!!</button></a>
+   
+    <div class="boxrate">
+        <div class="nav-left">
+            <div class="campaignpicinrate">
+                <img id="campaignpicinrate" src="./pic/camp1.png">
             </div>
         </div>
-
+        <div class="nav-right-rate">
+            <span class="ratetexttitle">Giving comment for :</span><br><br>
+            <span class="ratetexthead">Sweep for Dad</span><br> 
+        </div>                                                                                                     
     </div>
     
-    <div class="boxdown ">
+   
+
+    <form class="ratetextarea">
+        <textarea placeholder="Your comment"></textarea><br>
+        <a href="./ratesuccess.php"><button class="subbutt">Submit</button>
+    </form>
+
+
+    
+
+
+    <div class="boxdown">
         <div class="nav-left ">
             <span class="text-head ">ENVI</span>
         </div>

@@ -11,6 +11,7 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Campaign</title>
 </head>
 
@@ -43,24 +44,22 @@
     </div>
 
     <div class="boxrate">
-        <a href="./ratesuccess.php"><button class="nav1">
+        <a href="./ratecampaign2.php"><button class="nav1">
             1 Star
         </button>
-        <a href="./ratesuccess.php"><button class="nav2">
+        <a href="./ratecampaign2.php"><button class="nav2">
             2 Star
         </button>
-        <a href="./ratesuccess.php"><button class="nav3">
+        <a href="./ratecampaign2.php"><button class="nav3">
             3 Star
         </button>
-        <a href="./ratesuccess.php"><button class="nav4">
+        <a href="./ratecampaign2.php"><button class="nav4">
             4 Star
         </button>
-        <a href="./ratesuccess.php"><button class="nav5">
+        <a href="./ratecampaign2.php"><button class="nav5">
             5 Star
         </button>
     </div>
-
-
 
     <div class="boxdown ">
         <div class="nav-left ">

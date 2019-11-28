@@ -11,6 +11,7 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Success</title>
 </head>
 

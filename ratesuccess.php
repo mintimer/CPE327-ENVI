@@ -50,7 +50,7 @@
         <div class="ssmid">
             <span class="successbody">your paticipated</span><br>
             <span class="successbody2">for better next</span><br><br><br>
-            <a href="./rate.php"><button class="backbutt">Go back</button></a>
+            <a href="./history.php"><button class="backbutt">Go back</button></a>
         </div>
         <div class="ssright">
             <span class="successheader">Campaign</span>

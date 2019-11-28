@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
     $sql = "SELECT * FROM campaigninfo WHERE status = 0 ORDER BY start_time";
@@ -58,7 +59,10 @@
                     </div>
                 </div>';
             }
-        }else echo "หวายยยยย ไม่มีไรให้ แอพพรูฟฟฟ";
+        }else echo '<div class="subbox">
+        <p class="textnosub" id="camname">Congratulation! Your job is done (for now).</p>
+        <a href="./signout.php"><button class="btn3" id="joinedbtn">Sign out</button></a>
+    </div>';
         ?>
 
 

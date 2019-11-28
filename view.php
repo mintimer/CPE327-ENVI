@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
     session_start();
@@ -106,7 +107,10 @@
                     </div>
                 </div>';
             }
-        }else echo "เว็บมึงไม่มีไรเลยเหรอ";
+        }else echo '<div class="subbox">
+        <p class="textnosub" id="camname">There is no campaign right now.</p>
+        <a href="./create.php"><button class="btn3" id="joinedbtn">Be the first campaign</button></a>
+    </div>';
         ?>
     </div>
     <div class="boxdown ">

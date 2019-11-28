@@ -7,9 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/join.css">
-    <link rel="stylesheet" href="./css/view1.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     session_start();
     require 'connect.php';
@@ -31,30 +31,18 @@
         </div>
     </div>
 
-
+    
     <div class="contain3">
-        <span class="textjoin" id="join">Joining</span> &nbsp;
-        <span class="textcom" id="complete">Completed ! </span>
+    <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
+    <br>
         <br>
+        <span class="textjoin" id="join">Joining  </span>
+        <span class="textcom" id="complete">Completed ! </span>    
         <br>
-        <br>
-        <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
-        <br>
-        <br>
-        <br>
-        <span class="textenj" id="enjoy">Enjoy your trip</span>
-        <br>
-        <span class="textenj" id="good">Goodluck </span>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <a href="./View.php"><spam id="back">Back to View page</span></a>
+        <span class="textenj" id="enjoy">Enjoy your trip</span>
+        <br><br>
+        <a href="./view.php"><button class="btn1">Back to search campaign</button></a>
     </div>
 
 

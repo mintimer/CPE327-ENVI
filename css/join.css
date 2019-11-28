@@ -1,26 +1,35 @@
 .textjoin {
-    font-size: 80px;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .textcom {
-    font-size: 80px;
-    color:#01BF92 ;
+    font-size: 60px;
+    color: #01BF92;
+    font-weight: bold;
 }
 
 .textenj {
-    font-size: 60px;
+    font-size: 40px;
+    color: rgb(104, 104, 104);
+}
+
+.textor {
+    font-size: 30px;
     color: rgb(104, 104, 104);
 }
 
 .contain3 {
     margin: auto;
-    padding-top: 5%;
+    margin-top: 3%;
+    position: relative;
     max-width: 65%;
     align-items: center;
     text-align: center;
     vertical-align: center;
-    /* background: #000; */
+    /* background: rgb(104, 104, 104); */
 }
+
 .piccor {
     width: 200px;
     height: 200px;

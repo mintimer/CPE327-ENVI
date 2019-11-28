@@ -7,9 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/join.css">
-    <link rel="stylesheet" href="./css/view1.css">
+    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     session_start();
     $_SESSION['cid'] = $_POST['cid'];
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<div class="box">
+    <div class="box">
         <div class="nav-left">
             <a href="./view.php"><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
@@ -30,39 +30,26 @@
     </div>
 
     <div class="contain3">
-        <span class="textjoin" id="join">Joining</span> &nbsp;
+        <span class="textjoin" id="join">Join</span> &nbsp;
         <span class="textcom" id="complete">Compaign </span>
         <span class="textjoin" id="complete">Now !</span>
-        <br>
         <br>
         <span class="textenj" id="select">Select your account</span>
     </div>
 
-    <br>
-    
-    <div class="contain3">
-        <div class="boxaccount">
-            <a href="./join.php">
-                <div class="nav-left">
-                    <img style="width:35px" src="./pic/account.png">
-                    <span style="font-size:20px" id="account">Your Account</span>
-                </div>
-            </a>
-        </div>
-        <br>
-        <br>
 
-        <div class="line"></div>
-        or
+    <div class="contain3">
+        <a href="./join.php"><button class="btn4" onclick="goBack()">Confirm to use this account</button></a>
         <br>
+        <span class="textor" id="select">or</span>
         <br>
-        <button onclick="goBack()">Cancel</button>
+        <button class="btn5" onclick="goBack()">Cancel</button>
     </div>
 
     <script>
-    function goBack() {
-    window.history.back();
-    }
+        function goBack() {
+            window.history.back();
+        }
     </script>
 
 

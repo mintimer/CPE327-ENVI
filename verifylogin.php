@@ -26,7 +26,7 @@
         else $_SESSION['picpath'] = "./pic/profile/profilepic.png";
         if($_SESSION['uid']==1)
             header("Location: profileadmin.php");
-        else header("Location: profile.php");
+        else header("Location: view.php");
     }else{
         echo "
         <script>

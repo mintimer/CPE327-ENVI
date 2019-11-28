@@ -96,7 +96,7 @@
                             <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
                         </form>';
                 }else if($check == 2){
-                    echo 'ปุ่มคนเต็มที่กดไม่ได้';
+                    echo'<button type="submit" name="cid" class="btncannotclick" disabled>Full</button>';
                 }
                 else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
                     echo '

@@ -64,19 +64,21 @@
 
             <div class="box1">
                 <form action="./profileother.php" id="visit" method="post"></form>
-                <p class="textdetailsub">
                 <?php
                 for($x=0;$x<$num;$x++){
-                    echo '<button class="btnnobtn" type="submit" form="visit" name="visit" value="'.$row['user_id'].'">
+                    echo '
+                <p class="textdetailsub">
+                    <button class="btnnobtn" type="submit" form="visit" name="visit" value="'.$row['user_id'].'">
                         <img id="miniprofilepic" src="';
                             if($row['picture_path']==NULL) 
                                 echo "./pic/profile/profilepic.png";
                             else echo $t=$row['picture_path']; 
-                    echo '">'.$row['firstname'] . ' ' . $row['lastname'].'</button>';
+                    echo '">  '.$row['firstname'] . ' ' . $row['lastname'].'</button>';
                     $row = $row = mysqli_fetch_array($result);
+                    echo'</p><br><br>';
                 }
+               
                 ?>
-                </p>
                 <br>
                 <a class="middle"><button class="btn5" id="joinedbtn" onclick="showjoin()">Delete campaign</button></a>
             </div>

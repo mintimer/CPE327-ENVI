@@ -12,7 +12,9 @@
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     session_start();
-    $_SESSION['cid'] = $_POST['cid'];
+    $ref = $_SESSION['ref'];
+    if(isset($_POST['cid']))
+        $value = $_POST['cid'];
     ?>
 </head>
 
@@ -43,7 +45,9 @@
         <br>
         <span class="textor" id="select">or</span>
         <br>
-        <button class="btn5" onclick="goBack()">Cancel</button>
+        <form action="<?php echo $ref; ?>" method="post">
+            <button class="btn5" name="cid" value=<?php echo $value; ?> >Cancel</button>
+        </form>
     </div>
 
     <script>

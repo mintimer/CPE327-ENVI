@@ -13,6 +13,7 @@
     <?php
     require 'connect.php';
     session_start();
+    $_SESSION['ref'] = str_replace("/envi/CPE327-ENVI", ".", $_SERVER['REQUEST_URI']);
     if(isset($_POST['cid'])){
         $_SESSION['cid'] = $_POST['cid'];
     }
@@ -164,7 +165,7 @@
             }
             else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
             ?>
-            <button class="btn3" onclick="goBack()">Go Back</button>
+            <a href="./view.php"><button class="btn3">Go Back</button></a>
         </div>
 
     </div>

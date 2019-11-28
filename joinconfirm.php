@@ -13,8 +13,10 @@
     <?php
     session_start();
     $ref = $_SESSION['ref'];
-    if(isset($_POST['cid']))
+    if(isset($_POST['cid'])){
         $value = $_POST['cid'];
+        $_SESSION['cid'] = $_POST['cid'];
+    }
     ?>
 </head>
 
@@ -41,7 +43,7 @@
 
 
     <div class="contain3">
-        <a href="./join.php"><button class="btn4" onclick="goBack()">Confirm to use this account</button></a>
+        <a href="./join.php"><button class="btn4" >Confirm to use this account</button></a>
         <br>
         <span class="textor" id="select">or</span>
         <br>

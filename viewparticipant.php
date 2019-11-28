@@ -14,6 +14,7 @@
     <?php
     require 'connect.php';
     session_start();
+    $_SESSION['ref'] = str_replace("/envi/CPE327-ENVI", ".", $_SERVER['REQUEST_URI']);
     if(isset($_POST['cid'])){
         $_SESSION['cid'] = $_POST['cid'];
     }
@@ -58,7 +59,7 @@
                 <p class="texhistorysub">Participant : <?php
                     echo $num.' / ' . $row['amount_people'];
                 ?></p>
-                <p class="texhistorysub"><button class="btn6" onclick="goBack()">Go Back</button></p>
+                <p class="texhistorysub"><a href="./history.php"><button class="btn6" >Go Back</button></a></p>
                 <br>
             </div>
 
@@ -80,7 +81,7 @@
                
                 ?>
                 <br>
-                <a class="middle"><button class="btn5" id="joinedbtn" onclick="showjoin()">Delete campaign</button></a>
+                <a class="middle"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
             </div>
         </div>
     </div>

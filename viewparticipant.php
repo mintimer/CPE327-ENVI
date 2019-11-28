@@ -11,6 +11,24 @@
     <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/create1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Participant</title>
+    <?php
+    require 'connect.php';
+    session_start();
+    if(isset($_POST['cid'])){
+        $_SESSION['cid'] = $_POST['cid'];
+    }
+    $sql = "SELECT *
+    FROM user_join uf INNER JOIN campaigninfo c ON c.campaign_id = uf.campaign_id INNER JOIN userinfo u ON uf.user_id = u.user_id
+    WHERE uf.campaign_id = ".$_SESSION['cid'];
+    $sqlcount = "SELECT COUNT(*) num
+    FROM user_join uf INNER JOIN campaigninfo c ON c.campaign_id = uf.campaign_id INNER JOIN userinfo u ON uf.user_id = u.user_id
+    WHERE uf.campaign_id = ".$_SESSION['cid'];
+    $result = mysqli_query($con,$sqlcount);
+    $row = mysqli_fetch_array($result);
+    $num = $row['num'];
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result);
+    ?>
 </head>
 
 <body>
@@ -29,17 +47,35 @@
         <div class="form-box">
             <div class="head">
                 <p class="texthead">View Participant</p>
-                <p class="texhistorysub">Status : Enable</p>
-                <p class="texhistorysub">Participant : 0 / 20</p>
+                <p class="texhistorysub">Status : <?php
+                                                    if ($row['status'] == 1)
+                                                        echo 'Enable';
+                                                    else if ($row['status'] == 0)
+                                                        echo 'Pending Admin Checking';
+                                                    else if ($row['status'] == 2)
+                                                        echo 'Suspended';
+                                                    ?></p>
+                <p class="texhistorysub">Participant : <?php
+                    echo $num.' / ' . $row['amount_people'];
+                ?></p>
                 <p class="texhistorysub"><button class="btn6" onclick="goBack()">Go Back</button></p>
                 <br>
             </div>
 
             <div class="box1">
+                <form action="./profileother.php" id="visit" method="post"></form>
                 <p class="textdetailsub">
-                    <!-- loop start -->
-                    //Participant Name with link
-                    <!-- loop end -->
+                <?php
+                for($x=0;$x<$num;$x++){
+                    echo '<button class="btnnobtn" type="submit" form="visit" name="visit" value="'.$row['user_id'].'">
+                        <img id="miniprofilepic" src="';
+                            if($row['picture_path']==NULL) 
+                                echo "./pic/profile/profilepic.png";
+                            else echo $t=$row['picture_path']; 
+                    echo '">'.$row['firstname'] . ' ' . $row['lastname'].'</button>';
+                    $row = $row = mysqli_fetch_array($result);
+                }
+                ?>
                 </p>
                 <br>
                 <a class="middle"><button class="btn5" id="joinedbtn" onclick="showjoin()">Delete campaign</button></a>

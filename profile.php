@@ -10,6 +10,17 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/profile1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Profile</title>
+    <?php
+        require 'connect.php';
+        session_start();
+        $sql = "SELECT COUNT(*) num FROM campaigninfo WHERE user_id = ".$_SESSION['uid']." AND status = 1" ;
+        $result = mysqli_query($con, $sql);
+        $countcreate = mysqli_fetch_array($result);
+
+        $sql = "SELECT COUNT(*) num FROM user_join WHERE user_id = ".$_SESSION['uid'];
+        $result = mysqli_query($con, $sql);
+        $countjoin = mysqli_fetch_array($result);
+    ?>
 </head>
 
 <body>
@@ -28,7 +39,6 @@
         <div class="profiledetail">
             <img id="profilepic" src="
             <?php
-                session_start();
                 if($_SESSION['picpath']==NULL)
                     echo "./pic/profile/profilepic.png";
                 else echo $_SESSION['picpath'];
@@ -42,10 +52,10 @@
             </span>
             <br><br>
             <span class="textdetailsub">Created campaign :</span>
-            <span class="textdetaildata">0</span>
+            <span class="textdetaildata"><?php echo $countcreate['num'] ?></span>
             <br>
             <span class="textdetailsub">Participated campaign :</span>
-            <span class="textdetaildata">0</span>
+            <span class="textdetaildata"><?php echo $countjoin['num'] ?></span>
             <br>
             <span class="textdetailsub">Goodness points :</span>
             <span class="textdetaildate">

@@ -48,6 +48,7 @@
         <div class="form-box">
             <div class="head">
                 <p class="texthead">View Participant</p>
+                <p class="texthead"><?php echo $row['campaign_name'] ?></p>
                 <p class="texhistorysub">Status : <?php
                                                     if ($row['status'] == 1)
                                                         echo 'Enable';
@@ -75,13 +76,13 @@
                                 echo "./pic/profile/profilepic.png";
                             else echo $t=$row['picture_path']; 
                     echo '">  '.$row['firstname'] . ' ' . $row['lastname'].'</button>';
-                    $row = $row = mysqli_fetch_array($result);
+                    $row = mysqli_fetch_array($result);
                     echo'</p><br><br>';
                 }
                
                 ?>
                 <br>
-                <a class="middle"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
+                <a class="middle" href="./checkdelete.php"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
             </div>
         </div>
     </div>

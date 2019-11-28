@@ -16,7 +16,7 @@
 
 <body>
     <div class="box">
-        <a href="./view.php"><img style="width: 170px" src="./pic/icon.png"></a>
+        <a href="./home.php"><img style="width: 170px" src="./pic/icon.png"></a>
     </div>
     <div class="container">
         <div class="bg-image"></div>

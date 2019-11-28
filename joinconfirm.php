@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/view1.css">
-
+    <?php
+    require 'connect.php';
+    echo $_POST['cid'];
+    ?>
 </head>
 
 <body>

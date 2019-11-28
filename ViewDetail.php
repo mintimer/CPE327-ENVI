@@ -105,9 +105,16 @@
                     <span class="text2" id="camdate">End date : </span>
                     <span class="text2" id="camstatus2"><?php echo $row['end_time']; ?></span>
                     <br>
+                    <?php
+                    $sqlcountpeople = "SELECT COUNT(*) num
+                    FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                    WHERE u.campaign_id = ".$row['campaign_id'];
+                    $count = mysqli_query($con, $sqlcountpeople);
+                    $pNo = mysqli_fetch_array($count);
+                    ?>
                     <img class="pic2" id="picSize" src="./pic/people.png"></img>
                     <span class="text2" id="camsize">Size : </span>
-                    <span class="text2" id="camstatus2"><?php echo $row['amount_people']; ?></span>
+                    <span class="text2" id="camstatus2"><?php echo $pNo['num'].'/'.$row['amount_people']; ?></span>
                     <br>
                     <img class="pic2" id="picCompany" src="./pic/company.png"></img>
                     <span class="text2" id="camCompany">Location : </span>

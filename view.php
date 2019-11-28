@@ -56,54 +56,56 @@
     </div>
     <div class="contain">
         <?php
-        for ($x = 0; $x < $num; $x++) {
-            $row = mysqli_fetch_array($result);
-            echo '<div class="boxview">
-                <img class="pic" id="pic" src="' . $row['campaign_pic'] . '"><br>
-                <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span>
-                <div class="campaigndetailtextbox">
-                    <div class="nav-left2 ">
-                        <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                        <span class="text-campaignsub" id="camdate">Date : ' . $row['start_time'] . '</span>
-                        <br>
-                        <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                        <span class="text-campaignsub" id="camlocation">Location : ' . $row['location'] . '</span>
-                        <br>';
-                    $sqlcountpeople = "SELECT COUNT(*) num
-                    FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
-                    WHERE u.campaign_id = ".$row['campaign_id'];
-                    $count = mysqli_query($con, $sqlcountpeople);
-                    $pNo = mysqli_fetch_array($count);
-                        echo '<img class="picicon" id="picSize" src="./pic/people.png"></img>
-                        <span class="text-campaignsub" id="camsize">Size : '.$pNo['num'].'/' . $row['amount_people'] . '</span><br>
+        if($num != 0){
+            for ($x = 0; $x < $num; $x++) {
+                $row = mysqli_fetch_array($result);
+                echo '<div class="boxview">
+                    <img class="pic" id="pic" src="' . $row['campaign_pic'] . '"><br>
+                    <span class="text-campaignname" id="camname">' . $row['campaign_name'] . '</span>
+                    <div class="campaigndetailtextbox">
+                        <div class="nav-left2 ">
+                            <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
+                            <span class="text-campaignsub" id="camdate">Date : ' . $row['start_time'] . '</span>
+                            <br>
+                            <img class="picicon" id="picLocation" src="./pic/location.png"></img>
+                            <span class="text-campaignsub" id="camlocation">Location : ' . $row['location'] . '</span>
+                            <br>';
+                        $sqlcountpeople = "SELECT COUNT(*) num
+                        FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                        WHERE u.campaign_id = ".$row['campaign_id'];
+                        $count = mysqli_query($con, $sqlcountpeople);
+                        $pNo = mysqli_fetch_array($count);
+                            echo '<img class="picicon" id="picSize" src="./pic/people.png"></img>
+                            <span class="text-campaignsub" id="camsize">Size : '.$pNo['num'].'/' . $row['amount_people'] . '</span><br>
+                        </div>
                     </div>
-                </div>
-                <div class="campaigndetailbutton">
-                    <form action="./ViewDetail.php" method="post" id="select-form">
-                        <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn2">Read More</button>
-                    </form>
-                    ';
-                $check = 0;
-                if($pNo['num'] == $row['amount_people']){
-                    $check = 2;
-                }
-                for($z=0;$z<$numjoin;$z++){
-                    if($row2[$z] == $row['campaign_id']){
-                        $check = 1;
+                    <div class="campaigndetailbutton">
+                        <form action="./ViewDetail.php" method="post" id="select-form">
+                            <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn2">Read More</button>
+                        </form>
+                        ';
+                    $check = 0;
+                    if($pNo['num'] == $row['amount_people']){
+                        $check = 2;
                     }
-                }
-                if($check == 0){
-                    echo '<form method="post" id="่join-form">
-                            <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
-                        </form>';
-                }else if($check == 2){
-                    echo'<button type="submit" name="cid" class="btncannotclick" disabled>Full</button>';
-                }
-                else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
-                    echo '
-                </div>
-            </div>';
-        }
+                    for($z=0;$z<$numjoin;$z++){
+                        if($row2[$z] == $row['campaign_id']){
+                            $check = 1;
+                        }
+                    }
+                    if($check == 0){
+                        echo '<form method="post" id="่join-form">
+                                <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
+                            </form>';
+                    }else if($check == 2){
+                        echo'<button type="submit" name="cid" class="btncannotclick" disabled>Full</button>';
+                    }
+                    else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
+                        echo '
+                    </div>
+                </div>';
+            }
+        }else echo "เว็บมึงไม่มีไรเลยเหรอ";
         ?>
     </div>
     <div class="boxdown ">

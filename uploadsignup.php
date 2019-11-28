@@ -11,5 +11,5 @@ $row = $row=mysqli_fetch_array($result);
 $_SESSION['uid'] = $row['uid'];
 $_SESSION['goodness_point'] = $row['goodness_point'];
 $_SESSION['banned'] = $row['banned'];
-header("Location:view.php");
+header("Location:verifylogin.php");
 ?>

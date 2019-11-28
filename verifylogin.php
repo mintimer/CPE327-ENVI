@@ -1,8 +1,14 @@
 <?php
     require 'connect.php';
     session_start();
-    $eOrU = mysqli_real_escape_string($con,$_POST['email']);
-    $password = mysqli_real_escape_string($con,$_POST['password']);
+    if(isset($_POST['email'])){
+        $_SESSION['username'] = $_POST['email'];
+    }
+    if(isset($_POST['email'])){
+        $_SESSION['password'] = $_POST['password'];
+    }
+    $eOrU = mysqli_real_escape_string($con,$_SESSION['username']);
+    $password = mysqli_real_escape_string($con,$_SESSION['password']);
     if(strpos($eOrU,'@') !== false)
         $eOrU_table = 'email';
     else $eOrU_table = 'username';

@@ -75,6 +75,12 @@
     text-align: center;
 }
 
+.textdetailhead {
+    position: absolute;
+    font-size: 30px;
+    padding-left: 3%;
+}
+
 .textdetailsub {
     position: absolute;
     font-size: 18px;

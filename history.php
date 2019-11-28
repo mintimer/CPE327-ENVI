@@ -87,6 +87,7 @@
         </div>
         <!-- for loop end -->
 
+        <span class="textdetailhead" id="camname">You didn't join any campaign.</span>
 
     </div>
 

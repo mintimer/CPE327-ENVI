@@ -70,11 +70,12 @@
     height: fit-content;
     margin: auto;
     /* min-height: 100vh; */
-    padding: 1.5% 0;
+    padding: 1.5% 0 3%;
     padding-right: 1.5%;
     position: relative;
+    background: #fbfbfb;
     z-index: 1;
-    border: 0.3mm solid #333333;
+    border: 0.5mm double #333333;
     border-radius: 30px;
     margin-bottom: 15px;
     align-items: center;

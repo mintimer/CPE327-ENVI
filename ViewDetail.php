@@ -12,7 +12,7 @@
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
-    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['uid'];
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
     $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
@@ -110,8 +110,10 @@
                     <span><img id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
                 </div>
             </div>
-            <a href="./joinconfirm.php"><button class="btn3">Join us</button></a>
+            <form method="post" id="่joining-form">
+            <button type="submit" name="cid" formaction="./joinconfirm.php" value="<?php echo $row['campaign_id']; ?>" class="btn3">Join us</button>
             <br>
+            </form>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>
 

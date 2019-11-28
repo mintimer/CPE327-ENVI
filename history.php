@@ -10,7 +10,29 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <?php
+    require 'connect.php';
+    session_start();
+    $sql = "SELECT * FROM campaigninfo WHERE user_id = ".$_SESSION['uid'];
+    $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE user_id = ".$_SESSION['uid'];
+    $result = mysqli_query($con, $sqlcount);
+    $row = mysqli_fetch_array($result);
+    $num = $row['num'];
+    $result = mysqli_query($con, $sql);
 
+    $sqljoined = "SELECT u.* , c.*
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+    $sqlnumjoin = "SELECT COUNT(*) num2
+    FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
+    WHERE u.user_id = ".$_SESSION['uid'];
+
+    $join = mysqli_query($con, $sqlnumjoin);
+    $num2 = mysqli_fetch_array($join);
+    $numjoin = $num2['num2'];
+    $join = mysqli_query($con, $sqljoined);
+
+    ?>
 </head>
 
 <body>
@@ -34,27 +56,34 @@
             <a><button class="btn7" id="joinedbtn" onclick="showjoin()">Joined campaign</button></a>
         </div>
 
-        <!-- for loop start -->
-        <div class="boxview" style="padding-bottom:1%;">
-            <img class="pic" id="pic" src="./pic/cam1.jpg"><br>
-            <span class="text-campaignname" id="camname">Campaign Name</span>
-            <div class="campaigndetailtextbox">
-                <div class="nav-left2 ">
-                    <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                    <span class="text-campaignsub" id="camdate">Date</span>
-                    <br>
-                    <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                    <span class="text-campaignsub" id="camlocation">Location</span>
-                    <br>
-                    <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                    <span class="text-campaignsub" id="camsize">Size</span><br>
+        <?php
+        for($x=0;$x<$num;$x++){
+            $row = mysqli_fetch_array($result);
+            echo '<div class="boxview" style="padding-bottom:1%;">
+                <img class="pic" id="pic" src="'.$row['campaign_pic'].'"><br>
+                <span class="text-campaignname" id="camname">'.$row['campaign_name'].'</span>
+                <div class="campaigndetailtextbox">
+                    <div class="nav-left2 ">
+                        <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
+                        <span class="text-campaignsub" id="camdate">Date : '.$row['start_time'].'</span>
+                        <br>
+                        <img class="picicon" id="picLocation" src="./pic/location.png"></img>
+                        <span class="text-campaignsub" id="camlocation">Location : '.$row['location'].'</span>
+                        <br>';
+                        $sqlcountpeople = "SELECT COUNT(*) num
+                        FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                        WHERE u.campaign_id = ".$row['campaign_id'];
+                        $count = mysqli_query($con, $sqlcountpeople);
+                        $pNo = mysqli_fetch_array($count);
+                        echo '<img class="picicon" id="picSize" src="./pic/people.png"></img>
+                        <span class="text-campaignsub" id="camsize">Size : '.$pNo['num'].'/' . $row['amount_people'] . '</span><br>
+                    </div>
                 </div>
-            </div>
-                    <form action="./viewparticipant.php" method="post" id="select-form">
-                        <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn3">View participant</button>
-                    </form>
-        </div>
-        <!-- for loop end -->
+                        <form action="./viewparticipant.php" method="post" id="select-form">
+                            <button type="submit" name="cid" form="select-form" value="' . $row['campaign_id'] . '" class="btn3">View participant</button>
+                        </form>
+            </div>';
+        }?>
 
 
     </div>
@@ -67,25 +96,32 @@
             <a><button class="btn6" id="joinedbtn" onclick="showjoin()">Joined campaign</button></a>
         </div>
 
-        <!-- for loop start -->
-        <div class="boxview" style="padding-bottom:1%;">
-            <img class="pic" id="pic" src="./pic/cam1.jpg"><br>
-            <span class="text-campaignname" id="camname">Campaign Name</span>
-            <div class="campaigndetailtextbox">
-                <div class="nav-left2 ">
-                    <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
-                    <span class="text-campaignsub" id="camdate">Date</span>
-                    <br>
-                    <img class="picicon" id="picLocation" src="./pic/location.png"></img>
-                    <span class="text-campaignsub" id="camlocation">Location</span>
-                    <br>
-                    <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                    <span class="text-campaignsub" id="camsize">Size</span><br>
+        <?php
+        for($y=0;$y<$numjoin;$y++){
+            $row2 = mysqli_fetch_array($join);
+            echo '<div class="boxview" style="padding-bottom:1%;">
+                <img class="pic" id="pic" src="'.$row2['campaign_pic'].'"><br>
+                <span class="text-campaignname" id="camname">'.$row2['campaign_name'].'</span>
+                <div class="campaigndetailtextbox">
+                    <div class="nav-left2 ">
+                        <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
+                        <span class="text-campaignsub" id="camdate">Date : '.$row2['start_time'].'</span>
+                        <br>
+                        <img class="picicon" id="picLocation" src="./pic/location.png"></img>
+                        <span class="text-campaignsub" id="camlocation">Location : '.$row2['location'].'</span>
+                        <br>';
+                        $sqlcountpeople = "SELECT COUNT(*) num
+                        FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                        WHERE u.campaign_id = ".$row2['campaign_id'];
+                        $count = mysqli_query($con, $sqlcountpeople);
+                        $pNo = mysqli_fetch_array($count);
+                        echo '<img class="picicon" id="picSize" src="./pic/people.png"></img>
+                        <span class="text-campaignsub" id="camsize">Size : '.$pNo['num'].'/' . $row2['amount_people'] . '</span><br>
+                    </div>
                 </div>
-            </div>
-            <a href="#"><button class="btn4">Rate Campaign</button></a>
-        </div>
-        <!-- for loop end -->
+                <a href="#"><button class="btn4">Rate Campaign</button></a>
+            </div>';
+        }?>
 
         <span class="textdetailhead" id="camname">You didn't join any campaign.</span>
 

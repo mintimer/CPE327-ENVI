@@ -11,8 +11,8 @@
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
-    $sql = "SELECT * FROM campaigninfo WHERE status = 1 ORDER BY start_time";
-    $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 1";
+    $sql = "SELECT * FROM campaigninfo WHERE status = 0 ORDER BY start_time";
+    $sqlcount = "SELECT COUNT(*) num FROM campaigninfo WHERE status = 0";
     $result = mysqli_query($con, $sqlcount);
     $row = mysqli_fetch_array($result);
     $num = $row['num'];

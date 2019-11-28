@@ -54,7 +54,12 @@
 
         <div class="extradetail">
             <a href="#"><button class="btn2">Report this user</button></a>
-            <a href="./ViewDetail.php"><button class="btn2">Back</button></a>
+            <a href="<?php 
+                session_start();
+                if($_SESSION['uid']!=1) 
+                    echo './ViewDetail.php';
+                else echo './adminviewdetail.php';
+            ?>"><button class="btn2">Back</button></a>
 
         </div>
     </div>

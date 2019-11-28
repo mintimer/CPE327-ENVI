@@ -12,7 +12,11 @@
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <?php
     require 'connect.php';
-    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_POST['cid'];
+    session_start();
+    if(isset($_POST['cid'])){
+        $_SESSION['cid'] = $_POST['cid'];
+    }
+    $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_SESSION['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
     $sqlname = "SELECT * FROM userinfo WHERE user_id = " . $row['user_id'];
@@ -44,6 +48,10 @@
                     <span class="text2" id="camstatus2"><?php
                                                         if ($row['status'] == 1)
                                                             echo 'Enable';
+                                                        else if ($row['status'] == 0)
+                                                            echo 'Pending Admin Checking';
+                                                        else if ($row['status'] == 2)
+                                                            echo 'Suspended';
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
@@ -108,10 +116,12 @@
                     <span><img id="pic3" src="<?php echo $row['campaign_pic']; ?>"></img></span>
                 </div>
             </div>
-            <a href="#"><button class="btn4">Approve</button></a>
+            <form action="./updatestatus.php" method="post">
+            <button type="submit" name="status" class="btn4" value=1 >Approve</button>
             <br>
-            <a href="#"><button class="btn5">Suspend</button></a>
+            <button type="submit" name="status" class="btn5" value=2 >Suspend</button>
             <br>
+            </form>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>
 
@@ -131,6 +141,32 @@
         function goBack() {
             window.history.back();
         }
+    </script>
+    <script>
+        var map, marker, lat, lng, pos;
+
+        function initMap() {
+            lat = <?php echo $row['lati']; ?>;
+            lng = <?php echo $row['longti']; ?>;
+            pos = {
+                lat: lat,
+                lng: lng
+            };
+            map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 7,
+                    center: pos,
+                    streetViewControl: false,
+                    fullscreenControl: false,
+                    data: false
+                });
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB_iaHIfhLObFmtyTMO1vW0LeYWphhV5U&callback=initMap">
     </script>
 </body>
 

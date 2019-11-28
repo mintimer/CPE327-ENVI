@@ -37,6 +37,7 @@
         $arr = mysqli_fetch_array($join);
         $row2[$y] = $arr['campaign_id'];
     }
+
     ?>
 </head>
 
@@ -66,9 +67,14 @@
                         <br>
                         <img class="picicon" id="picLocation" src="./pic/location.png"></img>
                         <span class="text-campaignsub" id="camlocation">Location : ' . $row['location'] . '</span>
-                        <br>
-                        <img class="picicon" id="picSize" src="./pic/people.png"></img>
-                        <span class="text-campaignsub" id="camsize">Size : ' . $row['amount_people'] . '</span><br>
+                        <br>';
+                    $sqlcountpeople = "SELECT COUNT(*) num
+                    FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                    WHERE u.campaign_id = ".$row['campaign_id'];
+                    $count = mysqli_query($con, $sqlcountpeople);
+                    $pNo = mysqli_fetch_array($count);
+                        echo '<img class="picicon" id="picSize" src="./pic/people.png"></img>
+                        <span class="text-campaignsub" id="camsize">Size : '.$pNo['num'].'/' . $row['amount_people'] . '</span><br>
                     </div>
                 </div>
                 <div class="campaigndetailbutton">
@@ -77,6 +83,9 @@
                     </form>
                     ';
                 $check = 0;
+                if($pNo['num'] == $row['amount_people']){
+                    $check = 2;
+                }
                 for($z=0;$z<$numjoin;$z++){
                     if($row2[$z] == $row['campaign_id']){
                         $check = 1;
@@ -86,6 +95,8 @@
                     echo '<form method="post" id="่join-form">
                             <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>
                         </form>';
+                }else if($check == 2){
+                    echo 'ปุ่มคนเต็มที่กดไม่ได้';
                 }
                 else echo'<button type="submit" name="cid" class="btncannotclick" disabled>Joined</button>';
                     echo '

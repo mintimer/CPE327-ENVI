@@ -68,6 +68,10 @@
                     <span class="text2" id="camstatus2"><?php
                                                         if ($row['status'] == 1)
                                                             echo 'Enable';
+                                                        else if ($row['status'] == 0)
+                                                            echo 'Pending Admin Checking';
+                                                        else if ($row['status'] == 2)
+                                                            echo 'Suspended';
                                                         ?></span>
                     <br>
                     <span class="text2" id="camstatus">Create by : </span>
@@ -105,9 +109,16 @@
                     <span class="text2" id="camdate">End date : </span>
                     <span class="text2" id="camstatus2"><?php echo $row['end_time']; ?></span>
                     <br>
+                    <?php
+                    $sqlcountpeople = "SELECT COUNT(*) num
+                    FROM campaigninfo c LEFT JOIN user_join u ON c.campaign_id = u.campaign_id
+                    WHERE u.campaign_id = ".$row['campaign_id'];
+                    $count = mysqli_query($con, $sqlcountpeople);
+                    $pNo = mysqli_fetch_array($count);
+                    ?>
                     <img class="pic2" id="picSize" src="./pic/people.png"></img>
                     <span class="text2" id="camsize">Size : </span>
-                    <span class="text2" id="camstatus2"><?php echo $row['amount_people']; ?></span>
+                    <span class="text2" id="camstatus2"><?php echo $pNo['num'].'/'.$row['amount_people']; ?></span>
                     <br>
                     <img class="pic2" id="picCompany" src="./pic/company.png"></img>
                     <span class="text2" id="camCompany">Location : </span>
@@ -134,6 +145,9 @@
             </div>
             <?php
             $check = 0;
+            if($pNo['num'] == $row['amount_people']){
+                $check = 2;
+            }
             for($z=0;$z<$numjoin;$z++){
                 if($row2[$z] == $row['campaign_id']){
                     $check = 1;
@@ -144,8 +158,11 @@
                         <button type="submit" name="cid" formaction="./joinconfirm.php" value="'.$row['campaign_id'].'" class="btn3">Join us</button>
                         <br>
                         </form>';
-                    }
-                    else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
+            }
+            else if($check == 2){
+                echo 'ปุ่มคนเต็มที่กดไม่ได้';
+            }
+            else echo'<button type="submit" name="cid" class="btn3cannotclick" disabled>Joined</button>';
             ?>
             <button class="btn3" onclick="goBack()">Go Back</button>
         </div>

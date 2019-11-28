@@ -94,7 +94,6 @@
                             $check = 1;
                         }
                     }
-                    echo $row['campaign_id'];
                     if($check == 0){
                         echo '<form method="post" id="่join-form">
                                 <button type="submit" name="cid" formaction="./joinconfirm.php" value="' . $row['campaign_id'] . '" class="btn2">Join us</button>

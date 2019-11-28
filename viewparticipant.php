@@ -48,6 +48,7 @@
         <div class="form-box">
             <div class="head">
                 <p class="texthead">View Participant</p>
+                <p class="texthead"><?php echo $row['campaign_name'] ?></p>
                 <p class="texhistorysub">Status : <?php
                                                     if ($row['status'] == 1)
                                                         echo 'Enable';
@@ -81,7 +82,7 @@
                
                 ?>
                 <br>
-                <a class="middle"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
+                <a class="middle" href="./checkdelete.php"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@ Coding by
 
 **Should import sql database (envi.sql) to MySQL localhost before using**
 
-60070501014 - Nattakul Mongkolwijitkul - satansaga
-60070501032 - Prakasit Nuchkamnerd - manmanandman
-60070501086 - Settapong Subkong - mintimer
-60070501088 - Sopon Niyomwan - tsopon
+-60070501014 - Nattakul Mongkolwijitkul - satansaga
+-60070501032 - Prakasit Nuchkamnerd - manmanandman
+-60070501086 - Settapong Subkong - mintimer
+-60070501088 - Sopon Niyomwan - tsopon

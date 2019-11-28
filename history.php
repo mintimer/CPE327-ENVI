@@ -22,10 +22,10 @@
 
     $sqljoined = "SELECT u.* , c.*
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid'];
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
     $sqlnumjoin = "SELECT COUNT(*) num2
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid'];
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
 
     $join = mysqli_query($con, $sqlnumjoin);
     $num2 = mysqli_fetch_array($join);
@@ -117,8 +117,14 @@
                 $row2 = mysqli_fetch_array($join);
                 echo '<div class="boxview" style="padding-bottom:1%;">
                 <img class="pic" id="pic" src="' . $row2['campaign_pic'] . '"><br>
-                <span class="text-campaignname" id="camname">' . $row2['campaign_name'] . '</span>
-                <div class="campaigndetailtextbox">
+                <span class="text-campaignname" id="camname">' . $row2['campaign_name'] . '</span><br>';
+                    if ($row2['status'] == 1)
+                        echo '<span class="text2" style="color:#01906e" id="camstatus2">Enable</span>';
+                    else if ($row2['status'] == 0)
+                        echo '<span class="text2" style="color:orangered" id="camstatus2">Pending admin checking</span>';
+                    else if ($row2['status'] == 2)
+                        echo '<span class="text2" style="color:red" id="camstatus2">Suspended</span>';
+                echo '<div class="campaigndetailtextbox">
                     <div class="nav-left2 ">
                         <img class="picicon" id="picDate" src="./pic/calendar.png"></img>
                         <span class="text-campaignsub" id="camdate">Date : ' . $row2['start_time'] . '</span>

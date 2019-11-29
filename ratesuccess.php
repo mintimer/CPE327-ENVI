@@ -14,12 +14,12 @@
     <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Success</title>
     <?php
-        session_start();
-        require 'connect.php';
-        $sql = "UPDATE user_join SET rating_score = ".$_SESSION['camp']['ratescore'].", comment = '".$_POST['comment']."
-        ' WHERE user_id = ".$_SESSION['camp']['user_id']." AND campaign_id = ".$_SESSION['camp']['campaign_id'];
-        mysqli_query($con,$sql);
-        unset($_SESSION['camp']);
+    session_start();
+    require 'connect.php';
+    $sql = "UPDATE user_join SET rating_score = " . $_SESSION['camp']['ratescore'] . ", comment = '" . $_POST['comment'] . "
+        ' WHERE user_id = " . $_SESSION['camp']['user_id'] . " AND campaign_id = " . $_SESSION['camp']['campaign_id'];
+    mysqli_query($con, $sql);
+    unset($_SESSION['camp']);
     ?>
 </head>
 
@@ -38,35 +38,36 @@
         </div>
     </div>
 
-    <div class="contain" style="padding-top:150px;">
-        <div class="profiledetail">
-            <span class="textdetailhead">
-                Rate Success!
-            </span><br>
-            <span class="textdetailsub">
-                Thank you for your kind suggestion
-            </span>
-        </div>
+    <div class="contain7">
+        <br>
+        <br>
+        <span class="textjoin" id="join">Rate </span>
+        <span class="textcom" id="complete">Completed ! </span>
+        <br>
+
+        <span class="textenj" id="enjoy">Thanks for your kind suggestions.</span>
+        <br><br><br><br>
+        <a href="./history.php"><button class="btn1">Back to history</button></a>
+    </div>
 
 
-        <div class="profiledetail">
+    <!-- <div class="profiledetail">
 
-            <!-- <div class="ssleft">
+            <div class="ssleft">
                 <span class="successheader">Rate</span>
             </div>
             <div class="ssmid">
                 <span class="successbody">your paticipated</span><br>
-                <span class="successbody2">for better next</span><br><br><br> -->
+                <span class="successbody2">for better next</span><br><br><br>
                 <a href="./history.php"><button class="backbutt">Go back</button></a>
-            <!-- </div>
+            </div>
             <div class="ssright">
                 <span class="successheader">Campaign</span>
-            </div> -->
+            </div>
 
 
 
-        </div>
-    </div>
+        </div> -->
 
 
 

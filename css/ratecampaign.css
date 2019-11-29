@@ -24,7 +24,6 @@
 
 .ratetexttitle {
     position: relative;
-    margin-left: -375px;
     font-size: 60px;
     font-weight: 800;
     color: #01bf92;
@@ -32,7 +31,6 @@
 
 .ratetexthead {
     position: relative;
-    margin-left: -375px;
     font-size: 80px;
     font-weight: 800;
 }
@@ -139,12 +137,15 @@
 }
 
 .nav-right-rate {
-    position: absolute;
-    right: 3%;
+    position: fixed;
+    width: 40%;
+    height: fit-content;
+    left: 50%;
+    text-align: left;
     margin-top: -120px;
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-    padding-right: 5%;
+    /* background: #000; */
+    /* z-index: 4; */
+    /* overflow: hidden; */
 }
 
 .nav1 {
@@ -430,4 +431,16 @@
 .profiledetail {
     /* background: #000; */
     margin: auto;
+}
+
+.contain7 {
+    margin: auto;
+    padding-top: 160px;
+    padding-bottom: 50px;
+    position: relative;
+    max-width: 65%;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    /* background: rgb(104, 104, 104); */
 }

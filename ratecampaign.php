@@ -41,7 +41,7 @@
     </div>
 
 
-    <div class="contain3" style="padding-top:110px">
+    <div class="contain3" style="padding-top:110px; padding-bottom:50px;">
 
         <div class="boxrate">
             <div class="nav-left">

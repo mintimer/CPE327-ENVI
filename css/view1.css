@@ -88,6 +88,7 @@
     background: #F9F9F9;
     border-radius: 15px;
     box-shadow: 4px 4px 10px rgb(185, 185, 185);
+    overflow: hidden;
 }
 
 #pic {
@@ -96,9 +97,11 @@
     height: 150px;
     margin-top: 5%;
     margin-bottom: 3%;
+    object-fit: cover;
 }
 
 .text-campaignname {
+    text-align: center;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;

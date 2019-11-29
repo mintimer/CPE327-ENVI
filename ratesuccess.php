@@ -13,6 +13,14 @@
     <link href="./css/rate.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/ratecampaign.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Rate Success</title>
+    <?php
+        session_start();
+        require 'connect.php';
+        $sql = "UPDATE user_join SET rating_score = ".$_SESSION['camp']['ratescore'].", comment = '".$_POST['comment']."
+        ' WHERE user_id = ".$_SESSION['camp']['user_id']." AND campaign_id = ".$_SESSION['camp']['campaign_id'];
+        mysqli_query($con,$sql);
+        unset($_SESSION['camp']);
+    ?>
 </head>
 
 

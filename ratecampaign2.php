@@ -26,6 +26,12 @@
             resize: none;
         }
     </style>
+    <?php
+        session_start();
+        if(isset($_POST['rate'])){
+            $_SESSION['camp']['ratescore'] = $_POST['rate'];
+        }
+    ?>
 </head>
 
 
@@ -47,22 +53,22 @@
     <div class="boxrate">
         <div class="nav-left">
             <div class="campaignpicinrate">
-                <img id="campaignpicinrate" src="./pic/camp1.png">
+                <img id="campaignpicinrate" src="<?php echo $_SESSION['camp']['campaign_pic']; ?>">
             </div>
         </div>
         <div class="nav-right-rate">
             <span class="ratetexttitle">Giving comment for :</span><br>
-            <span class="ratetexthead">Sweep for Dad</span><br>
+            <span class="ratetexthead"><?php echo $_SESSION['camp']['campaign_name']; ?></span><br>
         </div>
     </div>
 
     <div class="boxrate2">
-        <form class="ratetextarea">
-            <textarea placeholder="Your comment"></textarea><br>
+        <form action="./ratesuccess.php" class="ratetextarea" id="comment" method="post">
+            <textarea name="comment" placeholder="Your comment"></textarea><br>
         </form>
     </div>
     <div class="boxrate3">
-        <a href="./ratesuccess.php"><button class="btn5">Submit</button></a>
+        <button type="submit" form="comment" class="btn5">Submit</button>
         <br>
         <a href="./ratecampaign.php"><button class="btn6">Back</button></a>
     </div>

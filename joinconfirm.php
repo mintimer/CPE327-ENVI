@@ -10,6 +10,7 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <title>Confirm join</title>
     <?php
     session_start();
     $ref = $_SESSION['ref'];

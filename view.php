@@ -10,6 +10,7 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <title>View</title>
     <?php
     require 'connect.php';
     session_start();

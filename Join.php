@@ -10,6 +10,7 @@
     <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/view1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/join.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <title>Join complete</title>
     <?php
     session_start();
     require 'connect.php';

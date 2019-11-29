@@ -40,9 +40,9 @@
             </form>
         </div>
     </div>
-    <div class="boxdown">
-        <div class="nav-left">
-            <span class="text-head">ENVI</span>
+    <div class="boxdown ">
+        <div class="nav-left ">
+            <span class="text-head ">ENVI</span>
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>

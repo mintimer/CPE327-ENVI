@@ -26,6 +26,28 @@ html {
     z-index: 3;
 }
 
+.nav-left {
+    position: absolute;
+    display: inline;
+    padding-right: 10%;
+    left: 5%;
+    margin: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.nav-right {
+    position: absolute;
+    display: inline;
+    right: 3%;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-left: 50px;
+}
+
 img {
     width: 75px;
     margin: auto;

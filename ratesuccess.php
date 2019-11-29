@@ -30,45 +30,45 @@
         </div>
     </div>
 
-    <div class="contain">
-
+    <div class="contain" style="margin-top:5%">
         <div class="profiledetail">
             <span class="textdetailhead">
                 Rate Success!
             </span><br>
             <span class="textdetailsub">
-                Thank you for your king suggestion
+                Thank you for your kind suggestion
             </span>
         </div>
+
+
+        <div class="ratehead">
+
+            <div class="ssleft">
+                <span class="successheader">Rate</span>
+            </div>
+            <div class="ssmid">
+                <span class="successbody">your paticipated</span><br>
+                <span class="successbody2">for better next</span><br><br><br>
+                <a href="./history.php"><button class="backbutt">Go back</button></a>
+            </div>
+            <div class="ssright">
+                <span class="successheader">Campaign</span>
+            </div>
+
+
+
+        </div>
     </div>
 
-    <div class = "ratehead">
 
-        <div class="ssleft">
-            <span class="successheader">Rate</span>
-        </div>
-        <div class="ssmid">
-            <span class="successbody">your paticipated</span><br>
-            <span class="successbody2">for better next</span><br><br><br>
-            <a href="./history.php"><button class="backbutt">Go back</button></a>
-        </div>
-        <div class="ssright">
-            <span class="successheader">Campaign</span>
-        </div>
 
-        
-    
-    </div>
-
-    
-    
     <div class="boxdown ">
         <div class="nav-left ">
             <span class="text-head ">ENVI</span>
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>
-    </div>
+        </div>
 </body>
 
 </html>

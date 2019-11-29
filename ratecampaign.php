@@ -30,35 +30,28 @@
         </div>
     </div>
 
-   
-    <div class="boxrate">
-        <div class="nav-left">
-            <div class="campaignpicinrate">
-                <img id="campaignpicinrate" src="./pic/camp1.png">
+
+    <div class="contain3" style="margin-top:3%">
+        
+        <div class="boxrate">
+            <div class="nav-left">
+                <div class="campaignpicinrate">
+                    <img id="campaignpicinrate" src="./pic/camp1.png">
+                </div>
+            </div>
+            <div class="nav-right-rate">
+                <span class="ratetexttitle">Giving a rate for :</span><br>
+                <span class="ratetexthead">Sweep for Dad</span><br>
             </div>
         </div>
-        <div class="nav-right-rate">
-            <span class="ratetexttitle">Giving a rate for :</span><br><br>
-            <span class="ratetexthead">Sweep for Dad</span><br> 
-        </div>                                                                                                     
-    </div>
 
-    <div class="boxrate">
-        <a href="./ratecampaign2.php"><button class="nav1">
-            1 Star
-        </button>
-        <a href="./ratecampaign2.php"><button class="nav2">
-            2 Star
-        </button>
-        <a href="./ratecampaign2.php"><button class="nav3">
-            3 Star
-        </button>
-        <a href="./ratecampaign2.php"><button class="nav4">
-            4 Star
-        </button>
-        <a href="./ratecampaign2.php"><button class="nav5">
-            5 Star
-        </button>
+        <div class="boxrate">
+            <a href="./ratecampaign2.php"><button class="nav1">1 Star</button></a>
+            <a href="./ratecampaign2.php"><button class="nav2">2 Star</button></a>
+            <a href="./ratecampaign2.php"><button class="nav3">3 Star</button></a>
+            <a href="./ratecampaign2.php"><button class="nav4">4 Star</button></a>
+            <a href="./ratecampaign2.php"><button class="nav5">5 Star</button></a>
+        </div>
     </div>
 
     <div class="boxdown ">
@@ -67,7 +60,7 @@
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>
-    </div>
+        </div>
 </body>
 
 </html>

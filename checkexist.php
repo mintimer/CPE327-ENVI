@@ -78,9 +78,14 @@ if ($_FILES["profilepic"]["name"] != NULL && (strpos($_FILES["profilepic"]["name
     $_SESSION['password'] = $_POST['password'];
     $_SESSION['firstname'] = $_POST['firstname'];
     $_SESSION['lastname'] = $_POST['lastname'];
-    $_SESSION['phone_no'] = $_POST['phone_no'];
-    $_SESSION['dob'] = $_POST['dob'];
-} else if ($_FILES["profilepic"]["name"] == NULL);
+} else if ($_FILES["profilepic"]["name"] == NULL){
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['password'] = $_POST['password'];
+    $_SESSION['firstname'] = $_POST['firstname'];
+    $_SESSION['lastname'] = $_POST['lastname'];
+    $_SESSION['picpath'] = NULL;
+}
 else $_SESSION['ext'] = $_SESSION['ext'] + 20;
 
 if ($_SESSION['ext'] > 0)

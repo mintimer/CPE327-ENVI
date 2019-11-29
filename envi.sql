@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2019 at 07:15 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Nov 29, 2019 at 08:16 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,16 +36,16 @@ CREATE TABLE `campaigninfo` (
   `end_time` date NOT NULL,
   `campaign_describe` text COLLATE utf8_unicode_ci NOT NULL,
   `manage_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `manage_authen` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `campaign_document` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `manage_authen` text COLLATE utf8_unicode_ci,
+  `campaign_document` text COLLATE utf8_unicode_ci,
   `campaign_pic` text COLLATE utf8_unicode_ci NOT NULL,
   `amount_people` int(11) NOT NULL,
   `location` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   `user_id` int(11) NOT NULL,
   `lati` double NOT NULL,
   `longti` double NOT NULL,
-  `rating_avg` float NOT NULL DEFAULT 0
+  `rating_avg` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -72,26 +72,28 @@ CREATE TABLE `userinfo` (
   `firstname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `goodness_point` int(11) NOT NULL,
-  `phone_no` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `dob` date NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL,
-  `banned` int(11) NOT NULL DEFAULT 0,
-  `picture_path` text COLLATE utf8_unicode_ci DEFAULT NULL
+  `disease` text COLLATE utf8_unicode_ci,
+  `allergic_food` text COLLATE utf8_unicode_ci,
+  `banned` int(11) NOT NULL DEFAULT '0',
+  `picture_path` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `userinfo`
 --
 
-INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastname`, `goodness_point`, `phone_no`, `email`, `dob`, `disease`, `allergic_food`, `banned`, `picture_path`) VALUES
-(1, 'admin', '1234', 'Prayad', 'Janjao', 9999, '0851957830', 'admin@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/adminpic.jpg'),
-(3, 'mint', '1234', 'Settapong', 'Subkong', 100, '0851957830', 'mint@envi.org', '1998-08-21', NULL, NULL, 0, './pic/profile/mint.jpg'),
-(5, 'test', '1150', 'Test', 'Unknown', 100, '191', 'test@test.test', '1982-06-11', NULL, NULL, 0, ''),
-(9, 'man', '1234', 'Prakasit', 'Nuchkamnerd', 100, '191', 'man@hotmail.com', '1998-09-20', NULL, NULL, 0, './pic/profile/man.jpg'),
-(10, 'k', '1234', 'Kakyoin', 'Noriaki', 100, '00', 'k@hotmail.com', '2008-11-20', NULL, NULL, 0, './pic/profile/k.jpg'),
-(11, 'd', '1234', 'DIO', 'DEJANERO', 100, '00000', 'd@hotmail.com', '1978-01-16', NULL, NULL, 0, './pic/profile/d.jpg');
+INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastname`, `goodness_point`, `email`, `disease`, `allergic_food`, `banned`, `picture_path`) VALUES
+(1, 'admin', '1234', 'Prayad', 'Janjao', 9999, 'admin@envi.org', NULL, NULL, 0, './pic/profile/adminpic.jpg'),
+(3, 'mint', '1234', 'Settapong', 'Subkong', 100, 'mint@envi.org', NULL, NULL, 0, './pic/profile/mint.jpg'),
+(5, 'test', '1150', 'Test', 'Unknown', 100, 'test@test.test', NULL, NULL, 0, ''),
+(9, 'man', '1234', 'Prakasit', 'Nuchkamnerd', 100, 'man@hotmail.com', NULL, NULL, 0, './pic/profile/man.jpg'),
+(10, 'k', '1234', 'Kakyoin', 'Noriaki', 100, 'k@hotmail.com', NULL, NULL, 0, './pic/profile/k.jpg'),
+(11, 'd', '1234', 'DIO', 'DEJANERO', 100, 'd@hotmail.com', NULL, NULL, 0, './pic/profile/d.jpg'),
+(13, 'pong', '1234', 'PONG', 'TAI', 100, 'p@eee.com', NULL, NULL, 0, './pic/profile/pong.jpg'),
+(16, '1234', '1234', '1234', '1234', 100, 'teat.@', NULL, NULL, 0, './pic/profile/1234.jpg'),
+(17, 'nopic', '1234', 'nopic', 'naja', 100, 'pen@eiei.com', NULL, NULL, 0, ''),
+(18, 'pen', '1234', 'I HAVE A PEN', 'I HAVE A APPLE', 100, 'pen@gmail.com', NULL, NULL, 0, './pic/profile/pen.jpg');
 
 -- --------------------------------------------------------
 
@@ -103,7 +105,7 @@ CREATE TABLE `user_join` (
   `user_id` int(11) NOT NULL,
   `campaign_id` int(11) NOT NULL,
   `rating_score` int(11) DEFAULT NULL,
-  `comment` text COLLATE utf8_unicode_ci DEFAULT NULL
+  `comment` text COLLATE utf8_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -123,7 +125,9 @@ INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VA
 (11, 1, NULL, NULL),
 (11, 2, NULL, NULL),
 (11, 7, NULL, NULL),
-(11, 8, NULL, NULL);
+(11, 8, NULL, NULL),
+(13, 2, NULL, NULL),
+(17, 7, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -158,13 +162,13 @@ ALTER TABLE `user_join`
 -- AUTO_INCREMENT for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables

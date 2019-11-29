@@ -8,7 +8,7 @@ $result = mysqli_query($con, $sqlcount);
 $row = mysqli_fetch_array($result);
 $num = $row['num'];
 $result = mysqli_query($con, $sql);
-for ($x = 0; $x <= $num; $x++) {
+for ($x = 0; $x < $num; $x++) {
     $row = mysqli_fetch_array($result);
     if ($row['campaign_name'] == $_POST['campaignname'])
         $_SESSION['ext2'] = '1';
@@ -75,6 +75,7 @@ if(isset($_FILES["promotepicture"]["name"])){
     else $_SESSION['ext2'] = $_SESSION['ext2'].'2';
 }else 
     $_SESSION['ext2'] = $_SESSION['ext2'].'3';
+echo $_SESSION['ext2'];
 if ($_SESSION['ext2'] != '0')
     echo "<script> window.location.replace('./create2.php'); </script>";
 else echo "<script> window.location.replace('./uploadcampaign.php'); </script>";

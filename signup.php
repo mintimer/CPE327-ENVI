@@ -15,11 +15,11 @@
         // Function to check Whether both passwords 
         // is same or not. 
         window.onload = "";
-        var success = [0,0,0,0,0];
+        var success = [0,0,0,0];
         function checkPassword(form) {
             password1 = form.password.value;
             password2 = form.rpassword.value;
-            success[4] = success[0]+success[1]+success[2]+success[3];
+            success[2] = success[0]+success[1];
             // If password not entered 
             if (password1 == '')
                 alert("Please enter Password");
@@ -27,7 +27,7 @@
             else if (password2 == '')
                 alert("Please enter confirm password");
             // If Not same return False.     
-            else if (success[4] != 4) {
+            else if (success[2] != 2) {
                 alert("\nInvalid input. Please try again.")
                 return false;
             }
@@ -121,20 +121,6 @@
                 <div class="form-group">
                     <input type="text" name="lastname" class="form-control" autocomplete="off" placeholder="Last name" required>
                 </div>
-                <p style="color:red" id="ermsg_phone"></p>
-                <script>
-                    function phone_check(){
-                        var phno = document.getElementById('phone').value;
-                        if(isNaN(phno)){
-                            document.getElementById('ermsg_phone').innerHTML = 'Invalid Phone NO.';
-                            success[2] = 0;
-                        }
-                        else {
-                            document.getElementById('ermsg_phone').innerHTML = '';
-                            success[2] = 1;
-                        }
-                    }
-                </script>
                 <div class="form-group">
                     <span class="text">Upload Profile picture (optional)</span>
                     <input type="file" name="profilepic" id="profilepic" class="form-control-file">

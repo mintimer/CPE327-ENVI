@@ -24,8 +24,6 @@
         $_SESSION['firstname'] = $userdata['firstname'];
         $_SESSION['lastname'] = $userdata['lastname'];
         $_SESSION['goodness_point'] = $userdata['goodness_point'];
-        $_SESSION['phone_no'] = $userdata['phone_no'];
-        $_SESSION['goodness_point'] = $row['goodness_point'];
         $_SESSION['banned'] = $row['banned'];
         if($userdata['picture_path'] != NULL)
             $_SESSION['picpath'] = $userdata['picture_path'];

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2019 at 08:16 AM
+-- Generation Time: Nov 29, 2019 at 08:57 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -57,7 +57,7 @@ INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `st
 (2, 'Plook Prayad', 1, '2019-12-28', '2019-12-31', 'Plook kun ter rao sao pai tum mai ya mua arai wa eiei zaza!!', 'Harn Bangmod', NULL, NULL, './pic/campaign/Plook Prayad.jpg', 44, 'Bang mod', 1, 3, 13.651032936218165, 100.49537658691406, 0),
 (6, 'Lang Par Char', 2, '2020-01-15', '2020-01-22', 'A Stop on the Salt Route 1000 B.C. As they rounded a bend in the path that ran beside the river, Lara recognized the silhouette of a fig tree atop a nearby hill. The weather was hot and the days were long. The fig tree was in full leaf, but not yet bearing fruit. Soon Lara spotted other landmarksâ€”an outcropping of limestone beside the path that had a silhouette like a manâ€™s face, a marshy spot beside the river where the waterfowl were easily startled, a tall tree that looked like a man with his arms upraised. They were drawing near to the place where there was an island in the river. The island was a good spot to make camp. They would sleep on the island tonight. Lara had been back and forth along the river path many times in her short life. Her people had not created the pathâ€”it had always been there, like the riverâ€”but their deerskin-shod feet and the wooden wheels of their handcarts kept the path well worn. Laraâ€™s people were salt traders, and their livelihood took them on a continual journey.', 'Polar Bear', NULL, NULL, './pic/campaign/Lang Par Char.jpg', 10, 'Greenland', 0, 3, 60.05032975791311, -43.19330771519503, 0),
 (7, 'The World', 4, '2020-03-05', '2020-04-24', 'KILL THANOS', 'TONY STARK', NULL, NULL, './pic/campaign/The World.jpg', 99, 'BENGBENG', 1, 9, 13.637535802375337, 87.23495707392317, 0),
-(8, 'Clean Egypt', 1, '2020-05-01', '2020-05-02', 'MUDAMUDAMUMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDADAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA', 'DIO', NULL, NULL, './pic/campaign/Clean Egypt.jpg', 10, 'Nile River', 0, 11, 26.98527590307631, 31.378434396274997, 0);
+(8, 'Clean Egypt', 1, '2020-05-01', '2020-05-02', 'MUDAMUDAMUMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDADAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA', 'DIO', NULL, NULL, './pic/campaign/Clean Egypt.jpg', 10, 'Nile River', 1, 11, 26.98527590307631, 31.378434396274997, 0);
 
 -- --------------------------------------------------------
 
@@ -67,12 +67,12 @@ INSERT INTO `campaigninfo` (`campaign_id`, `campaign_name`, `campaign_type`, `st
 
 CREATE TABLE `userinfo` (
   `user_id` int(11) NOT NULL,
-  `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `firstname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `lastname` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `firstname` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `lastname` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `goodness_point` int(11) NOT NULL,
-  `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `disease` text COLLATE utf8_unicode_ci,
   `allergic_food` text COLLATE utf8_unicode_ci,
   `banned` int(11) NOT NULL DEFAULT '0',
@@ -93,7 +93,9 @@ INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastnam
 (13, 'pong', '1234', 'PONG', 'TAI', 100, 'p@eee.com', NULL, NULL, 0, './pic/profile/pong.jpg'),
 (16, '1234', '1234', '1234', '1234', 100, 'teat.@', NULL, NULL, 0, './pic/profile/1234.jpg'),
 (17, 'nopic', '1234', 'nopic', 'naja', 100, 'pen@eiei.com', NULL, NULL, 0, ''),
-(18, 'pen', '1234', 'I HAVE A PEN', 'I HAVE A APPLE', 100, 'pen@gmail.com', NULL, NULL, 0, './pic/profile/pen.jpg');
+(18, 'pen', '1234', 'I HAVE A PEN', 'I HAVE A APPLE', 100, 'pen@gmail.com', NULL, NULL, 0, './pic/profile/pen.jpg'),
+(20, 'do', '1234', 'An An An', 'Tod Tae Mo Da I Su Ki Dorae Mo1', 100, 'do@do.com', NULL, NULL, 0, './pic/profile/do.jpg'),
+(21, 'nobi', '1234', 'Nobi', 'Nobita', 100, 'nobi@nobita.com', NULL, NULL, 0, './pic/profile/nobi.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,19 +117,28 @@ CREATE TABLE `user_join` (
 INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VALUES
 (3, 2, NULL, NULL),
 (3, 6, NULL, NULL),
+(3, 8, NULL, NULL),
 (5, 1, NULL, NULL),
 (5, 7, NULL, NULL),
+(5, 8, NULL, NULL),
 (9, 1, NULL, NULL),
 (9, 7, NULL, NULL),
+(9, 8, NULL, NULL),
 (10, 1, NULL, NULL),
 (10, 2, NULL, NULL),
 (10, 7, NULL, NULL),
+(10, 8, NULL, NULL),
 (11, 1, NULL, NULL),
 (11, 2, NULL, NULL),
 (11, 7, NULL, NULL),
 (11, 8, NULL, NULL),
 (13, 2, NULL, NULL),
-(17, 7, NULL, NULL);
+(13, 8, NULL, NULL),
+(16, 8, NULL, NULL),
+(17, 7, NULL, NULL),
+(17, 8, NULL, NULL),
+(18, 8, NULL, NULL),
+(20, 8, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -168,7 +179,7 @@ ALTER TABLE `campaigninfo`
 -- AUTO_INCREMENT for table `userinfo`
 --
 ALTER TABLE `userinfo`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables

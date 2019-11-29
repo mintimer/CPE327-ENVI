@@ -33,7 +33,6 @@
             }
             // If same return True. 
             else {
-                alert("Welcome to ENVI ")
                 return true;
             }
         }
@@ -53,7 +52,7 @@
                 <span class="text-head">ENVI </span>now
                 <p class="text-p">Create an account to make the great campaign.</p>
             </div>
-            <p class="text-p" style="color:red"><?php
+            <p class="text-p" id="ermsg_email_user" style="color:red"><?php
                 session_start();
                 if(isset($_SESSION['ext'])){
                     if($_SESSION['ext'] == 1)
@@ -73,12 +72,17 @@
                     session_destroy();
                 } 
             ?></p>
+            <script>
+                function ermsg_email(){
+                    document.getElementById('ermsg_email_user').innerHTML = '';
+                }
+            </script>
             <form action="./checkexist.php" enctype="multipart/form-data" id="login-form" onSubmit="return checkPassword(this)" method="post">
                 <div class="form-group">
-                    <input type="text" name="username" class="form-control" autocomplete="off" placeholder="Username" required>
+                    <input type="text" name="username" onChange="ermsg_email()" class="form-control" autocomplete="off" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <input onChange="email_check()" type="text" name="email" id="email" class="form-control" autocomplete="off" placeholder="Email address" required>
+                    <input onChange="email_check(),ermsg_email()" type="text" name="email" id="email" class="form-control" autocomplete="off" placeholder="Email address" required>
                 </div>
                 <p style="color:red" id='ermsg_email'></p>
                 <script>
@@ -136,7 +140,7 @@
     </div>
     <div class="boxdown">
         <div class="nav-left">
-            <span class="text-head">ENVI</span>
+            <span >ENVI</span>
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>

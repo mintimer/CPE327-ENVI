@@ -29,7 +29,7 @@
             </div>
             <form action="#" id="login-form" method="post">
                 <div class="form-group">
-                    <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Email addredd or username" required>
+                    <input type="text" name="email" class="form-control" autocomplete="off" placeholder="Email address or username" required>
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Password" required>
@@ -42,7 +42,7 @@
     </div>
     <div class="boxdown ">
         <div class="nav-left ">
-            <span class="text-head ">ENVI</span>
+            <span >ENVI</span>
         </div>
         <div class="nav-right ">
             <span>2018 All Right Reserve</span>

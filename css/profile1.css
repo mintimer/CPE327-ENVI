@@ -28,6 +28,7 @@
     float: center;
     object-fit: cover;
     margin: auto;
+    border: 0.5mm solid black;
 }
 
 .contain {

@@ -35,7 +35,7 @@
 }
 
 .btn7 {
-    margin: 5px;
+    margin: 10px;
     border: none;
     width: 30%;
     height: 50px;
@@ -158,6 +158,21 @@
     outline: none;
     overflow: hidden;
     align-items: left;
+    font-size: 20px;
+    transition: transform .2s;
+}
+
+.btncannotclick2 {
+    margin: 10px;
+    border: none;
+    width: 50%;
+    height: 5%;
+    background: rgb(0, 168, 98);
+    border-radius: 30px;
+    color: #fbfbfb;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
     font-size: 20px;
     transition: transform .2s;
 }

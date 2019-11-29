@@ -144,10 +144,10 @@
                 </div>';
                 if($row2['rating_score']==NULL){
                     echo '<form action="./ratecampaign.php" method="post" id="select-create">
-                    <button type="submit" name="cid" form="select-create" value="' . $row2['campaign_id'] . '" class="btn4">Rate campaign</button>
+                    <button type="submit" name="cid" form="select-create" value="' . $row2['campaign_id'] . '" class="btn3">Rate campaign</button>
                 </form>';
                 }
-                else echo 'เรทไปแล้วจ้า';
+                else echo'<button type="submit" name="cid" class="btncannotclick2" disabled>Rated</button>';
             echo '</div>';
             }
         } 

@@ -62,9 +62,9 @@
         </form>
     </div>
     <div class="boxrate3">
-    <a href="./ratesuccess.php"><button class="btn1">Submit</button></a>
-        <a href="./ratecampaign.php"><button class="btn5">Back</button></a>
-        
+        <a href="./ratesuccess.php"><button class="btn5">Submit</button></a>
+        <br>
+        <a href="./ratecampaign.php"><button class="btn6">Back</button></a>
     </div>
 
 

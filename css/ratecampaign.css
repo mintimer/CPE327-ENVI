@@ -52,7 +52,7 @@
 }
 
 .ratebutt {
-    display: inline;
+    /* display: inline; */
     background: #01BF92;
     border-radius: 30px;
     padding: 10px;
@@ -104,6 +104,17 @@
 .boxrate3 {
     width: fit-content;
     align-items: center;
+    text-align: center;
+    /* background: #000; */
+    margin: auto;
+}
+
+.boxrate5 {
+    position: relative;
+    padding-top: 25%;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
     /* background: #000; */
     margin: auto;
 }
@@ -366,8 +377,30 @@
 .btn5 {
     margin: 5px;
     border: none;
-    width: 50%;
-    height: 5%;
+    width: 150px;
+    height: 8%;
+    background: #01BF92;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 25px;
+    transition: transform .2s;
+}
+
+.btn5:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    background: #00daa2;
+}
+
+.btn6 {
+    margin: 5px;
+    border: none;
+    width: 100px;
+    height: 8%;
     background: white;
     border-radius: 30px;
     border: 0.15mm solid #01BF92;
@@ -376,11 +409,11 @@
     outline: none;
     overflow: hidden;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     transition: transform .2s;
 }
 
-.btn5:hover {
+.btn6:hover {
     text-decoration: none;
-    transform: scale(1.1);
+    background: rgb(243, 251, 250);
 }

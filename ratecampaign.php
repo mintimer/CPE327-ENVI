@@ -32,7 +32,7 @@
 
 
     <div class="contain3" style="margin-top:3%">
-        
+
         <div class="boxrate">
             <div class="nav-left">
                 <div class="campaignpicinrate">
@@ -42,6 +42,7 @@
             <div class="nav-right-rate">
                 <span class="ratetexttitle">Giving a rate for :</span><br>
                 <span class="ratetexthead">Sweep for Dad</span><br>
+
             </div>
         </div>
 
@@ -52,6 +53,10 @@
             <a href="./ratecampaign2.php"><button class="nav4">4 Star</button></a>
             <a href="./ratecampaign2.php"><button class="nav5">5 Star</button></a>
         </div>
+        <div class="boxrate5">
+        <a href="./history.php"><button class="btn6">Back</button></a>
+        </div>
+
     </div>
 
     <div class="boxdown ">

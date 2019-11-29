@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2019 at 10:09 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Nov 29, 2019 at 12:33 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,16 +36,16 @@ CREATE TABLE `campaigninfo` (
   `end_time` date NOT NULL,
   `campaign_describe` text COLLATE utf8_unicode_ci NOT NULL,
   `manage_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `manage_authen` text COLLATE utf8_unicode_ci,
-  `campaign_document` text COLLATE utf8_unicode_ci,
+  `manage_authen` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `campaign_document` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `campaign_pic` text COLLATE utf8_unicode_ci NOT NULL,
   `amount_people` int(11) NOT NULL,
   `location` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT 0,
   `user_id` int(11) NOT NULL,
   `lati` double NOT NULL,
   `longti` double NOT NULL,
-  `rating_avg` float NOT NULL DEFAULT '0'
+  `rating_avg` float NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -73,10 +73,10 @@ CREATE TABLE `userinfo` (
   `lastname` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `goodness_point` int(11) NOT NULL,
   `email` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `disease` text COLLATE utf8_unicode_ci,
-  `allergic_food` text COLLATE utf8_unicode_ci,
-  `banned` int(11) NOT NULL DEFAULT '0',
-  `picture_path` text COLLATE utf8_unicode_ci
+  `disease` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `allergic_food` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `banned` int(11) NOT NULL DEFAULT 0,
+  `picture_path` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -90,7 +90,7 @@ INSERT INTO `userinfo` (`user_id`, `username`, `password`, `firstname`, `lastnam
 (9, 'man', '1234', 'Prakasit', 'Nuchkamnerd', 100, 'man@hotmail.com', NULL, NULL, 0, './pic/profile/man.jpg'),
 (10, 'k', '1234', 'Kakyoin', 'Noriaki', 100, 'k@hotmail.com', NULL, NULL, 0, './pic/profile/k.jpg'),
 (11, 'd', '1234', 'DIO', 'DEJANERO', 100, 'd@hotmail.com', NULL, NULL, 0, './pic/profile/d.jpg'),
-(13, 'pong', '1234', 'PONG', 'TAI', 100, 'p@eee.com', NULL, NULL, 0, './pic/profile/pong.jpg'),
+(13, 'pong', '1234', 'PRA', 'KRAPONG', 100, 'p@eee.com', NULL, NULL, 0, './pic/profile/pong.jpg'),
 (16, '1234', '1234', '1234', '1234', 100, 'teat.@', NULL, NULL, 0, './pic/profile/1234.jpg'),
 (17, 'nopic', '1234', 'nopic', 'naja', 100, 'pen@eiei.com', NULL, NULL, 0, ''),
 (18, 'pen', '1234', 'I HAVE A PEN', 'I HAVE A APPLE', 100, 'pen@gmail.com', NULL, NULL, 0, './pic/profile/pen.jpg'),
@@ -107,7 +107,7 @@ CREATE TABLE `user_join` (
   `user_id` int(11) NOT NULL,
   `campaign_id` int(11) NOT NULL,
   `rating_score` int(11) DEFAULT NULL,
-  `comment` text COLLATE utf8_unicode_ci
+  `comment` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -118,12 +118,13 @@ INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VA
 (3, 2, NULL, NULL),
 (3, 6, NULL, NULL),
 (3, 8, NULL, NULL),
-(5, 1, NULL, NULL),
+(5, 1, 1, '\r\n        '),
 (5, 7, NULL, NULL),
-(5, 8, NULL, NULL),
+(5, 8, 4, '\r\n        '),
 (9, 1, NULL, NULL),
+(9, 2, 5, '\r\n        '),
 (9, 7, NULL, NULL),
-(9, 8, NULL, NULL),
+(9, 8, 3, '\r\n        '),
 (10, 1, NULL, NULL),
 (10, 2, NULL, NULL),
 (10, 7, NULL, NULL),
@@ -138,7 +139,9 @@ INSERT INTO `user_join` (`user_id`, `campaign_id`, `rating_score`, `comment`) VA
 (17, 7, NULL, NULL),
 (17, 8, NULL, NULL),
 (18, 8, NULL, NULL),
-(20, 8, NULL, NULL);
+(20, 8, NULL, NULL),
+(21, 1, 4, '\r\n        '),
+(21, 2, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -173,7 +176,7 @@ ALTER TABLE `user_join`
 -- AUTO_INCREMENT for table `campaigninfo`
 --
 ALTER TABLE `campaigninfo`
-  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `campaign_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `userinfo`

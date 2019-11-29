@@ -51,20 +51,22 @@
             </div>
         </div>
         <div class="nav-right-rate">
-            <span class="ratetexttitle">Giving comment for :</span><br><br>
-            <span class="ratetexthead">Sweep for Dad</span><br> 
-        </div> 
+            <span class="ratetexttitle">Giving comment for :</span><br>
+            <span class="ratetexthead">Sweep for Dad</span><br>
+        </div>
     </div>
-   
+
     <div class="boxrate2">
         <form class="ratetextarea">
             <textarea placeholder="Your comment"></textarea><br>
         </form>
     </div>
-
     <div class="boxrate3">
-        <a href="./ratesuccess.php"><button class="subbutt">Submit</button></a>
+        <a href="./ratesuccess.php"><button class="btn5">Submit</button></a>
+        <br>
+        <a href="./ratecampaign.php"><button class="btn6">Back</button></a>
     </div>
+
 
     <div class="boxdown">
         <div class="nav-left ">

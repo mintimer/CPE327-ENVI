@@ -1,7 +1,7 @@
 #campaignpic {
     width: 135px;
     border-radius: 30px;
-    margin-left: 2%;
+    margin-left: 5%;
     margin-top: 15px;
     margin-bottom: 5px;
     align-items: center;
@@ -11,8 +11,10 @@
     border-radius: 30px;
     margin-top: 25px;
     margin-bottom: 5px;
-    margin-left: 80%;
-    align-items: center;
+    margin-left: 20%;
+    width: 550px;
+    height: 350px;
+    object-fit: scale-down;
 }
 
 .textdetailcampaign {
@@ -50,7 +52,7 @@
 }
 
 .ratebutt {
-    display: inline;
+    /* display: inline; */
     background: #01BF92;
     border-radius: 30px;
     padding: 10px;
@@ -72,7 +74,6 @@
 .ratebutt2 {
     font-size: 25px;
     font-weight: 600;
-    display: inline;
     background: #FFFF00;
     border-radius: 25px;
     padding: 10px;
@@ -97,12 +98,25 @@
     position: relative;
     width: 100%;
     height: 175px;
+    align-items: center;
 }
 
 .boxrate3 {
-    position: relative;
-    width: 100%;
-    height: 125px;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    /* background: #000; */
+    margin: auto;
+}
+
+.boxrate5 {
+    /* position: relative; */
+    padding-top: 25%;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    /* background: #000; */
+    margin: auto;
 }
 
 .rate-left {
@@ -126,24 +140,21 @@
 
 .nav-right-rate {
     position: absolute;
-    display: inline;
     right: 3%;
     margin-top: -120px;
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
-    padding-left: 50px;
+    padding-right: 5%;
 }
 
 .nav1 {
     position: absolute;
-    display: inline;
     left: 20%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
-    display: inline;
-    background: #FFFF00;
+    background: rgb(255, 196, 0);
     border-radius: 25px;
     padding: 10px;
     padding-right: 25px;
@@ -158,14 +169,12 @@
 
 .nav2 {
     position: absolute;
-    display: inline;
     left: 33.5%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
-    display: inline;
-    background: #FFFF00;
+    background: rgb(238, 255, 0);
     border-radius: 25px;
     padding: 10px;
     padding-right: 25px;
@@ -180,14 +189,12 @@
 
 .nav3 {
     position: absolute;
-    display: inline;
     left: 47%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
-    display: inline;
-    background: #FFFF00;
+    background: rgb(166, 255, 0);
     border-radius: 25px;
     padding: 10px;
     padding-right: 25px;
@@ -202,14 +209,12 @@
 
 .nav4 {
     position: absolute;
-    display: inline;
-    left: 60.5%;
     margin-top: 260px;
+    left: 60.5%;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
-    display: inline;
-    background: #FFFF00;
+    background: rgb(102, 255, 0);
     border-radius: 25px;
     padding: 10px;
     padding-right: 25px;
@@ -224,14 +229,12 @@
 
 .nav5 {
     position: absolute;
-    display: inline;
     left: 74%;
     margin-top: 260px;
     font-size: 25px;
     align-items: center;
     font-weight: 600;
-    display: inline;
-    background: #FFFF00;
+    background: rgb(0, 255, 119);
     border-radius: 25px;
     padding: 10px;
     padding-right: 25px;
@@ -246,12 +249,12 @@
 
 .nav1:hover {
     text-decoration: none;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 .nav2:hover {
     text-decoration: none;
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 .nav3:hover {
@@ -261,12 +264,12 @@
 
 .nav4:hover {
     text-decoration: none;
-    transform: scale(1.5);
+    transform: scale(1.7);
 }
 
 .nav5:hover {
     text-decoration: none;
-    transform: scale(1.5);
+    transform: scale(1.9);
 }
 
 .ssleft {
@@ -350,7 +353,6 @@
 .subbutt {
     margin-bottom: 400px;
     margin-left: 45%;
-    display: inline;
     background: #01BF92;
     border-radius: 30px;
     width: 25%;
@@ -370,4 +372,48 @@
 .subbutt:hover {
     text-decoration: none;
     background: #00daa2;
+}
+
+.btn5 {
+    margin: 5px;
+    border: none;
+    width: 150px;
+    height: 8%;
+    background: #01BF92;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 25px;
+    transition: transform .2s;
+}
+
+.btn5:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    background: #00daa2;
+}
+
+.btn6 {
+    margin: 5px;
+    border: none;
+    width: 100px;
+    height: 8%;
+    background: white;
+    border-radius: 30px;
+    border: 0.15mm solid #01BF92;
+    color: #01906e;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: center;
+    font-size: 15px;
+    transition: transform .2s;
+}
+
+.btn6:hover {
+    text-decoration: none;
+    background: rgb(243, 251, 250);
 }

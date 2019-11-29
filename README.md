@@ -11,7 +11,7 @@ Coding by
 - Google Maps API
 - SQL Database
 
-**Should import sql database (envi.sql) to MySQL localhost before using**
+**Should import sql database (envi.sql) to MySQL and use Apache localhost before using**
 
 - 60070501014 - Nattakul Mongkolwijitkul - satansaga
 - 60070501032 - Prakasit Nuchkamnerd - manmanandman

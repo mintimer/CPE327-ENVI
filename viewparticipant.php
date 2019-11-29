@@ -20,10 +20,10 @@
     }
     $sql = "SELECT *
     FROM user_join uf INNER JOIN campaigninfo c ON c.campaign_id = uf.campaign_id INNER JOIN userinfo u ON uf.user_id = u.user_id
-    WHERE uf.campaign_id = ".$_SESSION['cid'];
+    WHERE uf.campaign_id = ".$_SESSION['cid']." ORDER BY u.firstname";
     $sqlcount = "SELECT COUNT(*) num
     FROM user_join uf INNER JOIN campaigninfo c ON c.campaign_id = uf.campaign_id INNER JOIN userinfo u ON uf.user_id = u.user_id
-    WHERE uf.campaign_id = ".$_SESSION['cid'];
+    WHERE uf.campaign_id = ".$_SESSION['cid']." ORDER BY u.firstname";
     $result = mysqli_query($con,$sqlcount);
     $row = mysqli_fetch_array($result);
     $num = $row['num'];

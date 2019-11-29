@@ -143,7 +143,7 @@
                     <input type="number" min="10" max="1000" name="amount" class="form-control" placeholder="how many people" required>
                     <!-- <p style="color:orange">less than 8 MB.</p> -->
                 </div>
-                <input type="submit" onClick="checkmark()" name="submit" id="submit" value="Submit" class="btn">
+                <input type="submit" onClick="checkmark()" name="submit" id="submit" value="Submit and join" class="btn">
             </form>
             <button onclick="goBack()" class="btn2">Back</button>
         </div>

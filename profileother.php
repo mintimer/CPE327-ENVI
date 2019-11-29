@@ -67,7 +67,6 @@
         </div>
 
         <div class="extradetail">
-            <a href="#"><button class="btn2">Report this user</button></a>
             <form action="<?php echo $ref; ?>" method="post">
                 <button type="submit" class="btn2" value=<?php echo $value; ?> >Back</button>
             </form>

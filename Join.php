@@ -13,8 +13,8 @@
     <?php
     session_start();
     require 'connect.php';
-    $sql = "INSERT INTO user_join (user_id, campaign_id) VALUES (".$_SESSION['uid'].", ".$_SESSION['cid']." )";
-    mysqli_query($con,$sql);
+    $sql = "INSERT INTO user_join (user_id, campaign_id) VALUES (" . $_SESSION['uid'] . ", " . $_SESSION['cid'] . " )";
+    mysqli_query($con, $sql);
     ?>
 </head>
 
@@ -31,13 +31,13 @@
         </div>
     </div>
 
-    
+
     <div class="contain3">
-    <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
-    <br>
+        <img class="piccor" id="picCorrect" src="./pic/com.png"></img>
         <br>
-        <span class="textjoin" id="join">Joining  </span>
-        <span class="textcom" id="complete">Completed ! </span>    
+        <br>
+        <span class="textjoin" id="join">Joining </span>
+        <span class="textcom" id="complete">Completed ! </span>
         <br>
 
         <span class="textenj" id="enjoy">Enjoy your trip</span>

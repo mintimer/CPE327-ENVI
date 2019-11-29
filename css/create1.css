@@ -4,7 +4,8 @@ body {
 
 .contain {
     margin: auto;
-    padding-top: 2%;
+    padding-top: 110px;
+    padding-bottom: 50px;
     max-width: 65%;
     align-items: center;
     vertical-align: center;

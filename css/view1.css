@@ -1,6 +1,7 @@
 .contain {
     margin: auto;
-    padding-top: 2%;
+    padding-top: 110px;
+    padding-bottom: 50px;
     max-width: 90%;
     vertical-align: center;
     /* background: #000; */
@@ -127,9 +128,10 @@
 
 .contain2 {
     margin: auto;
-    padding-top: 1%;
+    padding-top: 110px;
+    padding-bottom: 50px;
     max-width: 90%;
-    height: 100vh;
+    height: fit-content;
     align-items: center;
     text-align: center;
     vertical-align: center;

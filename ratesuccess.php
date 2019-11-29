@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="contain" style="margin-top:5%">
+    <div class="contain" style="padding-top:150px;">
         <div class="profiledetail">
             <span class="textdetailhead">
                 Rate Success!
@@ -41,19 +41,19 @@
         </div>
 
 
-        <div class="ratehead">
+        <div class="profiledetail">
 
-            <div class="ssleft">
+            <!-- <div class="ssleft">
                 <span class="successheader">Rate</span>
             </div>
             <div class="ssmid">
                 <span class="successbody">your paticipated</span><br>
-                <span class="successbody2">for better next</span><br><br><br>
+                <span class="successbody2">for better next</span><br><br><br> -->
                 <a href="./history.php"><button class="backbutt">Go back</button></a>
-            </div>
+            <!-- </div>
             <div class="ssright">
                 <span class="successheader">Campaign</span>
-            </div>
+            </div> -->
 
 
 

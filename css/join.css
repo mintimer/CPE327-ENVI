@@ -27,7 +27,8 @@
 
 .contain3 {
     margin: auto;
-    margin-top: 3%;
+    padding-top: 160px;
+    padding-bottom: 50px;
     position: relative;
     max-width: 65%;
     align-items: center;

@@ -39,10 +39,7 @@
         <span class="textjoin" id="complete">Now !</span>
         <br>
         <span class="textenj" id="select">Select your account</span>
-    </div>
-
-
-    <div class="contain3">
+        <br><br><br><br>
         <a href="./join.php"><button class="btn4" >Confirm to use this account</button></a>
         <br>
         <span class="textor" id="select">or</span>

@@ -281,8 +281,6 @@
 .ssmid {
     align-items: center;
     margin-top: 35px;
-    position: absolute;
-    left: 34.5%;
     width: auto;
 }
 
@@ -416,4 +414,20 @@
 .btn6:hover {
     text-decoration: none;
     background: rgb(243, 251, 250);
+}
+
+.textjoin {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.textcom {
+    font-size: 60px;
+    color: #01BF92;
+    font-weight: bold;
+}
+
+.profiledetail {
+    /* background: #000; */
+    margin: auto;
 }

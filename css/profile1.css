@@ -32,8 +32,8 @@
 
 .contain {
     margin: auto;
-    padding-top: 1%;
-    padding-bottom: 3%;
+    padding-top: 150px;
+    padding-bottom: 50px;
     max-width: 65%;
     align-items: center;
     vertical-align: center;

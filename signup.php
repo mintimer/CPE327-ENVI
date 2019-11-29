@@ -44,6 +44,7 @@
     <div class="box">
         <a href="./home.php"><img style="width: 170px" src="./pic/icon.png"></a>
     </div>
+    
     <div class="container">
         <div class="bg-image"></div>
         <div class="form-box">

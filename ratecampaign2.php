@@ -43,7 +43,7 @@
         </div>
     </div>
 
-
+    <div class="contain3" style="padding-top:110px">
     <div class="boxrate">
         <div class="nav-left">
             <div class="campaignpicinrate">
@@ -66,7 +66,7 @@
         <br>
         <a href="./ratecampaign.php"><button class="btn6">Back</button></a>
     </div>
-
+    </div>
 
     <div class="boxdown">
         <div class="nav-left ">

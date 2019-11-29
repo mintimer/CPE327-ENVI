@@ -7,9 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link href="./css/style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/history.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="./css/create1.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="./css/stylenobg.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Participant</title>
     <?php
     require 'connect.php';
@@ -42,6 +42,15 @@
             <span id="text"><a href="./create.php">Create campaign</a></span>
             <span id="text"><a href="./profile.php">My profile</a></span>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
+        </div>
+    </div>
+
+    <div class="boxdown">
+        <div class="nav-left">
+            <span class="text-head">ENVI</span>
+        </div>
+        <div class="nav-right ">
+            <span>2018 All Right Reserve</span>
         </div>
     </div>
     <div class="contain3">
@@ -80,20 +89,16 @@
                 }
                
                 ?>
+            
                 <br>
+                <p class="textdetailsubfordelete">
                 <a class="middle" href="./checkdelete.php"><button class="btn5" id="joinedbtn" >Delete campaign</button></a>
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="boxdown">
-        <div class="nav-left">
-            <span class="text-head">ENVI</span>
-        </div>
-        <div class="nav-right ">
-            <span>2018 All Right Reserve</span>
-        </div>
-    </div>
+    
     <script>
         function goBack() {
             window.history.back();

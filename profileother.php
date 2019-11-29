@@ -14,9 +14,7 @@
     <?php
         require 'connect.php';
         session_start();
-        if($_SESSION['uid']==1) 
-            $ref =  './adminviewdetail.php';
-        else $ref = $_SESSION['ref'];
+        $ref = $_SESSION['ref'];
         if(isset($_POST['cid']))
             $value=$_POST['cid'];
         else $value = NULL;

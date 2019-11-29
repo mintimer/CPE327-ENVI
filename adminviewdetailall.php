@@ -13,10 +13,10 @@
     <?php
     require 'connect.php';
     session_start();
+    $_SESSION['ref'] = str_replace("/envi/CPE327-ENVI", ".", $_SERVER['REQUEST_URI']);
     if(isset($_POST['cid'])){
         $_SESSION['cid'] = $_POST['cid'];
     }
-    $_SESSION['ref'] = str_replace("/envi/CPE327-ENVI", ".", $_SERVER['REQUEST_URI']);
     $sql = "SELECT * FROM campaigninfo WHERE campaign_id = " . $_SESSION['cid'];
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
@@ -121,12 +121,9 @@
                 </div>
             </div>
             <form action="./updatestatus.php" method="post">
-            <button type="submit" name="status" class="btn4" value=1 >Approve</button>
-            <br>
-            <button type="submit" name="status" class="btn5" value=2 >Suspend</button>
             <br>
             </form>
-            <a href="./adminview.php"><button class="btn3" >Go Back</button></a>
+            <a href="./adminviewall.php"><button class="btn3" >Go Back</button></a>
         </div>
 
     </div>

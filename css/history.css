@@ -1,154 +1,163 @@
-.headbox {
-    width: 90%;
-    /* background: #000; */
-    margin: auto;
-    margin-bottom: 2%;
-}
-
-.subbox {
-    width: 50%;
-    /* background: #000; */
-    margin: auto;
-    margin-top: 9%;
-    text-align: center;
-}
-
-.btn6 {
-    margin: 5px;
-    border: none;
-    width: 30%;
-    height: 50px;
-    background: #01BF92;
-    border-radius: 30px;
-    color: white;
-    outline: none;
-    overflow: hidden;
-    align-items: center;
-    font-size: 20px;
-    transition: transform .2s;
-}
-
-.btn6:hover {
-    text-decoration: none;
-    transform: scale(1.1);
-    background: #00daa2;
-}
-
-.btn7 {
-    margin: 5px;
-    border: none;
-    width: 30%;
-    height: 50px;
-    background: white;
-    border: 0.5mm solid #01BF92;
-    border-radius: 30px;
-    color: #01906e;
-    outline: none;
-    overflow: hidden;
-    align-items: center;
-    font-size: 20px;
-    transition: transform .2s;
-}
-
-.btn7:hover {
-    text-decoration: none;
-    transform: scale(1.1);
-    background: rgb(243, 251, 250);
-}
-
-.contain3 {
-    margin: auto;
-    padding-top: 2%;
-    max-width: 65%;
-    align-items: center;
-    vertical-align: center;
-    /* background: gray; */
-}
-
-.box1 {
-    width: 80%;
-    height: fit-content;
-    margin: auto;
-    /* min-height: 100vh; */
-    padding: 1.5% 0 3%;
-    padding-right: 1.5%;
-    position: relative;
-    background: #fbfbfb;
-    z-index: 1;
-    border: 0.5mm double #333333;
-    border-radius: 30px;
-    margin-bottom: 15px;
-    align-items: center;
-    text-align: center;
-}
-
-.textdetailhead {
-    position: absolute;
-    font-size: 30px;
-    padding-left: 3%;
-}
-
-.textnosub {
-    font-size: 30px;
-}
-
-.textdetailsub {
-    position: absolute;
-    font-size: 18px;
-    padding-left: 5%;
-    margin-bottom: 10%;
-}
-
-.texhistorysub {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-}
-
-.btn5 {
-    border: none;
-    margin: 3% 0 1%;
-    width: 50%;
-    height: 5%;
-    background: rgb(221, 18, 0);
-    border-radius: 30px;
-    color: #fbfbfb;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    align-items: center;
-    font-size: 20px;
-    transition: transform .2s;
-}
-
-.btn5:hover {
-    background: rgb(250, 77, 62);
-    text-decoration: none;
-    transform: scale(0.9);
-}
-
-.middle {
-    margin: auto;
-}
-
-#miniprofilepic {
-    border-radius: 50%;
-    width: 40;
-    height: 40;
-    float: center;
-    object-fit: cover;
-    margin: auto;
-}
-
-.btnnobtn {
-    border: none;
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
-    align-items: left;
-    font-size: 20px;
-    transition: transform .2s;
-}
+    .headbox {
+        width: 90%;
+        /* background: #000; */
+        margin: auto;
+        margin-bottom: 2%;
+    }
+    
+    .subbox {
+        width: 50%;
+        /* background: #000; */
+        margin: auto;
+        margin-top: 9%;
+        text-align: center;
+    }
+    
+    .btn6 {
+        margin: 5px;
+        border: none;
+        width: 30%;
+        height: 50px;
+        background: #01BF92;
+        border-radius: 30px;
+        color: white;
+        outline: none;
+        overflow: hidden;
+        align-items: center;
+        font-size: 20px;
+        transition: transform .2s;
+    }
+    
+    .btn6:hover {
+        text-decoration: none;
+        transform: scale(1.1);
+        background: #00daa2;
+    }
+    
+    .btn7 {
+        margin: 5px;
+        border: none;
+        width: 30%;
+        height: 50px;
+        background: white;
+        border: 0.5mm solid #01BF92;
+        border-radius: 30px;
+        color: #01906e;
+        outline: none;
+        overflow: hidden;
+        align-items: center;
+        font-size: 20px;
+        transition: transform .2s;
+    }
+    
+    .btn7:hover {
+        text-decoration: none;
+        transform: scale(1.1);
+        background: rgb(243, 251, 250);
+    }
+    
+    .contain3 {
+        margin: auto;
+        padding-top: 110px;
+        /* padding-bottom: 50px; */
+        max-width: 65%;
+        height: fit-content;
+        align-items: center;
+        z-index: 1;
+        /* background: gray; */
+    }
+    
+    .box1 {
+        width: 80%;
+        height: fit-content;
+        margin: auto;
+        /* min-height: 100vh; */
+        padding: 1.5% 0 3%;
+        padding-right: 1.5%;
+        position: relative;
+        background: #fbfbfb;
+        /* z-index: 2; */
+        border: 0.5mm double #333333;
+        border-radius: 30px;
+        margin-bottom: 50px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .textdetailhead {
+        position: absolute;
+        font-size: 30px;
+        padding-left: 3%;
+    }
+    
+    .textnosub {
+        font-size: 30px;
+    }
+    
+    .textdetailsub {
+        position: absolute;
+        font-size: 18px;
+        padding-left: 5%;
+        margin-bottom: 10%;
+    }
+    
+    .textdetailsubfordelete {
+        position: inherit;
+        width: 500px;
+        margin: auto;
+        margin-bottom: 1px;
+    }
+    
+    .texhistorysub {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .btn5 {
+        border: none;
+        margin: 3% 0 1%;
+        width: 50%;
+        height: 5%;
+        background: rgb(221, 18, 0);
+        border-radius: 30px;
+        color: #fbfbfb;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        align-items: center;
+        font-size: 20px;
+        transition: transform .2s;
+    }
+    
+    .btn5:hover {
+        background: rgb(250, 77, 62);
+        text-decoration: none;
+        transform: scale(0.9);
+    }
+    
+    .middle {
+        margin: auto;
+    }
+    
+    #miniprofilepic {
+        border-radius: 50%;
+        width: 40;
+        height: 40;
+        float: center;
+        object-fit: cover;
+        margin: auto;
+    }
+    
+    .btnnobtn {
+        border: none;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        align-items: left;
+        font-size: 20px;
+        transition: transform .2s;
+    }

@@ -22,10 +22,10 @@
 
     $sqljoined = "SELECT u.* , c.*
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1  AND c.user_id != u.user_id";
     $sqlnumjoin = "SELECT COUNT(*) num2
     FROM user_join u LEFT JOIN campaigninfo c ON c.campaign_id = u.campaign_id
-    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1";
+    WHERE u.user_id = " . $_SESSION['uid']. " AND c.status = 1  AND c.user_id != u.user_id";
 
     $join = mysqli_query($con, $sqlnumjoin);
     $num2 = mysqli_fetch_array($join);

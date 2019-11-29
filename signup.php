@@ -121,9 +121,6 @@
                 <div class="form-group">
                     <input type="text" name="lastname" class="form-control" autocomplete="off" placeholder="Last name" required>
                 </div>
-                <div class="form-group">
-                    <input onChange="phone_check()" id="phone" type="text" name="phone_no" class="form-control" autocomplete="off" placeholder="Phone number"  required>
-                </div>
                 <p style="color:red" id="ermsg_phone"></p>
                 <script>
                     function phone_check(){
@@ -135,25 +132,6 @@
                         else {
                             document.getElementById('ermsg_phone').innerHTML = '';
                             success[2] = 1;
-                        }
-                    }
-                </script>
-                <div class="form-group">
-                <span style="position : absolute; margin: auto; padding: 10px; padding-left:120px;" >Date of birth</span>
-                    <input onChange="dob_check()" id="dob" type="date" name="dob" class="form-control" autocomplete="off" placeholder="Date of birth" required>
-                </div>
-                <p style="color:red" id="ermsg_dob"></p>
-                <script>
-                    function dob_check(){
-                        var dobir = new Date(document.getElementById('dob').value);
-                        var today = new Date();
-                        if(dobir>today){
-                            document.getElementById('ermsg_dob').innerHTML = 'Please select valid date';
-                            success[3] = 0;
-                        }
-                        else {
-                            document.getElementById('ermsg_dob').innerHTML = '';
-                            success[3] = 1;
                         }
                     }
                 </script>

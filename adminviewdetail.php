@@ -31,7 +31,10 @@
             <a><img style="width: 135px" src="./pic/icon.png"></a>
         </div>
         <div class="nav-right">
-            <span id="text"><a href="./profileadmin.php">Main menu</a></span>
+            <a href="./profileadmin.php"><button class="btnnobtn2">
+                <img id="miniprofilepic" src="<?php echo $_SESSION['picpath']; ?>"> 
+                <span id="text">Main Menu</span>
+            </button></a>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>

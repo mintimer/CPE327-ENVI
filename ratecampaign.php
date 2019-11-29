@@ -35,7 +35,10 @@
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
-            <span id="text"><a href="./profile.php">My profile</a></span>
+            <a href="./profile.php"><button class="btnnobtn2">
+                <img id="miniprofilepic" src=" <?php echo $_SESSION['picpath']; ?>"> 
+                <span id="text">My Profile</span>
+            </button></a>
             <a href="./home.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>

@@ -39,7 +39,10 @@
         <div class="nav-right">
             <span id="text"><a href="./view.php">Search campaign</a></span>
             <span id="text"><a href="./create.php">Create campaign</a></span>
-            <span id="text"><a href="./profile.php">My profile</a></span>
+            <a href="./profile.php"><button class="btnnobtn2">
+                <img id="miniprofilepic" src=" <?php session_start(); echo $_SESSION['picpath']; ?>"> 
+                <span id="text">My Profile</span>
+            </button></a>
             <a href="./signout.php"><button class="btn1">Sign out</button></a>
         </div>
     </div>
@@ -53,7 +56,6 @@
                 }
             </script>
             <?php
-                session_start(); 
                 if(isset($_POST['category']))
                     $_SESSION['campaign_type'] = $_POST['category']; 
                 if(isset($_SESSION['ext2'])){

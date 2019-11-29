@@ -59,6 +59,38 @@ body {
     transform: translateY(-50%);
     padding-left: 50px;
 }
+.btnnobtn2 {
+    border: none;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: left;
+    font-size: 17px;
+    transition: transform .2s;
+}
+#miniprofilepic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 0.5mm solid #cccccc;
+    object-fit: cover;
+}
+
+.btnnobtn2:hover {
+    border: none;
+    background: none;
+    border: none;
+    color: #01BF92;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    align-items: left;
+    font-size: 17px;
+    transition: transform .2s;
+}
 
 .btn1 {
     display: inline;
